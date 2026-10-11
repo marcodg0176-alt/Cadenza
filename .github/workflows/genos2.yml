@@ -43,6 +43,7 @@ jobs:
           Copy-Item deps/fluidsynth-v2.6.1-win10-x64-cpp11/bin/*.dll $out
           Copy-Item LICENSE,NOTICE "$out/"
           Copy-Item docs/GENOS2_INTERFACE.md "$out/"
+          Copy-Item build-genos/genos2-3d.png,build-genos/genos2-top.png "$out/"
           Copy-Item deps/fluidsynth-v2.6.1-win10-x64-cpp11/COPYING* "$out/" -ErrorAction SilentlyContinue
       - uses: actions/upload-artifact@v4
         with:

@@ -128,12 +128,15 @@ std::vector<GenosSurface::ProjectedFace> GenosSurface::buildFrame() const
     using namespace genos;
     std::vector<Face> faces;
     box(faces,{0,-0.22f,0},12.34f,4.56f,0.54f,0xff252a30);
-    box(faces,{0,0.32f,-0.50f},11.82f,2.82f,0.045f,0xff20252b);
-    box(faces,{0,0.39f,-1.10f},2.21f,1.58f,0.16f,0xff111920);
-    box(faces,{0,0.55f,-1.10f},1.98f,1.36f,0.018f,0xff0b2438);
-    box(faces,{-2.71f,0.39f,-1.82f},2.27f,0.25f,0.045f,0xff071926);
+    // Large chassis planes must be painted before their surface controls.
+    // Sorting all faces by average depth hides rear controls behind a plane that
+    // spans the entire instrument. Explicit scene layers avoid that ambiguity.
+    box(faces,{0,0.32f,-0.50f},11.82f,2.82f,0.045f,0xff20252b,-1,1);
+    box(faces,{0,0.39f,-1.10f},2.21f,1.58f,0.16f,0xff111920,-1,2);
+    box(faces,{0,0.55f,-1.10f},1.98f,1.36f,0.018f,0xff0b2438,-1,3);
+    box(faces,{-2.71f,0.39f,-1.82f},2.27f,0.25f,0.045f,0xff071926,-1,2);
     for (int i=0;i<9;++i)
-        box(faces,{-3.54f+i*.28f,.38f,-1.05f},.055f,.78f,.008f,0xff080b10);
+        box(faces,{-3.54f+i*.28f,.38f,-1.05f},.055f,.78f,.008f,0xff080b10,-1,2);
 
     for (int i=0; i<static_cast<int>(m_controls.size()); ++i) {
         const auto& c=m_controls[static_cast<std::size_t>(i)];
@@ -154,8 +157,8 @@ std::vector<GenosSurface::ProjectedFace> GenosSurface::buildFrame() const
                 const float b=(side+1)*juce::MathConstants<float>::twoPi/8;
                 const Vec3 p{centre.x+r*std::cos(a),y1,centre.z+r*std::sin(a)};
                 const Vec3 q{centre.x+r*std::cos(b),y1,centre.z+r*std::sin(b)};
-                faces.push_back({{{{centre.x,y1,centre.z},p,q,q}},0xff59636e,i,true});
-                faces.push_back({{{p,{p.x,y0,p.z},{q.x,y0,q.z},q}},0xff343d47,i,false});
+                faces.push_back({{{{centre.x,y1,centre.z},p,q,q}},0xff59636e,i,true,4});
+                faces.push_back({{{p,{p.x,y0,p.z},{q.x,y0,q.z},q}},0xff343d47,i,false,4});
             }
             continue;
         } else if (c.kind==Control::Kind::wheel) colour=0xff13191f;
@@ -173,7 +176,7 @@ std::vector<GenosSurface::ProjectedFace> GenosSurface::buildFrame() const
     for (const auto& f:faces) {
         ProjectedFace p;
         p.colour=juce::Colour(f.colour).withMultipliedBrightness(f.top ? 1.0f : 0.65f);
-        p.control=f.control; p.top=f.top;
+        p.control=f.control; p.top=f.top; p.layer=f.layer;
         for (std::size_t i=0;i<4;++i) {
             p.points[i]=m_camera.project(f.vertices[i],static_cast<float>(bounds.getWidth()),static_cast<float>(bounds.getHeight()));
             p.points[i].x+=bounds.getX(); p.points[i].y+=bounds.getY();
@@ -181,7 +184,9 @@ std::vector<GenosSurface::ProjectedFace> GenosSurface::buildFrame() const
         }
         projected.push_back(p);
     }
-    std::stable_sort(projected.begin(),projected.end(),[](const auto& a,const auto& b){return a.depth<b.depth;});
+    std::stable_sort(projected.begin(),projected.end(),[](const auto& a,const auto& b){
+        return a.layer!=b.layer?a.layer<b.layer:a.depth<b.depth;
+    });
     return projected;
 }
 
@@ -267,6 +272,12 @@ int GenosSurface::hit(juce::Point<float> p) const
     for (auto it=frame.rbegin();it!=frame.rend();++it)
         if (genos::contains(it->points,p.x,p.y)) return it->control;
     return -1;
+}
+
+std::string GenosSurface::controlIdAt(juce::Point<float> point) const
+{
+    const int index=hit(point);
+    return index>=0?m_controls[(std::size_t)index].id:std::string{};
 }
 
 void GenosSurface::mouseMove(const juce::MouseEvent& e)

@@ -5,6 +5,9 @@ project(Cadenza VERSION 1.0.0 LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+if(MSVC)
+    add_compile_options(/utf-8)
+endif()
 
 option(CADENZA_BUILD_TESTS "Build Cadenza unit tests" ON)
 option(CADENZA_BUILD_NATIVE_HOST "Build the native JUCE application" ON)
@@ -343,7 +346,8 @@ if(CADENZA_BUILD_NATIVE_HOST AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib/JUCE/CM
 
     if(CADENZA_BUILD_TESTS)
         add_executable(cadenza_genos_interaction_tests
-            tests/GenosInteractionTests.cpp Source/UI/GenosSurface.cpp)
+            tests/GenosInteractionTests.cpp Source/UI/GenosSurface.cpp
+            Source/UI/CadenzaLookAndFeel.cpp)
         target_include_directories(cadenza_genos_interaction_tests PRIVATE Source)
         target_compile_definitions(cadenza_genos_interaction_tests PRIVATE
             JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0)

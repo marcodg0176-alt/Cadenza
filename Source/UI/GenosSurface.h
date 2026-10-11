@@ -34,6 +34,7 @@ public:
     void focusLost(FocusChangeType) override;
     void visibilityChanged() override;
     void releaseNotes();
+    std::string controlIdAt(juce::Point<float> point) const;
 
 private:
     struct ProjectedFace
@@ -43,6 +44,7 @@ private:
         juce::Colour colour;
         int control = -1;
         bool top = false;
+        int layer=0;
     };
     std::vector<ProjectedFace> buildFrame() const;
     int hit(juce::Point<float>) const;

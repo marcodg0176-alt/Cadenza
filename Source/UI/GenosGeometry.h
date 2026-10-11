@@ -17,6 +17,7 @@ struct Face
     std::uint32_t colour;
     int control = -1;
     bool top = false;
+    int layer = 0;
 };
 struct Control
 {
@@ -129,16 +130,17 @@ inline std::vector<Control> makeControls()
 }
 
 inline void box(std::vector<Face>& faces, Vec3 c, float w, float d, float h,
-                std::uint32_t colour, int control = -1)
+                std::uint32_t colour, int control = -1, int layer = -1)
 {
     const float l = c.x - w / 2, r = c.x + w / 2;
     const float back = c.z - d / 2, front = c.z + d / 2;
     const float bottom = c.y, top = c.y + h;
-    faces.push_back({{{{l,top,back},{r,top,back},{r,top,front},{l,top,front}}}, colour, control, true});
-    faces.push_back({{{{l,bottom,front},{l,top,front},{r,top,front},{r,bottom,front}}}, colour, control});
-    faces.push_back({{{{l,bottom,back},{r,bottom,back},{r,top,back},{l,top,back}}}, colour, control});
-    faces.push_back({{{{l,bottom,back},{l,top,back},{l,top,front},{l,bottom,front}}}, colour, control});
-    faces.push_back({{{{r,bottom,back},{r,bottom,front},{r,top,front},{r,top,back}}}, colour, control});
+    const int drawLayer=layer>=0?layer:(control>=0?4:0);
+    faces.push_back({{{{l,top,back},{r,top,back},{r,top,front},{l,top,front}}}, colour, control, true,drawLayer});
+    faces.push_back({{{{l,bottom,front},{l,top,front},{r,top,front},{r,bottom,front}}}, colour, control,false,drawLayer});
+    faces.push_back({{{{l,bottom,back},{r,bottom,back},{r,top,back},{l,top,back}}}, colour, control,false,drawLayer});
+    faces.push_back({{{{l,bottom,back},{l,top,back},{l,top,front},{l,bottom,front}}}, colour, control,false,drawLayer});
+    faces.push_back({{{{r,bottom,back},{r,bottom,front},{r,top,front},{r,top,back}}}, colour, control,false,drawLayer});
 }
 
 inline bool contains(const std::array<Point,4>& polygon, float x, float y)
