@@ -46,6 +46,14 @@ int runTests() {
     cb.onMakeEditable=[&]{++makeEditable;}; cb.onRecEdit=[&]{++editor;};
     cadenza::ui::GenosSurface view(cb,[&](int p){page=p;});
     view.setLookAndFeel(&theme); view.setSize(1280,800); view.setVisible(true);
+    bool frenchTooltip=false;
+    for(int i=0;i<view.getNumChildComponents();++i)
+        if(auto* b=dynamic_cast<juce::TextButton*>(view.getChildComponent(i));b && b->getTooltip().contains("Espace")) {
+            frenchTooltip=true;
+            expect(b->getTooltip().containsChar(0x00c9)&&b->getTooltip().containsChar(0x00ea)
+                   &&!b->getTooltip().containsChar(0x00c3),"French tooltip uses Unicode accents, not misdecoded UTF-8 bytes");
+        }
+    expect(frenchTooltip,"French keyboard help is available");
     auto toolbar=[&](const juce::String& text) {
         for(int i=0;i<view.getNumChildComponents();++i)
             if(auto* b=dynamic_cast<juce::TextButton*>(view.getChildComponent(i));b && b->getButtonText()==text) {

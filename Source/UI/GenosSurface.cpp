@@ -60,11 +60,11 @@ GenosSurface::GenosSurface(NativePanel::Callbacks cb, std::function<void(int)> o
     m_topButton.onClick = [this] { m_camera.yaw=0; m_camera.pitch=1.55f; m_camera.zoom=1; m_frameDirty=true; repaint(); };
     m_nativeButton.onClick = [this] { releaseNotes(); if(m_openPage)m_openPage(0); };
     m_angleButton.onClick = [this] { m_camera={}; m_frameDirty=true; repaint(); };
-    m_hint = "Cliquez les touches et commandes · glissez le fond pour orienter · molette pour zoomer";
-    m_playButton.setTooltip("Espace : lecture / arrêt. Échap : relâcher les notes du clavier à l'écran.");
-    m_editorButton.setTooltip("Ouvrir l'atelier Cadenza sur une copie éditable du style chargé.");
-    m_topButton.setTooltip("Recentrer le modèle en vue de dessus.");
-    m_angleButton.setTooltip("Recentrer le modèle en perspective 3D.");
+    m_hint = juce::String::fromUTF8("Cliquez les touches et commandes · glissez le fond pour orienter · molette pour zoomer");
+    m_playButton.setTooltip(juce::String::fromUTF8("Espace : lecture / arrêt. Échap : relâcher les notes du clavier à l'écran."));
+    m_editorButton.setTooltip(juce::String::fromUTF8("Ouvrir l'atelier Cadenza sur une copie éditable du style chargé."));
+    m_topButton.setTooltip(juce::String::fromUTF8("Recentrer le modèle en vue de dessus."));
+    m_angleButton.setTooltip(juce::String::fromUTF8("Recentrer le modèle en perspective 3D."));
 }
 
 GenosSurface::~GenosSurface() { releaseNotes(); }
@@ -85,14 +85,14 @@ void GenosSurface::setRuntime(const juce::String& style, const juce::String& cho
         || m_recorderActive != recorderActive || m_recording != recording || m_ots != ots
         || m_rightEnabled != rightEnabled || m_leftEnabled != leftEnabled
         || m_reverb!=reverb || m_compressor!=compressor || m_eq!=eq;
-    m_style=style; m_chord=chord.isEmpty() ? "—" : chord; m_section=section;
+    m_style=style; m_chord=chord.isEmpty() ? juce::String::fromUTF8("—") : chord; m_section=section;
     m_bpm=bpm; m_playing=playing; m_sections=available; m_volumes=volumes;
     m_arranger=arranger; m_memory=memory; m_autoFill=autoFill;
     m_syncStop=syncStop; m_transpose=transpose;
     m_recorderActive=recorderActive; m_recording=recording; m_ots=ots;
     m_rightEnabled=rightEnabled; m_leftEnabled=leftEnabled;
     m_reverb=reverb; m_compressor=compressor; m_eq=eq;
-    m_playButton.setButtonText(playing ? "Arrêter" : "Lancer la lecture");
+    m_playButton.setButtonText(playing ? juce::String::fromUTF8("Arrêter") : "Lecture");
     if (changed) {
         m_frameDirty=true;
         if(isVisible())repaint();
@@ -225,8 +225,8 @@ void GenosSurface::paintScreen(juce::Graphics& g,const genos::ModelScreen& scree
         }
         lcd.setColour(juce::Colour(0xffdf903f));lcd.fillRect(0,246,w,42);
         lcd.setColour(juce::Colour(0xff142737));lcd.setFont(juce::Font(juce::FontOptions(22.0f,juce::Font::bold)));
-        lcd.drawText(m_playing?"LECTURE":"PRÊT",18,246,230,42,juce::Justification::centredLeft);
-        lcd.drawText("STYLE · MIXER · ÉDITEUR",250,246,335,42,juce::Justification::centredRight);
+        lcd.drawText(m_playing?"LECTURE":juce::String::fromUTF8("PRÊT"),18,246,230,42,juce::Justification::centredLeft);
+        lcd.drawText(juce::String::fromUTF8("STYLE · MIXER · ÉDITEUR"),250,246,335,42,juce::Justification::centredRight);
     } else {
         constexpr const char* names[]={"REV","COMP","VOL","LOW","MID","HIGH"};
         for(int i=0;i<6;++i) {
@@ -257,6 +257,9 @@ void GenosSurface::paint(juce::Graphics& g)
     const auto bounds=modelBounds();
     g.setColour(juce::Colour(0xff05090e));
     g.fillEllipse(bounds.toFloat().reduced(28.0f,40.0f).translated(0,25));
+    {
+    juce::Graphics::ScopedSaveState sceneState(g);
+    g.reduceClipRegion(bounds);
     ensureFrame();
     g.drawImageAt(m_frame,bounds.getX(),bounds.getY());
     const float scale=std::min(bounds.getWidth()/13.7f,bounds.getHeight()/5.5f)*m_camera.zoom;
@@ -276,11 +279,12 @@ void GenosSurface::paint(juce::Graphics& g)
                    juce::Justification::centred,false);
     }
     for(const auto& screen:m_model.screens)paintScreen(g,screen);
+    }
     const auto band=getLocalBounds().removeFromBottom(88).reduced(24,7);
     g.setColour(juce::Colour(0xff192735)); g.fillRoundedRectangle(band.toFloat(),10);
     g.setFont(juce::Font(juce::FontOptions(15.0f,juce::Font::bold)));
     g.setColour(juce::Colour(0xffdcebf6));
-    g.drawText(m_style+"    ·    "+juce::String(m_bpm)+" BPM    ·    Transposition "+juce::String(m_transpose),
+    g.drawText(m_style+juce::String::fromUTF8("    ·    ")+juce::String(m_bpm)+juce::String::fromUTF8(" BPM    ·    Transposition ")+juce::String(m_transpose),
                band.reduced(15,0).removeFromTop(33),juce::Justification::centredLeft);
     g.setFont(juce::Font(juce::FontOptions(12.5f)));
     g.setColour(juce::Colour(0xff9cb7cb));
@@ -318,7 +322,7 @@ void GenosSurface::mouseMove(const juce::MouseEvent& e)
     if (next>=0) {
         const auto& c=m_controls[(std::size_t)next];
         m_hint=juce::String(c.hint.empty()?c.label:c.hint);
-        if (!enabled(c)) m_hint="Cette section n'existe pas dans le style chargé.";
+        if (!enabled(c)) m_hint=juce::String::fromUTF8("Cette section n'existe pas dans le style chargé.");
         setTooltip(m_hint);
         setMouseCursor(enabled(c)?juce::MouseCursor::PointingHandCursor:juce::MouseCursor::NormalCursor);
     } else { setTooltip({}); setMouseCursor(juce::MouseCursor::NormalCursor); }
@@ -423,7 +427,7 @@ void GenosSurface::mouseDrag(const juce::MouseEvent& e)
         m_modulation=juce::jlimit(0,127,m_startValue+(int)((m_dragStart.y-e.position.y)*1.3f));
         if(m_cb.onPitchBend)m_cb.onPitchBend(m_pitch);
         if(m_cb.onModulation)m_cb.onModulation(m_modulation);
-        m_hint="Joystick · pitch "+juce::String(m_pitch)+" · modulation "+juce::String(m_modulation);
+        m_hint=juce::String::fromUTF8("Joystick · pitch ")+juce::String(m_pitch)+juce::String::fromUTF8(" · modulation ")+juce::String(m_modulation);
         m_frameDirty=true;repaint();
     } else if (c.kind==genos::Control::Kind::wheel) {
         const int delta=(int)((m_dragStart.y-e.position.y)*130);

@@ -59,7 +59,7 @@ private:
     mutable juce::Image m_frame;
     mutable bool m_frameDirty = true;
     genos::Camera m_camera;
-    juce::String m_style = "Aucun style chargé", m_chord = "—", m_hint;
+    juce::String m_style = juce::String::fromUTF8("Aucun style chargé"), m_chord = juce::String::fromUTF8("—"), m_hint;
     std::string m_section;
     std::vector<std::string> m_sections;
     std::array<int,9> m_volumes{100,100,100,100,100,100,100,100,100};
@@ -79,7 +79,7 @@ private:
     int m_startValue{};
     int m_pitch=8192, m_modulation=0;
     int knobValue(int index) const;
-    juce::TextButton m_styleButton{"Ouvrir un style"}, m_playButton{"Lecture / arrêt"};
+    juce::TextButton m_styleButton{"Ouvrir un style"}, m_playButton{"Lecture"};
     juce::TextButton m_editorButton{"Style Creator"}, m_midiButton{"Connexion MIDI"};
     juce::TextButton m_audioButton{"Sortie audio"}, m_topButton{"Vue de dessus"};
     juce::TextButton m_angleButton{"Vue 3D"};
