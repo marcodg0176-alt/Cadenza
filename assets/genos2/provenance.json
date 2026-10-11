@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAtUtc": "2026-10-11T13:43:28.6774636Z",
+  "generatedAtUtc": "2026-10-11T13:47:15.1064241Z",
   "timezone": "Europe/Paris",
   "authorRole": "Dedicated Cadenza designer and Blender modeler",
   "blender": "5.2.1 LTS",
@@ -25,34 +25,35 @@
   "outputs": [
     {
       "file": "build_genos2.py",
-      "bytes": 16007,
-      "sha256": "A7A2213B8DEECC42B5D431030DD53FC161D241558BD6C794AC83CF809906FE98"
+      "bytes": 16247,
+      "sha256": "C707AE9A910AD6BC62013379921860BA4DCC8CC96B63B065015EA2ABB4FE68B1"
     },
     {
       "file": "genos2.blend",
-      "bytes": 281379,
-      "sha256": "57F2A746950C8C8B0C5133CBC18C68F3710F3359982AD672EC22716B8B9838B0"
+      "bytes": 282430,
+      "sha256": "364475D38FAB387DE9AB5B6E2F4A2117DF486ED2D3340D36FB68074DA65CBE60"
     },
     {
       "file": "geometry.json",
-      "bytes": 1899904,
-      "sha256": "F2E52530606F7285A9FD97E9EA0838DEA85E648237A3DA8F9F0F75DFEB0B91D6"
+      "bytes": 1908291,
+      "sha256": "138C79D2CF9DAA21ECABC6AC1E30AAA1CC46C525387AA15D694605210CC49A36"
     },
     {
       "file": "preview-top.png",
-      "bytes": 1232709,
-      "sha256": "F8A9219226A6F731DC2D708990FC9B063C1FEFA509CC5042284B3CC453B2D6B7"
+      "bytes": 1232694,
+      "sha256": "32814BDAE87BED5B2A73BC4ED46B50F5EE10EFBB3ED5DFBB6BFDB1FC9CEA48B6"
     },
     {
       "file": "preview-perspective.png",
-      "bytes": 1761648,
-      "sha256": "6F9A2C028253A53F58B75A3885A5D4F7DCD35FD1D52E841D2E9CA94FFD6C28BB"
+      "bytes": 1762127,
+      "sha256": "ED26FDCB51B39CB90535F8FF68BD2B9708B2ED47AEA39CA8E318F15553633A9B"
     }
   ],
   "geometry": {
-    "triangles": 11620,
+    "triangles": 11664,
     "keys": 76,
     "rotaries": 6,
+    "masterRotaries": 1,
     "faders": 9,
     "joysticks": 1
   },
@@ -60,20 +61,23 @@
     "button": 38,
     "key": 76,
     "fader": 9,
-    "knob": 6,
+    "knob": 7,
     "joystick": 1
   },
   "checks": [
-    "Renders opened and visually inspected",
-    "130 unique IDs",
+    "Latest Blender renders opened and visually inspected",
+    "131 unique command IDs",
     "Notes MIDI 28-103",
-    "11620 triangles below 20000 budget",
+    "11664 triangles below 20000 budget",
+    "Six LiveControl rotaries plus separate MASTER gain knob",
+    "MASTER id master kind knob value2",
     "Fader rail/slot/LED meshes pickable but moving false"
   ],
   "limitations": [
     "Hardware connectivity and audio untested by this model task",
     "Rear ports not modeled",
-    "Decorative registrations, multipads, master and data encoder have empty control IDs"
+    "Decorative registrations, multipads and data encoder have empty control IDs",
+    "JUCE integration visual review pending build captures"
   ],
   "sourceReferenceImagesBundled": false,
   "existingInteractiveBlenderTouched": false

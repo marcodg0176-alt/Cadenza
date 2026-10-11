@@ -126,7 +126,9 @@ cube('screen:status',(0,.493,-.62),1.95,.15,.002,'orange',bevel=0,layer=2)
 text('MAIN A   |   READY',(0,.502,-.62),.061,'black')
 text('STYLE   MIXER   EDITOR',(0,.502,-.47),.047)
 # Left MIDI/audio/tempo area occupies the matching physical banks.
-cylinder('decor:master dial',(-5.44,.475,-1.17),.132,.103,'black',vertices=20)
+control('master','knob','MASTER',-5.44,-1.17,.27,.27,.103,2,False,'Regler le volume maitre Cadenza')
+cylinder('rotary:master dial',(-5.44,.475,-1.17),.132,.103,'black','master',vertices=20,layer=4)
+cube('rotary:master pointer',(-5.44,.579,-1.244),.023,.085,.005,'orange','master',bevel=.003,layer=4)
 text('MASTER VOLUME',(-5.44,.455,-1.42),.052)
 button('midi','MIDI',-4.88,-1.33,.18,.13)
 button('audio','AUDIO',-4.59,-1.33,.18,.13)
@@ -198,7 +200,7 @@ for ob in bpy.context.scene.objects:
         faces.append({'vertices':v,'colour':colour,'control':ob.get('control',''),'top':bool(n.z>.45),'layer':int(ob.get('layer',0)),'moving':bool(ob.get('moving',True))})
     evaluated.to_mesh_clear()
 if len(faces)>20000: raise RuntimeError('CPU geometry budget exceeded: '+str(len(faces)))
-payload={'version':1,'coordinates':'x horizontal / y up / z depth; rear negative','source':'build_genos2.py / Blender 5.2','faces':faces,'controls':controls,'labels':labels,'screen':main,'screens':screens,'statistics':{'triangles':len(faces),'keys':76,'rotaries':6,'faders':9,'joysticks':1}}
+payload={'version':1,'coordinates':'x horizontal / y up / z depth; rear negative','source':'build_genos2.py / Blender 5.2','faces':faces,'controls':controls,'labels':labels,'screen':main,'screens':screens,'statistics':{'triangles':len(faces),'keys':76,'rotaries':6,'masterRotaries':1,'faders':9,'joysticks':1}}
 with open(os.path.join(OUT,'geometry.json.tmp'),'w',encoding='utf-8') as f: json.dump(payload,f,separators=(',',':'),ensure_ascii=False)
 os.replace(os.path.join(OUT,'geometry.json.tmp'),os.path.join(OUT,'geometry.json'))
 print('GEOMETRY_READY',len(faces),len(controls),flush=True)

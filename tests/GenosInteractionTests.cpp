@@ -21,7 +21,7 @@ juce::MouseEvent event(juce::Component& view, juce::Point<float> p,
             1.0f, 0.0f, 0.0f, 0.0f, 0.0f, &view, &view, now, down, now, 1, dragged};
 }
 }
-int main() {
+int runTests() {
     juce::ScopedJuceInitialiser_GUI initialise;
     cadenza::ui::CadenzaLookAndFeel theme;
     struct Note { int pitch, velocity; bool on; };
@@ -134,6 +134,8 @@ int main() {
     drag("knob0",{0,-500});drag("knob0",{0,500});expect(reverb==std::vector<int>({100,0}),"reverb percentage endpoints");
     drag("knob1",{0,-500});drag("knob1",{0,500});expect(compressor==std::vector<int>({100,0}),"compressor percentage endpoints");
     drag("knob2",{0,-500});drag("knob2",{0,500});expect(master==std::vector<int>({127,0,127,0}),"master knob shared callback");
+    drag("master",{0,-500});drag("master",{0,500});
+    expect(master.size()==6&&master[4]==127&&master[5]==0,"physical MASTER shares real gain callback");
     drag("knob3",{0,-500});drag("knob3",{0,500});
     expect(eq==std::vector<std::array<int,3>>({{12,0,0},{-12,0,0}}),"EQ endpoints preserve other bands");
     p=centre("pitch");down(p);view.mouseDrag(event(view,p+juce::Point<float>{100,-100},p,true,true));
@@ -144,6 +146,9 @@ int main() {
     expect(pitch.back()==8192,"pitch recentres on release");
     down(p);view.mouseDrag(event(view,p+juce::Point<float>{20,-20},p,true,true));
     view.focusLost(juce::Component::focusChangedDirectly);expect(pitch.back()==8192,"pitch recentres on focus loss");
+    const auto heldModulation=modulation.back();
+    p=centre("pitch");down(p);view.mouseDrag(event(view,p+juce::Point<float>{1,-1},p,true,true));up(p);
+    expect(modulation.back()==heldModulation+1,"new joystick gesture preserves held modulation without jumping");
     runtime({"mainA","mainB","mainC","mainD","intro","ending","fill"});toolbar("Style Creator");
     expect(newSession==1&&makeEditable==1&&editor==2&&page==7,"loaded creator makes editable and opens editor");
     count=notes.size();down(centre("note60"));toolbar("Vue Cadenza");
@@ -176,6 +181,19 @@ int main() {
     toolbar("Vue de dessus");picking();render("genos2-top.png");
     view.setSize(1600,900);picking();render("genos2-top-resized.png");
     toolbar("Vue 3D");picking();render("genos2-3d-resized.png");
+    view.setSize(900,650);picking();
+    for(int i=0;i<view.getNumChildComponents();++i)
+        expect(view.getLocalBounds().contains(view.getChildComponent(i)->getBounds()),"all toolbar buttons fit at minimum window size");
+    render("genos2-minimum.png");
     view.releaseNotes();view.setLookAndFeel(nullptr);
     std::cout<<"Genos interaction: pointer notes/releases, sections, mixer, knobs, joystick, Native/editor and resize passed\n";
+    return 0;
+}
+
+int main() {
+    try { return runTests(); }
+    catch(const std::exception& error) {
+        std::cerr<<"Genos interaction failure: "<<error.what()<<std::endl;
+        return 1;
+    }
 }

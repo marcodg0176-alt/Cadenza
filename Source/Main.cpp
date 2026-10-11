@@ -58,6 +58,7 @@ private:
             setContentOwned(new MainComponent(), true);
             centreWithSize(getWidth(), getHeight());
             setResizable(true, true);
+            setResizeLimits(900, 650, 7680, 4320);
             setVisible(true);
         }
 

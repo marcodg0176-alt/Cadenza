@@ -16,15 +16,15 @@ std::string resolveSection(const std::string& requested,
     auto exists = [&](const std::string& s) {
         return std::find(sections.begin(), sections.end(), s) != sections.end();
     };
-    if (exists(requested)) return requested;
-    if (requested == "introA" && exists("intro")) return "intro";
-    if (requested == "endingA" && exists("ending")) return "ending";
     if (requested == "fill") {
         const char variation = current.size() == 5 && current.rfind("main",0) == 0 ? current.back() : 'A';
         for (const auto& s : {std::string("fill")+variation+variation,
                               std::string("fill")+variation, std::string("fill")})
             if (exists(s)) return s;
     }
+    if (exists(requested)) return requested;
+    if (requested == "introA" && exists("intro")) return "intro";
+    if (requested == "endingA" && exists("ending")) return "ending";
     return {};
 }
 bool sectionControl(const std::string& id)
@@ -329,10 +329,10 @@ void GenosSurface::dispatch(const genos::Control& c)
     const auto& id=c.id;
     if (sectionControl(id)) { if (m_cb.selectSection) m_cb.selectSection(resolveSection(id,m_sections,m_section)); }
     else if (id=="play") { if (m_cb.togglePlay) m_cb.togglePlay(); }
-    else if (id=="style") m_styleButton.triggerClick();
-    else if (id=="creator") m_editorButton.triggerClick();
-    else if (id=="midi") m_midiButton.triggerClick();
-    else if (id=="audio") m_audioButton.triggerClick();
+    else if (id=="style") m_styleButton.onClick();
+    else if (id=="creator") m_editorButton.onClick();
+    else if (id=="midi") m_midiButton.onClick();
+    else if (id=="audio") m_audioButton.onClick();
     else if (id=="soundfont") { if (m_cb.openSoundFont) m_cb.openSoundFont(); }
     else if (id=="import") { if (m_cb.importMidiStyle) m_cb.importMidiStyle(); }
     else if (id=="native") { releaseNotes(); if (m_openPage) m_openPage(0); }
@@ -387,6 +387,7 @@ void GenosSurface::mouseDown(const juce::MouseEvent& e)
     if (c.kind==genos::Control::Kind::key) { m_pointerNote=c.value; pressNote(c.value); }
     else if (c.kind==genos::Control::Kind::fader) m_startValue=m_volumes[c.value];
     else if (c.kind==genos::Control::Kind::knob) m_startValue=knobValue(c.value);
+    else if (c.kind==genos::Control::Kind::joystick) m_startValue=m_modulation;
     else if (c.kind==genos::Control::Kind::button) { dispatch(c);m_frameDirty=true;repaint(); }
 }
 void GenosSurface::mouseDrag(const juce::MouseEvent& e)
@@ -417,7 +418,7 @@ void GenosSurface::mouseDrag(const juce::MouseEvent& e)
         m_hint=juce::String(c.label)+" : "+juce::String(value);m_frameDirty=true; repaint();
     } else if(c.kind==genos::Control::Kind::joystick) {
         m_pitch=juce::jlimit(0,16383,8192+(int)((e.position.x-m_dragStart.x)*130));
-        m_modulation=juce::jlimit(0,127,(int)((m_dragStart.y-e.position.y)*1.3f));
+        m_modulation=juce::jlimit(0,127,m_startValue+(int)((m_dragStart.y-e.position.y)*1.3f));
         if(m_cb.onPitchBend)m_cb.onPitchBend(m_pitch);
         if(m_cb.onModulation)m_cb.onModulation(m_modulation);
         m_hint="Joystick · pitch "+juce::String(m_pitch)+" · modulation "+juce::String(m_modulation);

@@ -6,7 +6,7 @@
 
 Le musicien retrouve les zones du véritable GENOS2 et joue dans le moteur Cadenza existant. Les trois planches locales approuvées, `Yamaha-Genos2-von-oben.jpg`, `Yamaha-Genos2-Detail-5_1600y1200.jpg` et `Yamaha-Genos2-Detail-6_1600y1200.jpg`, sont les références visuelles. Elles restent externes au dépôt. Le modèle est reconstruit en géométrie, sans texture de photographie ni copie de l'écran Yamaha.
 
-La silhouette prime : boîtier noir légèrement arrondi, large clavier clair de 76 touches E1–G7 (MIDI 28–103) occupant 84.5 % de la largeur, joystick unique à gauche, deux écrans distincts, six rotatifs et neuf curseurs à gauche de l'écran central, encodeur à droite, trois rangées compactes de commandes et les groupes style/registrations/OTS/parties au bord du clavier. L'écran central mesure environ 18.8 % de la largeur. Les petites fonctions Cadenza sont logées dans ces groupes ; le modèle ne prétend pas reproduire toutes les fonctions matérielles Yamaha.
+La silhouette prime : boîtier noir légèrement arrondi, large clavier clair de 76 touches E1–G7 (MIDI 28–103) occupant 84.5 % de la largeur, joystick unique à gauche, deux écrans distincts, six rotatifs Live Control et neuf curseurs à gauche de l'écran central, potentiomètre MASTER près du bord gauche (sept rotatifs au total), encodeur à droite, trois rangées compactes de commandes et les groupes style/registrations/OTS/parties au bord du clavier. L'écran central mesure environ 18.8 % de la largeur. Les petites fonctions Cadenza sont logées dans ces groupes ; le modèle ne prétend pas reproduire toutes les fonctions matérielles Yamaha.
 
 ## Composition et matériaux
 
@@ -41,10 +41,11 @@ La scène a été reconstruite et rendue par Blender **5.2.1 LTS**, moteur Cycle
 | Profondeur des touches blanches / boîtier | Environ 32 % | 1.40 / 4.45 = 31.5 % |
 | Touches | 76, E1–G7 | 76, MIDI 28–103 |
 | Live Control | 6 rotatifs, 9 curseurs | 6 rotatifs, 9 curseurs |
+| Volume maître | Potentiomètre séparé à gauche | MASTER séparé, gain Cadenza existant |
 | Contrôle pitch/modulation | Joystick gauche unique | Joystick gauche unique |
 
-Export runtime : **11 620 triangles**, 130 commandes avec ID uniques. Les rails et LEDs des faders restent fixes (`moving:false`), mais portent l'ID de leur fader pour autoriser le clic sur toute la course ; la cap est mobile. Les labels sont exportés séparément. Les aperçus montrent les proportions, les groupes et la visibilité. Ils ne prouvent pas les interactions JUCE.
+Export runtime après ajout MASTER autorisé : **11 664 triangles**, 131 commandes avec ID uniques. Le MASTER est un `knob`, index de gain `value:2`, portant le même réglage de gain déjà disponible par le rotatif VOL Live Control et le curseur maître. Son trait orange tourne avec le dial ; aucune nouvelle fonction musicale n'est ajoutée. Les rails et LEDs des faders restent fixes (`moving:false`), mais portent l'ID de leur fader pour autoriser le clic sur toute la course ; la cap est mobile. Les labels sont exportés séparément. Les aperçus montrent les proportions, les groupes et la visibilité. Ils ne prouvent pas les interactions JUCE.
 
-Limites de fidélité : approximation volontaire des petits groupes de boutons pour les 38 actions Cadenza disponibles ; la connectique arrière, le logo Yamaha et les commandes sans équivalent logiciel ne sont pas fonctionnels. L'encodeur, la molette master, les registrations et multipads représentés ont des noms `decor:*` et aucun ID de commande. Le rendu Blender reste plus éclairé que la photographie de référence ; le JSON conserve les couleurs sombres du matériau pour le rendu logiciel.
+Limites de fidélité : approximation volontaire des petits groupes de boutons pour les 38 actions Cadenza disponibles ; la connectique arrière, le logo Yamaha et les commandes sans équivalent logiciel ne sont pas fonctionnels. L'encodeur, les registrations et multipads représentés ont des noms `decor:*` et aucun ID de commande. Le rendu Blender reste plus éclairé que la photographie de référence ; le JSON conserve les couleurs sombres du matériau pour le rendu logiciel.
 
 Preuves : `assets/genos2/preview-top.png` (1700 × 660), `preview-perspective.png` (1700 × 900), `genos2.blend`, source `build_genos2.py`, export `geometry.json`, provenance `provenance.json`. La reconstruction utilise une nouvelle instance CLI ; l'instance Blender interactive préexistante n'a pas été modifiée.

@@ -33,6 +33,15 @@ jobs:
         run: cmake --build build-genos --parallel 4
       - name: Test
         run: ctest --test-dir build-genos --output-on-failure
+      - name: Preserve failed verification evidence
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Genos2-Verification-Diagnostics
+          path: |
+            build-genos/Testing/Temporary/LastTest.log
+            build-genos/genos2-*.png
+          retention-days: 14
       - name: Assemble portable application
         shell: pwsh
         run: |
@@ -43,7 +52,8 @@ jobs:
           Copy-Item deps/fluidsynth-v2.6.1-win10-x64-cpp11/bin/*.dll $out
           Copy-Item LICENSE,NOTICE "$out/"
           Copy-Item docs/GENOS2_INTERFACE.md "$out/"
-          Copy-Item build-genos/genos2-3d.png,build-genos/genos2-top.png "$out/"
+          Copy-Item build-genos/genos2-*.png "$out/"
+          Copy-Item build-genos/Testing/Temporary/LastTest.log "$out/verification-tests.log"
           Copy-Item deps/fluidsynth-v2.6.1-win10-x64-cpp11/COPYING* "$out/" -ErrorAction SilentlyContinue
       - uses: actions/upload-artifact@v4
         with:

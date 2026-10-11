@@ -24,6 +24,8 @@ musicales et les sons sont ceux du moteur Cadenza et des instruments chargés.
   L'édition se fait dans cet atelier ; cette version n'implémente pas tous les
   paramètres du Style Creator Yamaha ni un export SFF2 entièrement validé.
 - Vue Cadenza affiche l'interface originale. Vue Genos2 3D revient à l'instrument.
+- La fenêtre reste redimensionnable à partir de 900 × 650 pixels pour garder
+  tous les accès essentiels visibles.
 
 Les réglages sont conservés dans un profil local distinct, Genos2Personnel. Les
 réglages et journaux d'une installation Cadenza existante ne sont pas remplacés.
