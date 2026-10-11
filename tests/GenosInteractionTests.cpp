@@ -1,87 +1,181 @@
 #include "UI/GenosSurface.h"
 #include "UI/CadenzaLookAndFeel.h"
 #include <juce_gui_extra/juce_gui_extra.h>
+#include <array>
+#include <cmath>
 #include <iostream>
 #include <stdexcept>
+#include <string>
+#include <utility>
 #include <vector>
 
-namespace
-{
-void expect(bool condition,const char* message)
-{
-    if(!condition) throw std::runtime_error(message);
+namespace {
+void expect(bool condition, const std::string& message) {
+    if (!condition) throw std::runtime_error(message);
+}
+juce::MouseEvent event(juce::Component& view, juce::Point<float> p,
+                       juce::Point<float> down, bool held, bool dragged = false) {
+    auto now = juce::Time::getCurrentTime();
+    return {juce::Desktop::getInstance().getMainMouseSource(), p,
+            juce::ModifierKeys(held ? juce::ModifierKeys::leftButtonModifier : 0),
+            1.0f, 0.0f, 0.0f, 0.0f, 0.0f, &view, &view, now, down, now, 1, dragged};
 }
 }
-int main()
-{
+int main() {
     juce::ScopedJuceInitialiser_GUI initialise;
     cadenza::ui::CadenzaLookAndFeel theme;
-    struct Note { int pitch; bool on; };
+    struct Note { int pitch, velocity; bool on; };
     std::vector<Note> notes;
-    int openStyle=0, newSession=0, editor=0, page=-1;
-    cadenza::ui::NativePanel::Callbacks callbacks;
-    callbacks.onKeyboardNote=[&](int pitch,int,bool on){notes.push_back({pitch,on});};
-    callbacks.openStyle=[&]{++openStyle;};
-    callbacks.onRecNew=[&](int bars){expect(bars==4,"new style has four bars");++newSession;};
-    callbacks.onRecEdit=[&]{++editor;};
-    cadenza::ui::GenosSurface view(callbacks,[&](int p){page=p;});
-    view.setLookAndFeel(&theme);
-    view.setSize(1280,800);
-    view.setVisible(true);
-    expect(view.keyPressed(juce::KeyPress('Q',{},'q')),"melody keyboard key handled");
-    expect(notes.size()==1 && notes.back().pitch==60 && notes.back().on,"melody note reaches host callback");
-    view.keyPressed(juce::KeyPress('Q',{},'q'));
-    expect(notes.size()==1,"key repeat does not retrigger held note");
-    view.focusLost(juce::Component::focusChangedDirectly);
-    expect(notes.size()==2 && !notes.back().on,"focus loss releases held note");
-    view.keyPressed(juce::KeyPress('W',{},'w'));
-    expect(notes.back().pitch==48 && notes.back().on,"lower keyboard row supplies chord-zone notes");
-    view.setVisible(false);
-    expect(notes.back().pitch==48 && !notes.back().on,"hiding the 3D view releases notes");
-    const auto noteCount=notes.size();
-    expect(!view.keyPressed(juce::KeyPress('S',juce::ModifierKeys::ctrlModifier,'s')),
-           "system modifier shortcuts are not musical input");
-    expect(notes.size()==noteCount,"shortcut produces no note");
-    auto click=[&](const juce::String& text) {
+    std::vector<std::string> sections;
+    std::vector<std::pair<int,int>> mixer;
+    std::vector<int> master, reverb, compressor, pitch, modulation;
+    std::vector<std::array<int,3>> eq;
+    int openStyle=0, newSession=0, makeEditable=0, editor=0, page=-1, play=0;
+    cadenza::ui::NativePanel::Callbacks cb;
+    cb.onKeyboardNote=[&](int n,int v,bool on){notes.push_back({n,v,on});};
+    cb.openStyle=[&]{++openStyle;}; cb.togglePlay=[&]{++play;};
+    cb.selectSection=[&](const std::string& id){sections.push_back(id);};
+    cb.onMixerVolume=[&](int ch,int v){mixer.emplace_back(ch,v);};
+    cb.onMasterChanged=[&](int v){master.push_back(v);};
+    cb.onReverbChanged=[&](int v){reverb.push_back(v);};
+    cb.onCompChanged=[&](int v){compressor.push_back(v);};
+    cb.onEqChanged=[&](int l,int m,int h){eq.push_back({l,m,h});};
+    cb.onPitchBend=[&](int v){pitch.push_back(v);};
+    cb.onModulation=[&](int v){modulation.push_back(v);};
+    cb.onRecNew=[&](int bars){expect(bars==4,"new style has four bars");++newSession;};
+    cb.onMakeEditable=[&]{++makeEditable;}; cb.onRecEdit=[&]{++editor;};
+    cadenza::ui::GenosSurface view(cb,[&](int p){page=p;});
+    view.setLookAndFeel(&theme); view.setSize(1280,800); view.setVisible(true);
+    auto toolbar=[&](const juce::String& text) {
         for(int i=0;i<view.getNumChildComponents();++i)
-            if(auto* b=dynamic_cast<juce::TextButton*>(view.getChildComponent(i));b && b->getButtonText()==text){
-                if(b->onClick)b->onClick(); return;
+            if(auto* b=dynamic_cast<juce::TextButton*>(view.getChildComponent(i));b && b->getButtonText()==text) {
+                expect(bool(b->onClick),"toolbar callback exists"); b->onClick(); return;
             }
-        throw std::runtime_error("missing accessible toolbar button");
+        throw std::runtime_error("missing accessible toolbar: "+text.toStdString());
     };
-    click("Ouvrir un style");
-    expect(openStyle==1,"open style button reaches host callback");
-    click("Style Creator");
-    expect(newSession==1 && editor==1 && page==7,"creator opens real editor through host callbacks");
-
-    // A rear control must stay on top of the chassis for both painting and
-    // picking. Average-depth sorting previously made this button disappear.
-    cadenza::ui::genos::Camera camera;
-    for(const auto& control:cadenza::ui::genos::makeControls()) {
-        if(control.id!="style" && control.id!="midi" && control.id!="knob0")continue;
-        auto top=control.centre;top.y+=control.height;
-        const auto point=camera.project(top,1256,596);
-        expect(view.controlIdAt({point.x+12,point.y+104})==control.id,"rear control survives chassis occlusion");
+    auto centre=[&](const std::string& id) {
+        auto p=view.controlScreenCentre(id);
+        expect(std::isfinite(p.x)&&std::isfinite(p.y),"finite control position: "+id);
+        expect(p.x>=0&&p.x<view.getWidth()&&p.y>=0&&p.y<view.getHeight(),"within viewport: "+id);
+        expect(view.controlIdAt(p)==id,"mesh and picking agree: "+id); return p;
+    };
+    auto down=[&](juce::Point<float> p){view.mouseDown(event(view,p,p,true));};
+    auto up=[&](juce::Point<float> p){view.mouseUp(event(view,p,p,false));};
+    auto click=[&](const std::string& id){auto p=centre(id);down(p);up(p);};
+    auto drag=[&](const std::string& id,juce::Point<float> d){auto p=centre(id);down(p);view.mouseDrag(event(view,p+d,p,true,true));up(p+d);};
+    auto runtime=[&](std::vector<std::string> available) {
+        view.setRuntime(juce::String::fromUTF8("Été à Montréal — Répétition"),"C#m","mainA",110,false,
+            available,{104,86,101,87,80,86,78,78,100},true,true,true,false,0,
+            false,false,{}, {true,false,false},false,30,15,{0,0,0});
+    };
+    auto picking=[&] {
+        int keys=0;
+        for(const auto& c:cadenza::ui::genos::makeControls()) {
+            if(c.id=="mod")continue; // The imported instrument has one two-axis joystick.
+            centre(c.id); if(c.kind==cadenza::ui::genos::Control::Kind::key)++keys;
+        }
+        expect(keys==76,"all 76 physical keys independently pickable");
+    };
+    auto note=[&](std::size_t i,int n,bool on) {
+        expect(i<notes.size(),"note callback present");
+        expect(notes[i].pitch==n&&notes[i].on==on,"correct pitch and note direction");
+        expect(notes[i].velocity==(on?100:0),"correct attack/release velocity");
+    };
+    expect(view.keyPressed(juce::KeyPress('Q',{},'q')),"melody key handled");
+    expect(notes.size()==1,"melody reaches host once");note(0,60,true);
+    view.keyPressed(juce::KeyPress('Q',{},'q'));expect(notes.size()==1,"repeat does not retrigger");
+    view.focusLost(juce::Component::focusChangedDirectly);expect(notes.size()==2,"focus releases note");note(1,60,false);
+    view.keyPressed(juce::KeyPress('W',{},'w'));note(2,48,true);
+    view.setVisible(false);note(3,48,false);
+    auto count=notes.size();
+    expect(!view.keyPressed(juce::KeyPress('S',juce::ModifierKeys::ctrlModifier,'s')),"modifier shortcuts excluded");
+    expect(notes.size()==count,"shortcut produces no note");view.setVisible(true);
+    toolbar("Ouvrir un style");expect(openStyle==1,"open style toolbar reaches host");
+    toolbar("Style Creator");expect(newSession==1&&editor==1&&page==7,"empty creator opens real editor/session");
+    runtime({"mainA","mainB","mainC","mainD","intro","ending","fill"});picking();
+    for(int n=28;n<=103;++n) {
+        count=notes.size();click("note"+std::to_string(n));
+        expect(notes.size()==count+2,"pointer plays/releases every key");note(count,n,true);note(count+1,n,false);
     }
-
-    view.setVisible(true);
-    view.setRuntime("8 Beat Pop","C","mainA",110,false,
-        {"mainA","mainB","mainC","mainD","intro","ending","fill"},
-        {104,86,101,87,80,86,78,78,100},true,true,true,false,0,
-        false,false,{}, {true,false,false},false,30,15,{0,0,0});
+    auto p=centre("note60"),q=centre("note62");count=notes.size();down(p);
+    view.mouseDrag(event(view,q,p,true,true));up(q);
+    expect(notes.size()==count+4,"glissando paired attacks/releases");
+    note(count,60,true);note(count+1,60,false);note(count+2,62,true);note(count+3,62,false);
+    count=notes.size();down(p);view.mouseDrag(event(view,{-20,-20},p,true,true));up({-20,-20});
+    expect(notes.size()==count+2,"leaving keyboard and outside mouse-up release once");note(count+1,60,false);
+    count=notes.size();down(p);view.mouseExit(event(view,{-20,-20},p,false));up(p);
+    expect(notes.size()==count+2,"mouse exit without held button releases once");
+    for(int release=0;release<3;++release) {
+        count=notes.size();down(p);
+        if(release==0)view.focusLost(juce::Component::focusChangedDirectly);
+        if(release==1){view.setVisible(false);view.setVisible(true);}
+        if(release==2)expect(view.keyPressed(juce::KeyPress(juce::KeyPress::escapeKey)),"Escape handled");
+        up(p);expect(notes.size()==count+2,"safety release exactly one note-off");note(count+1,60,false);
+    }
+    count=notes.size();view.keyPressed(juce::KeyPress('Q',{},'q'));down(p);up(p);
+    expect(notes.size()==count+1,"pointer release preserves computer-owned same note");
+    view.keyStateChanged(false);expect(notes.size()==count+2,"last owner releases shared note");note(count+1,60,false);
+    count=notes.size();down(p);view.keyPressed(juce::KeyPress('Q',{},'q'));view.keyStateChanged(false);
+    expect(notes.size()==count+1,"computer release preserves pointer-owned note");up(p);
+    expect(notes.size()==count+2,"pointer releases shared note last");
+    runtime({"mainA","intro","ending","fill"});click("mainB");expect(sections.empty(),"absent variation disabled");
+    click("mainA");click("introA");click("endingA");click("fill");
+    expect(sections==std::vector<std::string>({"mainA","intro","ending","fill"}),"section aliases resolve to real sections");
+    runtime({"mainA","mainB","fillAA","fillA","fill"});click("mainB");click("fill");
+    expect(sections[4]=="mainB"&&sections[5]=="fillAA","variation and specific fill dispatch");
+    click("play");expect(play==1,"physical start/stop reaches host");
+    view.keyPressed(juce::KeyPress(juce::KeyPress::spaceKey));view.keyPressed(juce::KeyPress(juce::KeyPress::spaceKey));
+    expect(play==2,"held Space toggles once");view.keyStateChanged(false);
+    view.keyPressed(juce::KeyPress(juce::KeyPress::spaceKey));expect(play==3,"released Space toggles again");view.keyStateChanged(false);
+    drag("fader0",{0,-500});drag("fader0",{0,500});
+    expect(mixer==std::vector<std::pair<int,int>>({{10,127},{10,0}}),"first fader channel10 with both limits");
+    drag("fader8",{0,-500});drag("fader8",{0,500});
+    expect(master==std::vector<int>({127,0})&&mixer.size()==2,"ninth fader master only");
+    drag("knob0",{0,-500});drag("knob0",{0,500});expect(reverb==std::vector<int>({100,0}),"reverb percentage endpoints");
+    drag("knob1",{0,-500});drag("knob1",{0,500});expect(compressor==std::vector<int>({100,0}),"compressor percentage endpoints");
+    drag("knob2",{0,-500});drag("knob2",{0,500});expect(master==std::vector<int>({127,0,127,0}),"master knob shared callback");
+    drag("knob3",{0,-500});drag("knob3",{0,500});
+    expect(eq==std::vector<std::array<int,3>>({{12,0,0},{-12,0,0}}),"EQ endpoints preserve other bands");
+    p=centre("pitch");down(p);view.mouseDrag(event(view,p+juce::Point<float>{100,-100},p,true,true));
+    expect(!pitch.empty()&&pitch.back()==16383,"joystick right maximum bend");
+    expect(!modulation.empty()&&modulation.back()==127,"joystick up maximum modulation");
+    view.mouseDrag(event(view,p+juce::Point<float>{-100,100},p,true,true));
+    expect(pitch.back()==0&&modulation.back()==0,"joystick opposite limits");up(p);
+    expect(pitch.back()==8192,"pitch recentres on release");
+    down(p);view.mouseDrag(event(view,p+juce::Point<float>{20,-20},p,true,true));
+    view.focusLost(juce::Component::focusChangedDirectly);expect(pitch.back()==8192,"pitch recentres on focus loss");
+    runtime({"mainA","mainB","mainC","mainD","intro","ending","fill"});toolbar("Style Creator");
+    expect(newSession==1&&makeEditable==1&&editor==2&&page==7,"loaded creator makes editable and opens editor");
+    count=notes.size();down(centre("note60"));toolbar("Vue Cadenza");
+    expect(page==0,"Native opens Cadenza page");expect(notes.size()==count+2&&!notes.back().on,"Native releases held note");
     auto render=[&](const char* name) {
-        juce::Image image(juce::Image::ARGB,1280,800,true);
+        view.setVisible(true);
+        juce::Image image(juce::Image::ARGB,view.getWidth(),view.getHeight(),true);
         juce::Graphics graphics(image);
-        view.paintEntireComponent(graphics,true);
-        juce::File file=juce::File::getCurrentWorkingDirectory().getChildFile(name);
-        auto stream=file.createOutputStream();
-        expect(stream!=nullptr,"preview output opened");
-        stream->setPosition(0);stream->truncate();
-        expect(juce::PNGImageFormat{}.writeImageToStream(image,*stream),"preview rendered from the actual component");
+        // Paint the real component directly: standalone test components have no window peer.
+        view.paint(graphics);
+        for(int i=0;i<view.getNumChildComponents();++i) {
+            auto* child=view.getChildComponent(i);if(!child->isVisible())continue;
+            juce::Graphics::ScopedSaveState saved(graphics);
+            graphics.setOrigin(child->getPosition());graphics.reduceClipRegion(child->getLocalBounds());
+            child->paintEntireComponent(graphics,true);
+        }
+        int darkest=255,brightest=0,lit=0,samples=0;
+        for(int y=0;y<image.getHeight();y+=4)for(int x=0;x<image.getWidth();x+=4) {
+            auto c=image.getPixelAt(x,y);
+            int v=(int)c.getRed()+(int)c.getGreen()+(int)c.getBlue();
+            darkest=std::min(darkest,v/3);brightest=std::max(brightest,v/3);
+            if(c.getAlpha()!=0&&v>90)++lit;++samples;
+        }
+        expect(brightest-darkest>80&&lit>samples/10,"capture is nonblank with visible instrument: "+std::string(name));
+        auto stream=juce::File::getCurrentWorkingDirectory().getChildFile(name).createOutputStream();
+        expect(stream!=nullptr,"preview output opened");stream->setPosition(0);stream->truncate();
+        expect(juce::PNGImageFormat{}.writeImageToStream(image,*stream),"actual component preview rendered");
     };
-    render("genos2-3d.png");
-    click("Vue de dessus");
-    render("genos2-top.png");
-    view.setLookAndFeel(nullptr);
-    std::cout << "Genos interaction: real host callbacks and note release passed\n";
+    view.setSize(1280,800);toolbar("Vue 3D");picking();render("genos2-3d.png");
+    toolbar("Vue de dessus");picking();render("genos2-top.png");
+    view.setSize(1600,900);picking();render("genos2-top-resized.png");
+    toolbar("Vue 3D");picking();render("genos2-3d-resized.png");
+    view.releaseNotes();view.setLookAndFeel(nullptr);
+    std::cout<<"Genos interaction: pointer notes/releases, sections, mixer, knobs, joystick, Native/editor and resize passed\n";
 }

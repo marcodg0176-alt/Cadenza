@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "generatedAtUtc": "2026-10-11T13:43:28.6774636Z",
+  "timezone": "Europe/Paris",
+  "authorRole": "Dedicated Cadenza designer and Blender modeler",
+  "blender": "5.2.1 LTS",
+  "renderer": "Cycles 24 samples denoised",
+  "references": [
+    {
+      "file": "Yamaha-Genos2-Detail-5_1600y1200.jpg",
+      "sourcePath": "C:\\Users\\marco\\Desktop\\AI\\PLANCHES DE REFERENCES\\Martial\\Yamaha Genos 2\\Yamaha-Genos2-Detail-5_1600y1200.jpg",
+      "sha256": "1E53016E7E8B777C42E1E777120F5394A4E95C08CFB999098472BEAE071C3053"
+    },
+    {
+      "file": "Yamaha-Genos2-Detail-6_1600y1200.jpg",
+      "sourcePath": "C:\\Users\\marco\\Desktop\\AI\\PLANCHES DE REFERENCES\\Martial\\Yamaha Genos 2\\Yamaha-Genos2-Detail-6_1600y1200.jpg",
+      "sha256": "F03BC1D617278A4DB823EC9F5E000C4F1C9EFA673897EF12040CD8F019BC2BD5"
+    },
+    {
+      "file": "Yamaha-Genos2-von-oben.jpg",
+      "sourcePath": "C:\\Users\\marco\\Desktop\\AI\\PLANCHES DE REFERENCES\\Martial\\Yamaha Genos 2\\Yamaha-Genos2-von-oben.jpg",
+      "sha256": "F602A2E775998FC92B756528C15B09E1F1A3079266B74937D1FFB8D213B9451A"
+    }
+  ],
+  "outputs": [
+    {
+      "file": "build_genos2.py",
+      "bytes": 16007,
+      "sha256": "A7A2213B8DEECC42B5D431030DD53FC161D241558BD6C794AC83CF809906FE98"
+    },
+    {
+      "file": "genos2.blend",
+      "bytes": 281379,
+      "sha256": "57F2A746950C8C8B0C5133CBC18C68F3710F3359982AD672EC22716B8B9838B0"
+    },
+    {
+      "file": "geometry.json",
+      "bytes": 1899904,
+      "sha256": "F2E52530606F7285A9FD97E9EA0838DEA85E648237A3DA8F9F0F75DFEB0B91D6"
+    },
+    {
+      "file": "preview-top.png",
+      "bytes": 1232709,
+      "sha256": "F8A9219226A6F731DC2D708990FC9B063C1FEFA509CC5042284B3CC453B2D6B7"
+    },
+    {
+      "file": "preview-perspective.png",
+      "bytes": 1761648,
+      "sha256": "6F9A2C028253A53F58B75A3885A5D4F7DCD35FD1D52E841D2E9CA94FFD6C28BB"
+    }
+  ],
+  "geometry": {
+    "triangles": 11620,
+    "keys": 76,
+    "rotaries": 6,
+    "faders": 9,
+    "joysticks": 1
+  },
+  "interactiveControlCounts": {
+    "button": 38,
+    "key": 76,
+    "fader": 9,
+    "knob": 6,
+    "joystick": 1
+  },
+  "checks": [
+    "Renders opened and visually inspected",
+    "130 unique IDs",
+    "Notes MIDI 28-103",
+    "11620 triangles below 20000 budget",
+    "Fader rail/slot/LED meshes pickable but moving false"
+  ],
+  "limitations": [
+    "Hardware connectivity and audio untested by this model task",
+    "Rear ports not modeled",
+    "Decorative registrations, multipads, master and data encoder have empty control IDs"
+  ],
+  "sourceReferenceImagesBundled": false,
+  "existingInteractiveBlenderTouched": false
+}

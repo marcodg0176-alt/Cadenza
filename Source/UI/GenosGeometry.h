@@ -21,7 +21,7 @@ struct Face
 };
 struct Control
 {
-    enum class Kind { button, key, fader, wheel, knob };
+    enum class Kind { button, key, fader, wheel, knob, joystick };
     Kind kind = Kind::button;
     std::string id, label, hint;
     Vec3 centre;

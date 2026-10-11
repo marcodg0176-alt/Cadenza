@@ -41,7 +41,7 @@ GenosSurface::GenosSurface(NativePanel::Callbacks cb, std::function<void(int)> o
     setTitle("Genos2 personnel en 3D");
     setDescription("Commandes de l'arrangeur Cadenza, clavier et vue 3D orientable");
     for (auto* b : {&m_styleButton,&m_playButton,&m_editorButton,&m_midiButton,
-                    &m_audioButton,&m_topButton,&m_angleButton}) {
+                    &m_audioButton,&m_topButton,&m_angleButton,&m_nativeButton}) {
         addAndMakeVisible(*b);
         b->setColour(juce::TextButton::buttonColourId, juce::Colour(0xff182938));
         b->setColour(juce::TextButton::textColourOffId, juce::Colour(0xffeef4fa));
@@ -57,8 +57,9 @@ GenosSurface::GenosSurface(NativePanel::Callbacks cb, std::function<void(int)> o
     };
     m_midiButton.onClick = [this] { if (m_cb.openMidiSettings) m_cb.openMidiSettings(); };
     m_audioButton.onClick = [this] { if (m_cb.openAudioSettings) m_cb.openAudioSettings(); };
-    m_topButton.onClick = [this] { m_camera.yaw=0; m_camera.pitch=1.55f; m_camera.zoom=1; repaint(); };
-    m_angleButton.onClick = [this] { m_camera={}; repaint(); };
+    m_topButton.onClick = [this] { m_camera.yaw=0; m_camera.pitch=1.55f; m_camera.zoom=1; m_frameDirty=true; repaint(); };
+    m_nativeButton.onClick = [this] { releaseNotes(); if(m_openPage)m_openPage(0); };
+    m_angleButton.onClick = [this] { m_camera={}; m_frameDirty=true; repaint(); };
     m_hint = "Cliquez les touches et commandes · glissez le fond pour orienter · molette pour zoomer";
     m_playButton.setTooltip("Espace : lecture / arrêt. Échap : relâcher les notes du clavier à l'écran.");
     m_editorButton.setTooltip("Ouvrir l'atelier Cadenza sur une copie éditable du style chargé.");
@@ -92,7 +93,10 @@ void GenosSurface::setRuntime(const juce::String& style, const juce::String& cho
     m_rightEnabled=rightEnabled; m_leftEnabled=leftEnabled;
     m_reverb=reverb; m_compressor=compressor; m_eq=eq;
     m_playButton.setButtonText(playing ? "Arrêter" : "Lancer la lecture");
-    if (changed && isVisible()) repaint();
+    if (changed) {
+        m_frameDirty=true;
+        if(isVisible())repaint();
+    }
 }
 
 juce::Rectangle<int> GenosSurface::modelBounds() const
@@ -123,71 +127,120 @@ bool GenosSurface::illuminated(const genos::Control& c) const
     return false;
 }
 
-std::vector<GenosSurface::ProjectedFace> GenosSurface::buildFrame() const
+genos::Vec3 GenosSurface::movedVertex(genos::Vec3 p, int index) const
 {
-    using namespace genos;
-    std::vector<Face> faces;
-    box(faces,{0,-0.22f,0},12.34f,4.56f,0.54f,0xff252a30);
-    // Large chassis planes must be painted before their surface controls.
-    // Sorting all faces by average depth hides rear controls behind a plane that
-    // spans the entire instrument. Explicit scene layers avoid that ambiguity.
-    box(faces,{0,0.32f,-0.50f},11.82f,2.82f,0.045f,0xff20252b,-1,1);
-    box(faces,{0,0.39f,-1.10f},2.21f,1.58f,0.16f,0xff111920,-1,2);
-    box(faces,{0,0.55f,-1.10f},1.98f,1.36f,0.018f,0xff0b2438,-1,3);
-    box(faces,{-2.71f,0.39f,-1.82f},2.27f,0.25f,0.045f,0xff071926,-1,2);
-    for (int i=0;i<9;++i)
-        box(faces,{-3.54f+i*.28f,.38f,-1.05f},.055f,.78f,.008f,0xff080b10,-1,2);
+    if(index<0)return p;
+    const auto& c=m_controls[(std::size_t)index];
+    if(c.kind==genos::Control::Kind::key && m_notes.count(c.value))p.y-=.035f;
+    else if(c.kind==genos::Control::Kind::fader)
+        p.z+=(.5f-m_volumes[(std::size_t)c.value]/127.0f)*.48f;
+    else if(c.kind==genos::Control::Kind::knob) {
+        const float angle=-2.2f+4.4f*knobValue(c.value)/127.0f;
+        const float x=p.x-c.centre.x,z=p.z-c.centre.z;
+        p.x=c.centre.x+x*std::cos(angle)-z*std::sin(angle);
+        p.z=c.centre.z+x*std::sin(angle)+z*std::cos(angle);
+    } else if(c.kind==genos::Control::Kind::joystick) {
+        p.x+=(m_pitch-8192)/8192.0f*.07f;
+        p.z-=m_modulation/127.0f*.06f;
+    }
+    return p;
+}
 
-    for (int i=0; i<static_cast<int>(m_controls.size()); ++i) {
-        const auto& c=m_controls[static_cast<std::size_t>(i)];
-        auto centre=c.centre;
-        std::uint32_t colour=0xff4b5660;
-        if (c.kind==Control::Kind::key) {
-            colour=c.black ? 0xff16191e : 0xffe4e7e8;
-            if (illuminated(c)) { centre.y-=0.035f; colour=0xff79b8df; }
-        } else if (c.kind==Control::Kind::fader) {
-            centre.z += (0.5f-static_cast<float>(m_volumes[c.value])/127.0f)*0.61f;
-            box(faces,centre,c.width,0.17f,c.height,0xff697784,i);
-            continue;
-        } else if (c.kind==Control::Kind::knob) {
-            // Eight-sided cylindrical knob, not a flat decoration.
-            const float y0=centre.y,y1=y0+c.height,r=c.width/2;
-            for(int side=0;side<8;++side) {
-                const float a=side*juce::MathConstants<float>::twoPi/8;
-                const float b=(side+1)*juce::MathConstants<float>::twoPi/8;
-                const Vec3 p{centre.x+r*std::cos(a),y1,centre.z+r*std::sin(a)};
-                const Vec3 q{centre.x+r*std::cos(b),y1,centre.z+r*std::sin(b)};
-                faces.push_back({{{{centre.x,y1,centre.z},p,q,q}},0xff59636e,i,true,4});
-                faces.push_back({{{p,{p.x,y0,p.z},{q.x,y0,q.z},q}},0xff343d47,i,false,4});
-            }
-            continue;
-        } else if (c.kind==Control::Kind::wheel) colour=0xff13191f;
-        else {
-            if (!enabled(c)) colour=0xff2b3036;
-            else if (illuminated(c)) colour=0xff197bb7;
-            else if (c.id=="creator" || c.id=="play") colour=0xff235776;
-            if (m_hover==i && enabled(c)) colour=juce::Colour(colour).brighter(.17f).getARGB();
-        }
-        box(faces,centre,c.width,c.depth,c.height,colour,i);
-    }
-    std::vector<ProjectedFace> projected;
+juce::Point<float> GenosSurface::project(genos::Vec3 p) const
+{
+    const auto b=modelBounds();
+    const auto q=m_camera.project(p,(float)b.getWidth(),(float)b.getHeight());
+    return {q.x+b.getX(),q.y+b.getY()};
+}
+
+void GenosSurface::ensureFrame() const
+{
     const auto bounds=modelBounds();
-    projected.reserve(faces.size());
-    for (const auto& f:faces) {
-        ProjectedFace p;
-        p.colour=juce::Colour(f.colour).withMultipliedBrightness(f.top ? 1.0f : 0.65f);
-        p.control=f.control; p.top=f.top; p.layer=f.layer;
-        for (std::size_t i=0;i<4;++i) {
-            p.points[i]=m_camera.project(f.vertices[i],static_cast<float>(bounds.getWidth()),static_cast<float>(bounds.getHeight()));
-            p.points[i].x+=bounds.getX(); p.points[i].y+=bounds.getY();
-            p.depth+=p.points[i].depth/4;
+    if(!m_frameDirty && m_frame.getWidth()==bounds.getWidth() && m_frame.getHeight()==bounds.getHeight())return;
+    const int w=bounds.getWidth(),h=bounds.getHeight();
+    if(w<=0 || h<=0)return;
+    m_raster.clear(w,h);
+    for(const auto& face:m_model.triangles) {
+        std::array<genos::Point,3> points;
+        for(std::size_t i=0;i<3;++i)
+            points[i]=m_camera.project(face.moving?movedVertex(face.vertices[i],face.control):face.vertices[i],
+                                       (float)w,(float)h);
+        auto colour=juce::Colour(face.colour);
+        if(face.control>=0) {
+            const auto& c=m_controls[(std::size_t)face.control];
+            if(c.kind==genos::Control::Kind::key) {
+                if(illuminated(c))colour=colour.interpolatedWith(juce::Colour(0xff70b6d5),.45f);
+            } else if(c.kind==genos::Control::Kind::button) {
+                if(!enabled(c))colour=colour.withMultipliedBrightness(.52f);
+                else if(illuminated(c))colour=colour.interpolatedWith(juce::Colour(0xff368dcc),.65f);
+            }
+            if(m_hover==face.control && enabled(c))colour=colour.brighter(.14f);
         }
-        projected.push_back(p);
+        m_raster.triangle(points,colour.getARGB(),face.control);
     }
-    std::stable_sort(projected.begin(),projected.end(),[](const auto& a,const auto& b){
-        return a.layer!=b.layer?a.layer<b.layer:a.depth<b.depth;
-    });
-    return projected;
+    m_frame=juce::Image(juce::Image::ARGB,w,h,true);
+    juce::Image::BitmapData data(m_frame,juce::Image::BitmapData::writeOnly);
+    for(int y=0;y<h;++y)for(int x=0;x<w;++x) {
+        const auto c=m_raster.pixels[(std::size_t)y*w+x];
+        auto* pixel=reinterpret_cast<juce::PixelARGB*>(data.getPixelPointer(x,y));
+        pixel->setARGB((juce::uint8)(c>>24),(juce::uint8)(c>>16),(juce::uint8)(c>>8),(juce::uint8)c);
+    }
+    m_frameDirty=false;
+}
+
+juce::Point<float> GenosSurface::controlScreenCentre(const std::string& id) const
+{
+    for(std::size_t i=0;i<m_controls.size();++i)if(m_controls[i].id==id) {
+        const auto& c=m_controls[i];
+        auto p=c.centre;p.y+=c.height*.8f;
+        if(c.kind==genos::Control::Kind::fader){p.z-=.08f;p.y=.55f;}
+        return project(movedVertex(p,(int)i));
+    }
+    return {-1,-1};
+}
+
+void GenosSurface::paintScreen(juce::Graphics& g,const genos::ModelScreen& screen)
+{
+    const bool main=screen.id=="main";
+    const int w=main?600:600,h=main?310:64;
+    juce::Image image(juce::Image::RGB,w,h,true);
+    juce::Graphics lcd(image);
+    lcd.fillAll(juce::Colour(0xff142737));
+    if(main) {
+        lcd.setColour(juce::Colour(0xff22455c));lcd.fillRect(0,0,w,42);
+        lcd.setFont(juce::Font(juce::FontOptions(20.0f,juce::Font::bold)));
+        lcd.setColour(juce::Colours::white);
+        lcd.drawText("CADENZA",14,0,250,42,juce::Justification::centredLeft);
+        lcd.drawText(juce::String(m_bpm)+" BPM",400,0,185,42,juce::Justification::centredRight);
+        lcd.setFont(juce::Font(juce::FontOptions(25.0f,juce::Font::bold)));
+        lcd.drawFittedText(m_style,{16,52,w-32,46},juce::Justification::centredLeft,1);
+        lcd.setColour(juce::Colour(0xff7cd0ee));lcd.setFont(juce::Font(juce::FontOptions(42.0f,juce::Font::bold)));
+        lcd.drawText(m_chord,18,110,180,55,juce::Justification::centredLeft);
+        lcd.setFont(juce::Font(juce::FontOptions(23.0f)));
+        lcd.drawText(juce::String(m_section),230,110,350,55,juce::Justification::centredRight);
+        for(int i=0;i<9;++i) {
+            lcd.setColour(juce::Colour(0xff234658));lcd.fillRect(18+i*64,189,48,32);
+            lcd.setColour(juce::Colour(0xff5faacc));lcd.fillRect(18+i*64,221-m_volumes[(std::size_t)i]*32/127,48,m_volumes[(std::size_t)i]*32/127);
+        }
+        lcd.setColour(juce::Colour(0xffdf903f));lcd.fillRect(0,246,w,42);
+        lcd.setColour(juce::Colour(0xff142737));lcd.setFont(juce::Font(juce::FontOptions(22.0f,juce::Font::bold)));
+        lcd.drawText(m_playing?"LECTURE":"PRÊT",18,246,230,42,juce::Justification::centredLeft);
+        lcd.drawText("STYLE · MIXER · ÉDITEUR",250,246,335,42,juce::Justification::centredRight);
+    } else {
+        constexpr const char* names[]={"REV","COMP","VOL","LOW","MID","HIGH"};
+        for(int i=0;i<6;++i) {
+            lcd.setColour(juce::Colour(0xff7cd0ee));lcd.setFont(juce::Font(juce::FontOptions(18.0f)));
+            lcd.drawText(names[i],i*100,0,100,28,juce::Justification::centred);
+            lcd.setColour(juce::Colours::white);
+            lcd.drawText(juce::String(knobValue(i)),i*100,27,100,32,juce::Justification::centred);
+        }
+    }
+    auto c=screen.centre;c.y+=.036f;
+    const auto a=project({c.x-screen.width/2,c.y,c.z-screen.depth/2});
+    const auto b=project({c.x+screen.width/2,c.y,c.z-screen.depth/2});
+    const auto d=project({c.x-screen.width/2,c.y,c.z+screen.depth/2});
+    g.drawImageTransformed(image,juce::AffineTransform::fromTargetPoints(0,0,a.x,a.y,
+        (float)w,0,b.x,b.y,0,(float)h,d.x,d.y),false);
 }
 
 void GenosSurface::paint(juce::Graphics& g)
@@ -202,50 +255,25 @@ void GenosSurface::paint(juce::Graphics& g)
     const auto bounds=modelBounds();
     g.setColour(juce::Colour(0xff05090e));
     g.fillEllipse(bounds.toFloat().reduced(28.0f,40.0f).translated(0,25));
-    for (const auto& f:buildFrame()) {
-        juce::Path p; p.startNewSubPath(f.points[0].x,f.points[0].y);
-        for (int i=1;i<4;++i) p.lineTo(f.points[i].x,f.points[i].y);
-        p.closeSubPath(); g.setColour(f.colour); g.fillPath(p);
-        g.setColour(juce::Colours::black.withAlpha(.20f)); g.strokePath(p,juce::PathStrokeType(.7f));
-        if (f.top && f.control>=0) {
-            const auto& c=m_controls[static_cast<std::size_t>(f.control)];
-            if (!c.label.empty() && c.kind!=genos::Control::Kind::knob) {
-                const auto r=p.getBounds();
-                g.setFont(juce::Font(juce::FontOptions(juce::jlimit(7.0f,12.0f,r.getHeight()*.66f))));
-                g.setColour(enabled(c)?juce::Colour(0xfff3f7fa):juce::Colour(0xff86939e));
-                g.drawFittedText(juce::String(c.label),r.toNearestInt(),juce::Justification::centred,1,.60f);
-            }
-        }
-    }
-    auto point=[&](genos::Vec3 p) {
-        const auto s=m_camera.project(p,(float)bounds.getWidth(),(float)bounds.getHeight());
-        return juce::Point<float>(s.x+bounds.getX(),s.y+bounds.getY());
-    };
-    for(const auto& c:m_controls) if(c.kind==genos::Control::Kind::knob) {
-        auto centre=c.centre; centre.y+=c.height+.005f;
-        const float angle=-2.2f+4.4f*knobValue(c.value)/127.0f;
-        const auto start=point(centre);
-        const auto end=point({centre.x+.085f*std::sin(angle),centre.y,
-                              centre.z-.085f*std::cos(angle)});
-        g.setColour(juce::Colour(0xffefaa56));g.drawLine({start,end},2.0f);
-    }
-    const auto lcd=point({0,.58f,-1.1f});
+    ensureFrame();
+    g.drawImageAt(m_frame,bounds.getX(),bounds.getY());
     const float scale=std::min(bounds.getWidth()/13.7f,bounds.getHeight()/5.5f)*m_camera.zoom;
-    const int lw=(int)(1.86f*scale), lh=(int)(.98f*scale);
-    auto screen=juce::Rectangle<int>((int)lcd.x-lw/2,(int)lcd.y-lh/2,lw,lh);
-    g.setColour(juce::Colour(0xffe3eff8));
-    g.setFont(juce::Font(juce::FontOptions(std::max(11.0f,scale*.15f),juce::Font::bold)));
-    g.drawFittedText(m_style,screen.removeFromTop(lh/3).reduced(6,1),juce::Justification::centredLeft,1);
-    g.setFont(juce::Font(juce::FontOptions(std::max(18.0f,scale*.30f),juce::Font::bold)));
-    g.setColour(juce::Colour(0xff80d4ff));
-    g.drawFittedText(m_chord,screen.removeFromTop(lh/3).reduced(6,0),juce::Justification::centredLeft,1);
-    g.setFont(juce::Font(juce::FontOptions(std::max(10.0f,scale*.125f))));
-    g.setColour(juce::Colour(0xffb4cadd));
-    g.drawFittedText(juce::String(m_bpm)+" BPM  ·  "+juce::String(m_section),screen.reduced(6,0),juce::Justification::centredLeft,1);
-    const auto logo=point({4.88f,.42f,-.98f});
-    g.setFont(juce::Font(juce::FontOptions(std::max(16.0f,scale*.26f))));
-    g.setColour(juce::Colour(0xffaab1ba));
-    g.drawText("Genos2",(int)logo.x-55,(int)logo.y-12,110,25,juce::Justification::centred);
+    for(const auto& label:m_model.labels) {
+        // Live display artwork is supplied by the host, never baked as a photo.
+        bool inScreen=false;
+        for(const auto& screen:m_model.screens)
+            if(std::abs(label.position.x-screen.centre.x)<screen.width/2 &&
+               std::abs(label.position.z-screen.centre.z)<screen.depth/2)inScreen=true;
+        if(inScreen)continue;
+        const auto p=project(label.position);
+        const float size=std::max(5.5f,label.size*scale);
+        g.setFont(juce::Font(juce::FontOptions(size)));
+        g.setColour(juce::Colour(label.colour));
+        const float width=std::max(30.0f,size*label.text.length()*.8f);
+        g.drawText(label.text,juce::Rectangle<float>(p.x-width/2,p.y-size*.55f,width,size*1.2f),
+                   juce::Justification::centred,false);
+    }
+    for(const auto& screen:m_model.screens)paintScreen(g,screen);
     const auto band=getLocalBounds().removeFromBottom(88).reduced(24,7);
     g.setColour(juce::Colour(0xff192735)); g.fillRoundedRectangle(band.toFloat(),10);
     g.setFont(juce::Font(juce::FontOptions(15.0f,juce::Font::bold)));
@@ -259,19 +287,19 @@ void GenosSurface::paint(juce::Graphics& g)
 
 void GenosSurface::resized()
 {
-    const int width=juce::jlimit(75,145,(getWidth()-60)/7);
+    m_frameDirty=true;
+    const int width=std::max(70,(getWidth()-90)/8);
     int x=24;
-    for (auto* b : {&m_styleButton,&m_playButton,&m_editorButton,&m_midiButton,&m_audioButton,&m_topButton,&m_angleButton}) {
+    for (auto* b : {&m_styleButton,&m_playButton,&m_editorButton,&m_midiButton,&m_audioButton,&m_topButton,&m_angleButton,&m_nativeButton}) {
         b->setBounds(x,62,width,34); x+=width+6;
     }
 }
 
 int GenosSurface::hit(juce::Point<float> p) const
 {
-    const auto frame=buildFrame();
-    for (auto it=frame.rbegin();it!=frame.rend();++it)
-        if (genos::contains(it->points,p.x,p.y)) return it->control;
-    return -1;
+    ensureFrame();
+    const auto b=modelBounds();
+    return m_raster.at((int)std::floor(p.x)-b.getX(),(int)std::floor(p.y)-b.getY());
 }
 
 std::string GenosSurface::controlIdAt(juce::Point<float> point) const
@@ -292,7 +320,7 @@ void GenosSurface::mouseMove(const juce::MouseEvent& e)
         setTooltip(m_hint);
         setMouseCursor(enabled(c)?juce::MouseCursor::PointingHandCursor:juce::MouseCursor::NormalCursor);
     } else { setTooltip({}); setMouseCursor(juce::MouseCursor::NormalCursor); }
-    repaint();
+    m_frameDirty=true; repaint();
 }
 
 void GenosSurface::dispatch(const genos::Control& c)
@@ -330,7 +358,7 @@ void GenosSurface::pressNote(int note)
 {
     if (!m_notes.insert(note).second) return;
     if (m_cb.onKeyboardNote) m_cb.onKeyboardNote(note,100,true);
-    repaint();
+    m_frameDirty=true; repaint();
 }
 void GenosSurface::releasePointerNote()
 {
@@ -339,15 +367,16 @@ void GenosSurface::releasePointerNote()
     if (!m_computerNotes.count(n)) {
         m_notes.erase(n); if (m_cb.onKeyboardNote) m_cb.onKeyboardNote(n,0,false);
     }
-    repaint();
+    m_frameDirty=true; repaint();
 }
 void GenosSurface::releaseNotes()
 {
     for (int n:m_notes) if (m_cb.onKeyboardNote) m_cb.onKeyboardNote(n,0,false);
     m_notes.clear(); m_computerNotes.clear(); m_pointerNote=-1;
-    if (m_drag>=0 && m_controls[(std::size_t)m_drag].id=="pitch" && m_cb.onPitchBend)
-        m_cb.onPitchBend(8192);
-    m_drag=-1; repaint();
+    if (m_drag>=0 && m_controls[(std::size_t)m_drag].id=="pitch") {
+        m_pitch=8192;if(m_cb.onPitchBend)m_cb.onPitchBend(8192);
+    }
+    m_drag=-1; m_frameDirty=true; repaint();
 }
 void GenosSurface::mouseDown(const juce::MouseEvent& e)
 {
@@ -358,14 +387,14 @@ void GenosSurface::mouseDown(const juce::MouseEvent& e)
     if (c.kind==genos::Control::Kind::key) { m_pointerNote=c.value; pressNote(c.value); }
     else if (c.kind==genos::Control::Kind::fader) m_startValue=m_volumes[c.value];
     else if (c.kind==genos::Control::Kind::knob) m_startValue=knobValue(c.value);
-    else if (c.kind==genos::Control::Kind::button) dispatch(c);
+    else if (c.kind==genos::Control::Kind::button) { dispatch(c);m_frameDirty=true;repaint(); }
 }
 void GenosSurface::mouseDrag(const juce::MouseEvent& e)
 {
     if (m_drag<0) {
         m_camera.yaw=juce::jlimit(-0.48f,.48f,m_startYaw+(e.position.x-m_dragStart.x)*.002f);
         m_camera.pitch=juce::jlimit(.72f,1.56f,m_startPitch+(e.position.y-m_dragStart.y)*.003f);
-        repaint(); return;
+        m_frameDirty=true; repaint(); return;
     }
     const auto& c=m_controls[(std::size_t)m_drag];
     if (c.kind==genos::Control::Kind::key) {
@@ -378,14 +407,21 @@ void GenosSurface::mouseDrag(const juce::MouseEvent& e)
         const int value=juce::jlimit(0,127,m_startValue+(int)((m_dragStart.y-e.position.y)*2));
         if(c.value==8) {if(m_cb.onMasterChanged)m_cb.onMasterChanged(value);}
         else if (m_cb.onMixerVolume) m_cb.onMixerVolume(mixerChannels[c.value],value);
-        m_volumes[c.value]=value; m_hint="Volume partie "+juce::String(c.value+1)+" : "+juce::String(value); repaint();
+        m_volumes[c.value]=value; m_hint="Volume partie "+juce::String(c.value+1)+" : "+juce::String(value); m_frameDirty=true; repaint();
     } else if(c.kind==genos::Control::Kind::knob) {
         const int value=juce::jlimit(0,127,m_startValue+(int)((m_dragStart.y-e.position.y)*2));
         if(c.value==0) {m_reverb=value*100/127;if(m_cb.onReverbChanged)m_cb.onReverbChanged(m_reverb);}
         else if(c.value==1) {m_compressor=value*100/127;if(m_cb.onCompChanged)m_cb.onCompChanged(m_compressor);}
         else if(c.value==2) {m_volumes[8]=value;if(m_cb.onMasterChanged)m_cb.onMasterChanged(value);}
         else {m_eq[c.value-3]=value*24/127-12;if(m_cb.onEqChanged)m_cb.onEqChanged(m_eq[0],m_eq[1],m_eq[2]);}
-        m_hint=juce::String(c.label)+" : "+juce::String(value);repaint();
+        m_hint=juce::String(c.label)+" : "+juce::String(value);m_frameDirty=true; repaint();
+    } else if(c.kind==genos::Control::Kind::joystick) {
+        m_pitch=juce::jlimit(0,16383,8192+(int)((e.position.x-m_dragStart.x)*130));
+        m_modulation=juce::jlimit(0,127,(int)((m_dragStart.y-e.position.y)*1.3f));
+        if(m_cb.onPitchBend)m_cb.onPitchBend(m_pitch);
+        if(m_cb.onModulation)m_cb.onModulation(m_modulation);
+        m_hint="Joystick · pitch "+juce::String(m_pitch)+" · modulation "+juce::String(m_modulation);
+        m_frameDirty=true;repaint();
     } else if (c.kind==genos::Control::Kind::wheel) {
         const int delta=(int)((m_dragStart.y-e.position.y)*130);
         if(c.id=="pitch" && m_cb.onPitchBend) m_cb.onPitchBend(juce::jlimit(0,16383,8192+delta));
@@ -395,17 +431,17 @@ void GenosSurface::mouseDrag(const juce::MouseEvent& e)
 void GenosSurface::mouseUp(const juce::MouseEvent&)
 {
     releasePointerNote();
-    if (m_drag>=0 && m_controls[(std::size_t)m_drag].id=="pitch" && m_cb.onPitchBend) m_cb.onPitchBend(8192);
+    if (m_drag>=0 && m_controls[(std::size_t)m_drag].id=="pitch") {m_pitch=8192;if(m_cb.onPitchBend)m_cb.onPitchBend(8192);m_frameDirty=true;repaint();}
     m_drag=-1;
 }
 void GenosSurface::mouseExit(const juce::MouseEvent& e)
 {
     if (!e.mods.isAnyMouseButtonDown()) releasePointerNote();
-    m_hover=-1; repaint();
+    m_hover=-1; m_frameDirty=true; repaint();
 }
 void GenosSurface::mouseWheelMove(const juce::MouseEvent&,const juce::MouseWheelDetails& wheel)
 {
-    m_camera.zoom=juce::jlimit(.65f,1.45f,m_camera.zoom+wheel.deltaY*.20f); repaint();
+    m_camera.zoom=juce::jlimit(.65f,1.45f,m_camera.zoom+wheel.deltaY*.20f); m_frameDirty=true; repaint();
 }
 bool GenosSurface::keyPressed(const juce::KeyPress& key)
 {
@@ -432,7 +468,7 @@ bool GenosSurface::keyStateChanged(bool)
             if (m_pointerNote!=n) {m_notes.erase(n);if(m_cb.onKeyboardNote)m_cb.onKeyboardNote(n,0,false);}
         }
     }
-    repaint(); return true;
+    m_frameDirty=true; repaint(); return true;
 }
 void GenosSurface::focusLost(FocusChangeType) { releaseNotes(); }
 void GenosSurface::visibilityChanged() { if (!isVisible()) releaseNotes(); }

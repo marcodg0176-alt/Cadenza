@@ -1,6 +1,8 @@
 #pragma once
 #include "GenosGeometry.h"
 #include "NativePanel.h"
+#include "GenosModel.h"
+#include "GenosRaster.h"
 #include <set>
 
 namespace cadenza::ui
@@ -35,18 +37,13 @@ public:
     void visibilityChanged() override;
     void releaseNotes();
     std::string controlIdAt(juce::Point<float> point) const;
+    juce::Point<float> controlScreenCentre(const std::string& id) const;
 
 private:
-    struct ProjectedFace
-    {
-        std::array<genos::Point,4> points;
-        float depth{};
-        juce::Colour colour;
-        int control = -1;
-        bool top = false;
-        int layer=0;
-    };
-    std::vector<ProjectedFace> buildFrame() const;
+    void ensureFrame() const;
+    genos::Vec3 movedVertex(genos::Vec3, int control) const;
+    juce::Point<float> project(genos::Vec3) const;
+    void paintScreen(juce::Graphics&, const genos::ModelScreen&);
     int hit(juce::Point<float>) const;
     bool enabled(const genos::Control&) const;
     bool illuminated(const genos::Control&) const;
@@ -56,7 +53,11 @@ private:
     juce::Rectangle<int> modelBounds() const;
     NativePanel::Callbacks m_cb;
     std::function<void(int)> m_openPage;
-    std::vector<genos::Control> m_controls = genos::makeControls();
+    genos::Model m_model = genos::Model::load();
+    std::vector<genos::Control> m_controls = m_model.controls;
+    mutable genos::Raster m_raster;
+    mutable juce::Image m_frame;
+    mutable bool m_frameDirty = true;
     genos::Camera m_camera;
     juce::String m_style = "Aucun style chargé", m_chord = "—", m_hint;
     std::string m_section;
@@ -76,11 +77,13 @@ private:
     juce::Point<float> m_dragStart;
     float m_startYaw{}, m_startPitch{};
     int m_startValue{};
+    int m_pitch=8192, m_modulation=0;
     int knobValue(int index) const;
     juce::TextButton m_styleButton{"Ouvrir un style"}, m_playButton{"Lecture / arrêt"};
     juce::TextButton m_editorButton{"Style Creator"}, m_midiButton{"Connexion MIDI"};
     juce::TextButton m_audioButton{"Sortie audio"}, m_topButton{"Vue de dessus"};
     juce::TextButton m_angleButton{"Vue 3D"};
+    juce::TextButton m_nativeButton{"Vue Cadenza"};
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(GenosSurface)
 };
 }

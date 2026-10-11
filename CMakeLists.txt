@@ -17,6 +17,10 @@ if(CADENZA_BUILD_TESTS)
     add_executable(cadenza_genos_geometry_tests tests/GenosGeometryTests.cpp)
     target_include_directories(cadenza_genos_geometry_tests PRIVATE Source)
     add_test(NAME cadenza_genos_geometry_tests COMMAND cadenza_genos_geometry_tests)
+
+    add_executable(cadenza_genos_raster_tests tests/GenosRasterTests.cpp)
+    target_include_directories(cadenza_genos_raster_tests PRIVATE Source)
+    add_test(NAME cadenza_genos_raster_tests COMMAND cadenza_genos_raster_tests)
 endif()
 
 # ------------------------------------------------------------
@@ -247,6 +251,8 @@ endif()
 # ============================================================
 if(CADENZA_BUILD_NATIVE_HOST AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib/JUCE/CMakeLists.txt")
     add_subdirectory(lib/JUCE)
+    juce_add_binary_data(GenosModel HEADER_NAME GenosModelData.h
+        NAMESPACE GenosModelData SOURCES assets/genos2/geometry.json)
 
     # ----- plugin-probe: headless CLI to verify VST3 hosting works -----
     juce_add_console_app(plugin-probe PRODUCT_NAME "plugin-probe")
@@ -336,6 +342,7 @@ if(CADENZA_BUILD_NATIVE_HOST AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib/JUCE/CM
     target_link_libraries(Cadenza
         PRIVATE
             cadenza_core
+            GenosModel
             juce::juce_audio_utils
             juce::juce_audio_devices
             juce::juce_audio_formats
@@ -352,7 +359,7 @@ if(CADENZA_BUILD_NATIVE_HOST AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib/JUCE/CM
         target_compile_definitions(cadenza_genos_interaction_tests PRIVATE
             JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0)
         target_link_libraries(cadenza_genos_interaction_tests PRIVATE
-            juce::juce_gui_extra juce::juce_audio_utils)
+            GenosModel juce::juce_gui_extra juce::juce_audio_utils)
         add_test(NAME cadenza_genos_interaction_tests COMMAND cadenza_genos_interaction_tests)
 
         add_executable(cadenza_pattern_import_tests
