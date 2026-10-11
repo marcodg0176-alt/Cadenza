@@ -178,7 +178,7 @@ void GenosSurface::ensureFrame() const
         }
         m_raster.triangle(points,colour.getARGB(),face.control);
     }
-    m_frame=juce::Image(juce::Image::ARGB,w,h,true);
+    m_frame=juce::Image(juce::Image::ARGB,w,h,true,juce::SoftwareImageType());
     juce::Image::BitmapData data(m_frame,juce::Image::BitmapData::writeOnly);
     for(int y=0;y<h;++y)for(int x=0;x<w;++x) {
         const auto c=m_raster.pixels[(std::size_t)y*w+x];
@@ -203,7 +203,8 @@ void GenosSurface::paintScreen(juce::Graphics& g,const genos::ModelScreen& scree
 {
     const bool main=screen.id=="main";
     const int w=main?600:600,h=main?310:64;
-    juce::Image image(juce::Image::RGB,w,h,true);
+    juce::Image image(juce::Image::RGB,w,h,true,juce::SoftwareImageType());
+    {
     juce::Graphics lcd(image);
     lcd.fillAll(juce::Colour(0xff142737));
     if(main) {
@@ -235,6 +236,7 @@ void GenosSurface::paintScreen(juce::Graphics& g,const genos::ModelScreen& scree
             lcd.drawText(juce::String(knobValue(i)),i*100,27,100,32,juce::Justification::centred);
         }
     }
+    } // Complete the display image before the host graphics reads it.
     auto c=screen.centre;c.y+=.036f;
     const auto a=project({c.x-screen.width/2,c.y,c.z-screen.depth/2});
     const auto b=project({c.x+screen.width/2,c.y,c.z-screen.depth/2});

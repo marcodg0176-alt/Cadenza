@@ -155,7 +155,8 @@ int runTests() {
     expect(page==0,"Native opens Cadenza page");expect(notes.size()==count+2&&!notes.back().on,"Native releases held note");
     auto render=[&](const char* name) {
         view.setVisible(true);
-        juce::Image image(juce::Image::ARGB,view.getWidth(),view.getHeight(),true);
+        juce::Image image(juce::Image::ARGB,view.getWidth(),view.getHeight(),true,juce::SoftwareImageType());
+        {
         juce::Graphics graphics(image);
         // Paint the real component directly: standalone test components have no window peer.
         view.paint(graphics);
@@ -165,6 +166,7 @@ int runTests() {
             graphics.setOrigin(child->getPosition());graphics.reduceClipRegion(child->getLocalBounds());
             child->paintEntireComponent(graphics,true);
         }
+        } // Flush all painting before inspecting or exporting the pixels.
         int darkest=255,brightest=0,lit=0,samples=0;
         for(int y=0;y<image.getHeight();y+=4)for(int x=0;x<image.getWidth();x+=4) {
             auto c=image.getPixelAt(x,y);
@@ -172,10 +174,10 @@ int runTests() {
             darkest=std::min(darkest,v/3);brightest=std::max(brightest,v/3);
             if(c.getAlpha()!=0&&v>90)++lit;++samples;
         }
-        expect(brightest-darkest>80&&lit>samples/10,"capture is nonblank with visible instrument: "+std::string(name));
         auto stream=juce::File::getCurrentWorkingDirectory().getChildFile(name).createOutputStream();
         expect(stream!=nullptr,"preview output opened");stream->setPosition(0);stream->truncate();
         expect(juce::PNGImageFormat{}.writeImageToStream(image,*stream),"actual component preview rendered");
+        expect(brightest-darkest>80&&lit>samples/10,"capture is nonblank with visible instrument: "+std::string(name));
     };
     view.setSize(1280,800);toolbar("Vue 3D");picking();render("genos2-3d.png");
     toolbar("Vue de dessus");picking();render("genos2-top.png");
