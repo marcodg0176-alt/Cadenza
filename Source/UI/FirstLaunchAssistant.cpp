@@ -81,7 +81,7 @@ void FirstLaunchAssistant::paint(juce::Graphics& g)
     // Title + subtitle.
     g.setColour(juce::Colour(0xffe8c46a));
     g.setFont(juce::Font(juce::FontOptions(26.0f, juce::Font::bold)));
-    g.drawText("Welcome to Cadenza", kPad, 18, getWidth() - 2 * kPad, 32,
+    g.drawText("Welcome to KMR V Genos 2", kPad, 18, getWidth() - 2 * kPad, 32,
                juce::Justification::centredLeft);
 
     g.setColour(juce::Colour(0xffb8bdc8));

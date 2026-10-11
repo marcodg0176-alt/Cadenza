@@ -1172,7 +1172,7 @@ class FirstLaunchWindow final : public juce::DialogWindow
 {
 public:
     explicit FirstLaunchWindow(std::function<void()> onClose)
-        : juce::DialogWindow("Welcome to Cadenza", juce::Colour(0xff20242e),
+        : juce::DialogWindow("Welcome to KMR V Genos 2", juce::Colour(0xff20242e),
                              /*escapeCloses*/ true, /*nativeTitleBar*/ true),
           m_onClose(std::move(onClose)) {}
 
@@ -1738,7 +1738,7 @@ void MainComponent::showNativePage(int page)
     m_showGenos = false;
     if (m_genosSurface) m_genosSurface->setVisible(false);
     if (m_panel) { m_panel->setVisible(true); m_panel->setActivePage(page); }
-    m_surfaceSwitch.setButtonText("Vue Genos2 3D");
+    m_surfaceSwitch.setButtonText("Vue instrument 3D");
 }
 
 void MainComponent::updateGenosSurface()
@@ -2137,7 +2137,7 @@ void MainComponent::openStyleFileChooser()
                         : juce::File::getSpecialLocation(juce::File::userDocumentsDirectory));
 
     m_styleChooser = std::make_unique<juce::FileChooser>(
-        "Choose a Cadenza or Yamaha style",
+        "Choose a KMR V Genos 2 or Yamaha style",
         startDir,
         "*.cstyle;*.sty;*.prs;*.sst;*.fps;*.bcs");
 
@@ -2235,7 +2235,7 @@ void MainComponent::openMidiStyleImportChooser()
 {
     const auto startDir = juce::File::getSpecialLocation(juce::File::userDocumentsDirectory);
     m_midiStyleChooser = std::make_unique<juce::FileChooser>(
-        "Import a MIDI file as a Cadenza style",
+        "Import a MIDI file as a KMR V Genos 2 style",
         startDir,
         "*.mid;*.midi");
 
@@ -2638,7 +2638,7 @@ void MainComponent::openSongFileChooser()
         .getChildFile("songs");
 
     m_songChooser = std::make_unique<juce::FileChooser>(
-        "Choose a Cadenza song (chord chart)",
+        "Choose a KMR V Genos 2 song (chord chart)",
         songsDir.isDirectory() ? songsDir : juce::File::getSpecialLocation(juce::File::userDocumentsDirectory),
         "*.csong");
 
@@ -3306,7 +3306,7 @@ void MainComponent::applyPolishedStyle(const cadenza::ai::StyleGenResult& result
     }
 
     auto dir = juce::File::getSpecialLocation(juce::File::userDocumentsDirectory)
-                   .getChildFile("Cadenza AI Styles");
+                   .getChildFile("KMR V Genos 2 AI Styles");
     dir.createDirectory();
     juce::String name = juce::String(loaded.style.name);
     if (name.isEmpty()) name = "AI Style";
@@ -3527,7 +3527,7 @@ void MainComponent::applyGeneratedStyle(const cadenza::ai::StyleGenResult& resul
     // Persist it as a real .cstyle and load it through the normal path (so it
     // becomes an editable recorder session), then jump to the Editor page.
     auto dir = juce::File::getSpecialLocation(juce::File::userDocumentsDirectory)
-                   .getChildFile("Cadenza AI Styles");
+                   .getChildFile("KMR V Genos 2 AI Styles");
     dir.createDirectory();
     juce::String name = juce::String(finalStyle.name);
     if (name.isEmpty()) name = "AI Style";
@@ -4309,7 +4309,7 @@ void MainComponent::buildNativePanel()
         m_showGenos = true;
         m_panel->setVisible(false);
         m_genosSurface->setVisible(true);
-        m_surfaceSwitch.setButtonText("Vue Cadenza");
+        m_surfaceSwitch.setButtonText("Vue arrangeur");
         updateGenosSurface();
         m_genosSurface->grabKeyboardFocus();
     };

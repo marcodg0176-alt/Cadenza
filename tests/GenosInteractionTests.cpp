@@ -260,7 +260,7 @@ int runTests() {
     expect(modulation.back()==heldModulation+1,"new joystick gesture preserves held modulation without jumping");
     runtime({"mainA","mainB","mainC","mainD","intro","ending","fill"});toolbar("Style Creator");
     expect(newSession==1&&makeEditable==1&&editor==2&&page==7,"loaded creator makes editable and opens editor");
-    count=notes.size();down(centre("note60"));toolbar("Vue Cadenza");
+    count=notes.size();down(centre("note60"));toolbar("Vue arrangeur");
     expect(page==0,"Native opens Cadenza page");expect(notes.size()==count+2&&!notes.back().on,"Native releases held note");
     auto render=[&](const char* name,float pixelScale=1.0f) {
         view.setVisible(true);

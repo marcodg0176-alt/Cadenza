@@ -270,8 +270,8 @@ if(CADENZA_BUILD_NATIVE_HOST AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib/JUCE/CM
         juce::juce_recommended_config_flags)
 
     juce_add_gui_app(Cadenza
-        PRODUCT_NAME "Genos2 Personnel"
-        COMPANY_NAME "Cadenza"
+        PRODUCT_NAME "KMR V Genos 2"
+        COMPANY_NAME "KMR"
     )
 
     target_sources(Cadenza

@@ -229,7 +229,7 @@ private:
 
     std::unique_ptr<cadenza::ui::NativePanel> m_panel;
     std::unique_ptr<cadenza::ui::GenosSurface> m_genosSurface;
-    juce::TextButton m_surfaceSwitch { "Vue Cadenza" };
+    juce::TextButton m_surfaceSwitch { "Vue arrangeur" };
     bool m_showGenos = true;
     bool m_aiInFlight = false;
 

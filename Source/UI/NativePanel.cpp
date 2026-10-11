@@ -209,9 +209,9 @@ NativePanel::NativePanel()
 
     // Left hardware faceplate: CADENZA wordmark.
     addAndMakeVisible(m_logoMain);
-    m_logoMain.setText("CADENZA", juce::dontSendNotification);
+    m_logoMain.setText("KMR V Genos 2", juce::dontSendNotification);
     m_logoMain.setColour(juce::Label::textColourId, CadenzaLookAndFeel::accent());
-    m_logoMain.setFont(juce::Font(juce::FontOptions("Georgia", 34.0f, juce::Font::bold)));
+    m_logoMain.setFont(juce::Font(juce::FontOptions("Georgia", 20.0f, juce::Font::bold)));
     m_logoMain.setJustificationType(juce::Justification::centred);
     addAndMakeVisible(m_logoSub);
     m_logoSub.setText("A R R A N G E R", juce::dontSendNotification);

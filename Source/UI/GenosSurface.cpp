@@ -21,8 +21,8 @@ GenosSurface::GenosSurface(NativePanel::Callbacks cb, std::function<void(int)> o
     : m_cb(std::move(cb)), m_openPage(std::move(openPage))
 {
     setWantsKeyboardFocus(true);
-    setTitle("Genos2 personnel en 3D");
-    setDescription("Commandes de l'arrangeur Cadenza, clavier et vue 3D orientable");
+    setTitle("KMR V Genos 2 en 3D");
+    setDescription("Commandes de KMR V Genos 2, clavier et vue 3D orientable");
     for (auto* b : {&m_styleButton,&m_playButton,&m_editorButton,&m_midiButton,
                     &m_audioButton,&m_topButton,&m_angleButton,&m_nativeButton}) {
         addAndMakeVisible(*b);
@@ -45,7 +45,7 @@ GenosSurface::GenosSurface(NativePanel::Callbacks cb, std::function<void(int)> o
     m_angleButton.onClick = [this] { m_camera={}; m_frameDirty=true; repaint(); };
     m_hint = juce::String::fromUTF8("Cliquez les touches et commandes · glissez le fond pour orienter · molette pour zoomer");
     m_playButton.setTooltip(juce::String::fromUTF8("Espace : lecture / arrêt. Échap : relâcher les notes du clavier à l'écran."));
-    m_editorButton.setTooltip(juce::String::fromUTF8("Ouvrir l'atelier Cadenza sur une copie éditable du style chargé."));
+    m_editorButton.setTooltip(juce::String::fromUTF8("Ouvrir l'atelier KMR V Genos 2 sur une copie éditable du style chargé."));
     m_topButton.setTooltip(juce::String::fromUTF8("Recentrer le modèle en vue de dessus."));
     m_angleButton.setTooltip(juce::String::fromUTF8("Recentrer le modèle en perspective 3D."));
 }
@@ -238,7 +238,7 @@ void GenosSurface::rasterScreen(const genos::ModelScreen& screen) const
         lcd.setColour(juce::Colour(0xff22455c));lcd.fillRect(0,0,w,42);
         lcd.setFont(juce::Font(juce::FontOptions(20.0f,juce::Font::bold)));
         lcd.setColour(juce::Colours::white);
-        lcd.drawText("CADENZA",14,0,250,42,juce::Justification::centredLeft);
+        lcd.drawText("KMR V Genos 2",14,0,250,42,juce::Justification::centredLeft);
         lcd.drawText(juce::String(m_bpm)+" BPM",400,0,185,42,juce::Justification::centredRight);
         lcd.setFont(juce::Font(juce::FontOptions(25.0f,juce::Font::bold)));
         lcd.drawFittedText(m_style,{16,52,w-32,46},juce::Justification::centredLeft,1);
@@ -276,10 +276,10 @@ void GenosSurface::paint(juce::Graphics& g)
     g.fillAll(juce::Colour(0xff0c131b));
     g.setColour(juce::Colour(0xffedf3f8));
     g.setFont(juce::Font(juce::FontOptions(25.0f,juce::Font::bold)));
-    g.drawText("Genos2",24,12,250,34,juce::Justification::centredLeft);
+    g.drawFittedText("KMR V Genos 2",{24,12,250,34},juce::Justification::centredLeft,1);
     g.setFont(juce::Font(juce::FontOptions(13.0f)));
     g.setColour(juce::Colour(0xff9fb4c6));
-    g.drawText("ARRANGEUR PERSONNEL  /  MOTEUR CADENZA",160,17,getWidth()-360,26,juce::Justification::centredLeft);
+    g.drawText("ARRANGEUR PERSONNEL",300,17,getWidth()-500,26,juce::Justification::centredLeft);
     const auto bounds=modelBounds();
     g.setColour(juce::Colour(0xff05090e));
     g.fillEllipse(bounds.toFloat().reduced(28.0f,40.0f).translated(0,25));

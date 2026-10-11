@@ -6,7 +6,7 @@
 class CadenzaApplication final : public juce::JUCEApplication
 {
 public:
-    const juce::String getApplicationName() override { return "Genos2 Personnel"; }
+    const juce::String getApplicationName() override { return "KMR V Genos 2"; }
     const juce::String getApplicationVersion() override { return "0.1.0"; }
     bool moreThanOneInstanceAllowed() override { return false; }
 

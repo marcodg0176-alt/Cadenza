@@ -78,7 +78,7 @@ inline std::vector<Control> makeControls()
         result.push_back({Control::Kind::button, std::move(id), std::move(label),
                           std::move(hint), {x, 0.39f, z}, width, 0.20f, 0.07f});
     };
-    button("style", "STYLE", -5.15f, -1.46f, 0.65f, "Ouvrir un style Cadenza ou Yamaha");
+    button("style", "STYLE", -5.15f, -1.46f, 0.65f, "Ouvrir un style KMR V Genos 2 ou Yamaha");
     button("midi", "MIDI", -5.15f, -0.95f, 0.65f, "Choisir le clavier MIDI et ses commandes");
     button("audio", "AUDIO", -5.15f, -0.45f, 0.65f, "Choisir la sortie audio");
     button("transpose-", "−", -4.64f, -1.72f);
@@ -97,10 +97,10 @@ inline std::vector<Control> makeControls()
             "Glisser pour régler "+std::string(knobLabels[i]),
             {-3.55f+i*.44f,.42f,-1.60f},.23f,.23f,.13f,i});
     button("creator", "STYLE CREATOR", 0.0f, -0.14f, 1.58f,
-           "Ouvrir l'éditeur de styles existant de Cadenza");
+           "Ouvrir l'éditeur de styles de KMR V Genos 2");
     button("soundfont", "SONS", 2.08f, -1.75f, 0.65f);
     button("import", "MIDI → STYLE", 3.12f, -1.75f, 1.20f);
-    button("native", "CADENZA", 4.48f, -1.75f, 0.97f);
+    button("native", "ARRANGEUR", 4.48f, -1.75f, 0.97f);
     button("rec", "REC", 2.22f, -1.25f, 0.55f);
     button("save", "SAVE", 2.90f, -1.25f, 0.60f);
     button("ots0", "1", 2.10f, -0.44f);

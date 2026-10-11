@@ -86,7 +86,7 @@ private:
     juce::TextButton m_editorButton{"Style Creator"}, m_midiButton{"Connexion MIDI"};
     juce::TextButton m_audioButton{"Sortie audio"}, m_topButton{"Vue de dessus"};
     juce::TextButton m_angleButton{"Vue 3D"};
-    juce::TextButton m_nativeButton{"Vue Cadenza"};
+    juce::TextButton m_nativeButton{"Vue arrangeur"};
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(GenosSurface)
 };
 }

@@ -1,4 +1,4 @@
-name: Genos2 Personnel Windows
+name: KMR V Genos 2 Windows
 
 on:
   push:
@@ -37,7 +37,7 @@ jobs:
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: Genos2-Verification-Diagnostics
+          name: KMR-V-Genos-2-Verification-Diagnostics
           path: |
             build-genos/Testing/Temporary/LastTest.log
             build-genos/genos2-*.png
@@ -45,18 +45,19 @@ jobs:
       - name: Assemble portable application
         shell: pwsh
         run: |
-          $out = 'package/Genos2 Personnel'
+          $out = 'package/KMR V Genos 2'
           New-Item -ItemType Directory -Force -Path $out | Out-Null
-          Copy-Item 'build-genos/Cadenza_artefacts/Release/Genos2 Personnel.exe' $out
+          Copy-Item 'build-genos/Cadenza_artefacts/Release/KMR V Genos 2.exe' $out
           Copy-Item resources "$out/resources" -Recurse
           Copy-Item deps/fluidsynth-v2.6.1-win10-x64-cpp11/bin/*.dll $out
           Copy-Item LICENSE,NOTICE "$out/"
           Copy-Item docs/GENOS2_INTERFACE.md "$out/"
+          Copy-Item docs/KMR_V_GENOS_2_README.md "$out/LIRE-MOI.md"
           Copy-Item build-genos/genos2-*.png "$out/"
           Copy-Item build-genos/Testing/Temporary/LastTest.log "$out/verification-tests.log"
           Copy-Item deps/fluidsynth-v2.6.1-win10-x64-cpp11/COPYING* "$out/" -ErrorAction SilentlyContinue
       - uses: actions/upload-artifact@v4
         with:
-          name: Genos2-Personnel-Windows
+          name: KMR-V-Genos-2-Windows
           path: package/
           retention-days: 14

@@ -599,7 +599,7 @@ private:
                     juce::AlertWindow::showMessageBoxAsync(
                         juce::MessageBoxIconType::InfoIcon,
                         "About Part Editor",
-                        "Cadenza Part Editor\nPiano-roll editing for melodic and drum parts.");
+                        "KMR V Genos 2 Part Editor\nPiano-roll editing for melodic and drum parts.");
                 }
             });
     }
