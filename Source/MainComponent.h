@@ -22,7 +22,7 @@
 #include <string>
 #include <vector>
 
-namespace cadenza::ui { class NativePanel; class StylePartEditorWindow; }
+namespace cadenza::ui { class NativePanel; class StylePartEditorWindow; class GenosSurface; }
 namespace cadenza::ai { struct StyleGenResult; }
 
 enum class AiStyleAction
@@ -83,6 +83,8 @@ private:
 
     // Native control panel (source of truth for live performance controls).
     void buildNativePanel();
+    void updateGenosSurface();
+    void showNativePage(int page);
     void updateNativePanelStyle();   // push current style name + sections + mixer to the panel
     void applyMixerState();          // send each channel's effective volume (CC7) to the synth
     void applyStyleMix(const std::string& styleId);  // apply saved per-style mixer overrides
@@ -226,6 +228,9 @@ private:
     std::string m_learnCommand;        // command currently waiting for a MIDI-learn press
 
     std::unique_ptr<cadenza::ui::NativePanel> m_panel;
+    std::unique_ptr<cadenza::ui::GenosSurface> m_genosSurface;
+    juce::TextButton m_surfaceSwitch { "Vue Cadenza" };
+    bool m_showGenos = true;
     bool m_aiInFlight = false;
 
     // First-launch "Quick Start" assistant (shown once; see setupAssistantSeen).

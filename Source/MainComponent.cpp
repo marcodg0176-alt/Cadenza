@@ -12,6 +12,7 @@
 #include "Arranger/SectionFlow.h"
 #include "UI/CadenzaLookAndFeel.h"
 #include "UI/NativePanel.h"
+#include "UI/GenosSurface.h"
 #include "UI/StylePartEditor.h"
 #include "UI/FirstLaunchAssistant.h"
 #include "Ai/StyleGenerator.h"
@@ -41,7 +42,7 @@ arranger::ChordDetectionMode chordModeFromId(const std::string& id) noexcept;
 juce::File importedStylesDir()
 {
     return juce::File::getSpecialLocation(juce::File::userApplicationDataDirectory)
-        .getChildFile("Cadenza")
+        .getChildFile("Genos2Personnel")
         .getChildFile("imported-styles");
 }
 
@@ -1125,7 +1126,7 @@ MainComponent::~MainComponent()
 std::string MainComponent::settingsFilePath() const
 {
     const auto dir = juce::File::getSpecialLocation(juce::File::userApplicationDataDirectory)
-        .getChildFile("Cadenza");
+        .getChildFile("Genos2Personnel");
     if (!dir.isDirectory()) dir.createDirectory();
     return dir.getChildFile("settings.json").getFullPathName().toStdString();
 }
@@ -1616,7 +1617,7 @@ void MainComponent::loadSettings()
 juce::File MainComponent::voiceMapFile() const
 {
     return juce::File::getSpecialLocation(juce::File::userApplicationDataDirectory)
-        .getChildFile("Cadenza").getChildFile("voicemap.json");
+        .getChildFile("Genos2Personnel").getChildFile("voicemap.json");
 }
 
 void MainComponent::loadVoiceMap()
@@ -1723,8 +1724,52 @@ void MainComponent::saveSettings()
 
 void MainComponent::resized()
 {
+    auto content = getLocalBounds().withTrimmedTop(36);
+    m_surfaceSwitch.setBounds(getWidth() - 176, 4, 166, 28);
     if (m_panel)
-        m_panel->setBounds(getLocalBounds());
+        m_panel->setBounds(content);
+    if (m_genosSurface)
+        m_genosSurface->setBounds(content);
+}
+
+void MainComponent::showNativePage(int page)
+{
+    if (m_genosSurface) m_genosSurface->releaseNotes();
+    m_showGenos = false;
+    if (m_genosSurface) m_genosSurface->setVisible(false);
+    if (m_panel) { m_panel->setVisible(true); m_panel->setActivePage(page); }
+    m_surfaceSwitch.setButtonText("Vue Genos2 3D");
+}
+
+void MainComponent::updateGenosSurface()
+{
+    if (!m_genosSurface) return;
+    auto style = m_styleEngine.currentStyle();
+    std::vector<std::string> sections;
+    if (style) for (const auto& section : style->sections) sections.push_back(section.name);
+    std::array<int, 9> volumes{};
+    constexpr std::array<int,8> channels{10,9,11,12,13,14,15,16};
+    for (std::size_t i=0;i<channels.size();++i) volumes[i]=m_mixer.volume(channels[i]);
+    std::array<bool,4> ots{};
+    if (style) for (std::size_t i=0;i<ots.size();++i) ots[i]=style->ots[i].present;
+    std::array<bool,3> rightEnabled{};
+    std::array<int,3> eq{};
+    int reverb=30, compressor=0;
+    if(m_settings) {
+        const auto& settings=m_settings->state();
+        volumes[8]=settings.masterVolume;
+        eq={settings.eqLowDb,settings.eqMidDb,settings.eqHighDb};
+        reverb=settings.reverbLevel;compressor=settings.compAmount;
+    }
+    if(m_settings) for(std::size_t i=0;i<rightEnabled.size();++i)
+        rightEnabled[i]=m_settings->state().rightLayers[i].enabled;
+    m_genosSurface->setRuntime(style ? juce::String(style->name) : juce::String("Aucun style chargé"),
+        juce::String(m_midi.currentChordDisplayName()), m_styleEngine.currentSection(),
+        m_state.bpm(), m_state.playing(), sections, volumes,
+        m_state.chordSourceEnabled("arranger"), m_state.chordSourceEnabled("memory"),
+        m_state.autoFillEnabled(), m_state.syncroStopOnRelease(), m_state.transpose(),
+        m_recorder.sessionActive(), m_recordArmed.load(), ots, rightEnabled, m_leftEnabled,
+        reverb, compressor, eq);
 }
 
 juce::File MainComponent::findResourcesRoot()
@@ -3771,6 +3816,7 @@ void MainComponent::triggerSection(const std::string& id)
 
 void MainComponent::timerCallback()
 {
+    updateGenosSurface();
     // Hot-plug MIDI: rescan ~every 2s (20Hz timer) so a keyboard plugged in after
     // launch is picked up automatically.
     if (++m_midiRescanTicks >= 40) {
@@ -4252,7 +4298,21 @@ void MainComponent::buildNativePanel()
         saveSettings();
     };
 
-    m_panel->setCallbacks(std::move(cb));
+    m_panel->setCallbacks(cb);
+    m_genosSurface = std::make_unique<cadenza::ui::GenosSurface>(std::move(cb),
+        [this](int page) { showNativePage(page); });
+    addAndMakeVisible(*m_genosSurface);
+    m_panel->setVisible(false);
+    addAndMakeVisible(m_surfaceSwitch);
+    m_surfaceSwitch.onClick = [this] {
+        if (m_showGenos) { showNativePage(0); return; }
+        m_showGenos = true;
+        m_panel->setVisible(false);
+        m_genosSurface->setVisible(true);
+        m_surfaceSwitch.setButtonText("Vue Cadenza");
+        updateGenosSurface();
+        m_genosSurface->grabKeyboardFocus();
+    };
 
     // Reflect current persisted state on the panel.
     m_panel->setTranspose(m_state.transpose());

@@ -1,0 +1,51 @@
+name: Genos2 Personnel Windows
+
+on:
+  push:
+    branches: [ marco/genos2-study ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: JUCE
+        run: git clone --depth 1 --branch 8.0.13 https://github.com/juce-framework/JUCE.git lib/JUCE
+      - uses: ilammy/msvc-dev-cmd@v1
+      - uses: seanmiddleditch/gha-setup-ninja@v5
+      - name: FluidSynth
+        shell: pwsh
+        run: |
+          Invoke-WebRequest https://github.com/FluidSynth/fluidsynth/releases/download/v2.6.1/fluidsynth-v2.6.1-win10-x64-cpp11.zip -OutFile fluidsynth.zip
+          if ((Get-FileHash fluidsynth.zip -Algorithm SHA256).Hash.ToLower() -ne 'fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c') { throw 'FluidSynth checksum mismatch' }
+          Expand-Archive fluidsynth.zip -DestinationPath deps
+      - name: Configure
+        shell: pwsh
+        run: |
+          $fluid = (Resolve-Path deps/fluidsynth-v2.6.1-win10-x64-cpp11/lib/cmake/fluidsynth).Path.Replace('\','/')
+          cmake -S . -B build-genos -G Ninja -DCMAKE_BUILD_TYPE=Release "-DFluidSynth_DIR=$fluid"
+      - name: Build
+        run: cmake --build build-genos --parallel 4
+      - name: Test
+        run: ctest --test-dir build-genos --output-on-failure
+      - name: Assemble portable application
+        shell: pwsh
+        run: |
+          $out = 'package/Genos2 Personnel'
+          New-Item -ItemType Directory -Force -Path $out | Out-Null
+          Copy-Item 'build-genos/Cadenza_artefacts/Release/Genos2 Personnel.exe' $out
+          Copy-Item resources "$out/resources" -Recurse
+          Copy-Item deps/fluidsynth-v2.6.1-win10-x64-cpp11/bin/*.dll $out
+          Copy-Item LICENSE,NOTICE "$out/"
+          Copy-Item docs/GENOS2_INTERFACE.md "$out/"
+          Copy-Item deps/fluidsynth-v2.6.1-win10-x64-cpp11/COPYING* "$out/" -ErrorAction SilentlyContinue
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Genos2-Personnel-Windows
+          path: package/
+          retention-days: 14

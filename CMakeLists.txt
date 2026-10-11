@@ -7,6 +7,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 option(CADENZA_BUILD_TESTS "Build Cadenza unit tests" ON)
+option(CADENZA_BUILD_NATIVE_HOST "Build the native JUCE application" ON)
+
+if(CADENZA_BUILD_TESTS)
+    enable_testing()
+    add_executable(cadenza_genos_geometry_tests tests/GenosGeometryTests.cpp)
+    target_include_directories(cadenza_genos_geometry_tests PRIVATE Source)
+    add_test(NAME cadenza_genos_geometry_tests COMMAND cadenza_genos_geometry_tests)
+endif()
 
 # ------------------------------------------------------------
 # Optional FluidSynth. If not found, AudioEngine uses
@@ -234,7 +242,7 @@ endif()
 # ============================================================
 # Native JUCE GUI app (built only if lib/JUCE is checked out).
 # ============================================================
-if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib/JUCE/CMakeLists.txt")
+if(CADENZA_BUILD_NATIVE_HOST AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib/JUCE/CMakeLists.txt")
     add_subdirectory(lib/JUCE)
 
     # ----- plugin-probe: headless CLI to verify VST3 hosting works -----
@@ -251,7 +259,7 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib/JUCE/CMakeLists.txt")
         juce::juce_recommended_config_flags)
 
     juce_add_gui_app(Cadenza
-        PRODUCT_NAME "Cadenza Workstation"
+        PRODUCT_NAME "Genos2 Personnel"
         COMPANY_NAME "Cadenza"
     )
 
@@ -270,6 +278,7 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib/JUCE/CMakeLists.txt")
             Source/Arranger/StyleEngine.cpp
             Source/UI/CadenzaLookAndFeel.cpp
             Source/UI/NativePanel.cpp
+            Source/UI/GenosSurface.cpp
             Source/UI/FirstLaunchAssistant.cpp
             Source/UI/StylePartEditor.cpp
             Source/UI/StylePartPatternImport.cpp
@@ -333,6 +342,15 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib/JUCE/CMakeLists.txt")
     )
 
     if(CADENZA_BUILD_TESTS)
+        add_executable(cadenza_genos_interaction_tests
+            tests/GenosInteractionTests.cpp Source/UI/GenosSurface.cpp)
+        target_include_directories(cadenza_genos_interaction_tests PRIVATE Source)
+        target_compile_definitions(cadenza_genos_interaction_tests PRIVATE
+            JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0)
+        target_link_libraries(cadenza_genos_interaction_tests PRIVATE
+            juce::juce_gui_extra juce::juce_audio_utils)
+        add_test(NAME cadenza_genos_interaction_tests COMMAND cadenza_genos_interaction_tests)
+
         add_executable(cadenza_pattern_import_tests
             tests/StylePartPatternImportTests.cpp
             Source/UI/StylePartPatternImport.cpp
@@ -376,6 +394,6 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib/JUCE/CMakeLists.txt")
             "$<TARGET_FILE_DIR:Cadenza>/resources"
         COMMENT "Copying Cadenza resources next to the executable"
     )
-else()
+elseif(CADENZA_BUILD_NATIVE_HOST)
     message(WARNING "lib/JUCE was not found, so the native host target is skipped. Clone JUCE into lib/JUCE to build Cadenza.exe.")
 endif()
