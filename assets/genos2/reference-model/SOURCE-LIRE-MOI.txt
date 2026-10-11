@@ -1,0 +1,51 @@
+YAMAHA GENOS2 — MODÈLE BLENDER ET RÉFÉRENCES
+Date : 11 octobre 2026
+
+OUVRIR LE MODÈLE
+blender/Yamaha_Genos2.blend
+Créé et vérifié avec Blender 5.2.1 LTS. Les textures sont intégrées au fichier.
+L'export blender/Yamaha_Genos2.glb contient aussi ses images et peut être importé dans d'autres logiciels 3D.
+
+CONTENU
+- 40 images téléchargées : 11 photos Yamaha, 1 schéma dimensions/connectique, 12 photos Thomann, 16 angles du visualiseur 360°.
+- Les 16 vues 360° sont dans sources/rotation_360/ en 5120 × 3026 pixels. Le serveur plafonne la livraison à cette résolution, malgré des dimensions natives annoncées plus grandes dans l'index.
+- 2 PDF : manuel d'utilisation et brochure Yamaha.
+- Les 3 images déjà présentes à la racine ont été conservées sans modification.
+- Manifestes de provenance, URL, résolution, taille et SHA-256 : sources/manifest.json et sources/rotation_360/manifest.json.
+- 5 rendus Cycles en 2400 × 1500 pixels : perspective, dessus, arrière, profil droit, commandes.
+- Planche récapitulative : rendus/Planche_verification.jpg.
+
+MODÈLE
+Dimensions globales vérifiées : 1234 × 456 × 151 mm. Unités : mètres, affichage millimètres.
+76 touches distinctes : 45 blanches et 31 noires, notes MIDI 28 à 103.
+Coques, écrans inclinés, joystick, commandes, 6 encodeurs, 9 faders, LED et connectique séparés.
+Collections 01 à 06 : éléments du produit. Collection 07 : photos de référence masquées. Collection 08 : studio, lumières et caméras.
+Le modèle est regroupé sous l'objet YAMAHA GENOS2 - 1234 x 456 x 151 mm.
+Les marquages et interfaces utilisent des textures dérivées des photographies Yamaha. Ce ne sont pas des interfaces fonctionnelles.
+
+FIDÉLITÉ ET LIMITES
+Reconstruction visuelle détaillée de l'extérieur à partir de photographies, pas un fichier CAO du fabricant.
+Les dimensions globales sont officielles. Les petites cotes, rayons, épaisseurs locales, course des boutons et profil précis du clavier FSX restent estimés.
+Le dessous n'est que partiellement documenté. Les nervures et la position de la trappe USB s'appuient sur le schéma du manuel ; leurs cotes locales et les patins sont estimés.
+La texture photographique conserve une partie de l'éclairage de la source ; un matériau entièrement indépendant de cet éclairage demanderait une capture supplémentaire.
+Le fichier est destiné à la visualisation et à l'édition 3D. Aucun assemblage mécanique ni ajustement de pièce réelle n'a été validé.
+
+REPRODUCTION
+scripts/collect_references.py : collecte Yamaha/Thomann.
+scripts/collect_360.py : téléchargement des 16 vues du visualiseur.
+scripts/build_genos2.py : construction initiale.
+scripts/refine_genos2.py : correction des proportions, matières et dessous.
+scripts/polish_genos2.py : logements arrière, finition et rendus finaux.
+scripts/fix_rear_uv.py : sélection de la projection UV arrière.
+scripts/final_surface.py : suppression du capot en double sous la peau photographique et rendus finaux.
+scripts/validate_blender_files.py : réouverture du BLEND et importation réelle du GLB dans Blender.
+scripts/finalize_delivery.py : vérification des fichiers et planche de contrôle.
+Les scripts Blender s'exécutent avec blender --background --python CHEMIN_DU_SCRIPT.
+La texture dérivée sources/panel_texture_clean.png est fournie et doit être conservée pour une reconstruction par script.
+Pour recalculer les rendus sur ce PC, le périphérique Cycles utilisé est HIP / AMD Radeon RX 9070 XT, à sélectionner dans les préférences Système de Blender si nécessaire.
+
+VÉRIFICATIONS
+Les 42 téléchargements ont été contrôlés par leur empreinte SHA-256.
+76 notes distinctes et dimensions globales contrôlées dans Blender.
+Le GLB est valide structurellement et ses images sont intégrées.
+Les cinq vues ont été rendues et inspectées ; les détails peu documentés sont explicitement indiqués ci-dessus.

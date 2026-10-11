@@ -4,6 +4,14 @@
 
 namespace cadenza::ui::genos
 {
+struct Vec2 { float x{}, y{}; };
+struct RasterTexture
+{
+    int width{}, height{};
+    std::vector<std::uint32_t> pixels;
+    bool bilinear=false;
+    bool valid() const { return width>0 && height>0 && pixels.size()==static_cast<std::size_t>(width)*height; }
+};
 // The visible pixel and its control ID share the same depth test. Picking
 // therefore cannot select a button hidden behind the chassis or a black key.
 struct Raster
@@ -19,7 +27,8 @@ struct Raster
         depths.assign(pixels.size(),-std::numeric_limits<float>::infinity());
         controls.assign(pixels.size(),-1);
     }
-    void triangle(const std::array<Point,3>& p, std::uint32_t colour, int control)
+    void triangle(const std::array<Point,3>& p, std::uint32_t colour, int control,
+                  const RasterTexture* texture=nullptr, const std::array<Vec2,3>& uv={})
     {
         for(const auto& point:p)
             if(!std::isfinite(point.x)||!std::isfinite(point.y)||!std::isfinite(point.depth))return;
@@ -29,6 +38,9 @@ struct Raster
         const float area=edge(p[0],p[1],p[2].x,p[2].y);
         if(!std::isfinite(area)||std::abs(area)<0.0001f)return;
         const float inverseArea=1.0f/area;
+        bool textured=texture && texture->valid();
+        if(textured)for(const auto& coordinate:uv)
+            if(!std::isfinite(coordinate.x)||!std::isfinite(coordinate.y))textured=false;
         const int left=std::max(0,(int)std::floor(std::min({p[0].x,p[1].x,p[2].x})));
         const int right=std::min(width-1,(int)std::ceil(std::max({p[0].x,p[1].x,p[2].x})));
         const float minimumY=std::min({p[0].y,p[1].y,p[2].y});
@@ -62,7 +74,38 @@ struct Raster
             const float depth=a*p[0].depth+b*p[1].depth+c*p[2].depth;
             const auto i=static_cast<std::size_t>(y)*width+x;
             if(depth<=depths[i])continue;
-            depths[i]=depth;pixels[i]=colour;controls[i]=control;
+            auto pixel=colour;
+            if(textured) {
+                const float u=std::clamp(a*uv[0].x+b*uv[1].x+c*uv[2].x,0.0f,1.0f);
+                const float v=std::clamp(a*uv[0].y+b*uv[1].y+c*uv[2].y,0.0f,1.0f);
+                const int tx=std::min(texture->width-1,(int)(u*texture->width));
+                const int ty=std::min(texture->height-1,(int)(v*texture->height));
+                auto sample=texture->pixels[static_cast<std::size_t>(ty)*texture->width+tx];
+                if(texture->bilinear) {
+                    const float sx=std::clamp(u*texture->width-.5f,0.0f,(float)texture->width-1);
+                    const float sy=std::clamp(v*texture->height-.5f,0.0f,(float)texture->height-1);
+                    const int x0=(int)sx,y0=(int)sy;
+                    const int x1=std::min(x0+1,texture->width-1),y1=std::min(y0+1,texture->height-1);
+                    const float fx=sx-x0,fy=sy-y0;
+                    const auto s00=texture->pixels[static_cast<std::size_t>(y0)*texture->width+x0];
+                    const auto s10=texture->pixels[static_cast<std::size_t>(y0)*texture->width+x1];
+                    const auto s01=texture->pixels[static_cast<std::size_t>(y1)*texture->width+x0];
+                    const auto s11=texture->pixels[static_cast<std::size_t>(y1)*texture->width+x1];
+                    sample=0;
+                    for(int shift=0;shift<=24;shift+=8) {
+                        const float top=((s00>>shift)&255)*(1-fx)+((s10>>shift)&255)*fx;
+                        const float bottom=((s01>>shift)&255)*(1-fx)+((s11>>shift)&255)*fx;
+                        sample|=static_cast<std::uint32_t>(std::lround(top*(1-fy)+bottom*fy))<<shift;
+                    }
+                }
+                pixel=0;
+                for(int shift=0;shift<=24;shift+=8)
+                    pixel|=(((sample>>shift)&255)*((colour>>shift)&255)/255)<<shift;
+            }
+            // The imported model's surfaces are opaque. Fully transparent
+            // texels leave both the visible surface and picking untouched.
+            if((pixel>>24)==0)continue;
+            depths[i]=depth;pixels[i]=pixel;controls[i]=control;
             }
         }
     }

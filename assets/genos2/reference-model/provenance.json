@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "createdAtUtc": "2026-10-11T19:49:05.9632205Z",
+  "timezone": "Europe/Paris",
+  "purpose": "Import approved final Blender source into existing native Cadenza",
+  "source": {
+    "path": "C:/Users/marco/Desktop/AI/PLANCHES DE REFERENCES/Martial/Yamaha Genos 2/blender/Yamaha_Genos2.blend",
+    "sha256": "09D140A95059B1A05504D4BD60E96ECD581D2854F34729947407095E938ED553",
+    "copiedSha256": "09D140A95059B1A05504D4BD60E96ECD581D2854F34729947407095E938ED553",
+    "modified": false,
+    "sourceRenderPaths": [
+      "rendus/01_Perspective_hero.png",
+      "rendus/02_Dessus_orthographique.png",
+      "rendus/05_Detail_commandes.png"
+    ]
+  },
+  "blender": "5.2.1 LTS",
+  "inventory": {
+    "sourceMeshObjects": 801,
+    "sourceTriangles": 205760,
+    "runtimeTriangles": 205756,
+    "texturedTriangles": 4361,
+    "commandCount": 122,
+    "keys": 76,
+    "liveControlRotaries": 6,
+    "masterRotaries": 1,
+    "faders": 9,
+    "joysticks": 1
+  },
+  "binary": {
+    "signature": "GNOS2M01",
+    "records": 205756,
+    "recordBytes": 76,
+    "headerBytes": 12,
+    "fileBytes": 15637468,
+    "contractSizeVerified": true
+  },
+  "files": [
+    {
+      "file": "01_Perspective_hero.png",
+      "bytes": 3972971,
+      "sha256": "AA7C2D8B73713F85D6471038F8B98FA8CAAED2067EDCA6098C30C7097575C112"
+    },
+    {
+      "file": "02_Dessus_orthographique.png",
+      "bytes": 3989364,
+      "sha256": "37F93EABF329D27332E910A8B57B568C53C9B3B47A6828E66731E9CB480317C5"
+    },
+    {
+      "file": "05_Detail_commandes.png",
+      "bytes": 4518447,
+      "sha256": "5F0DA5A97471F30088C8496D6564DC1BD6FC588B0C8010B0126204EDE04DB839"
+    },
+    {
+      "file": "control-mapping.json",
+      "bytes": 31488,
+      "sha256": "1503C89A8BC0CD9B82A330B6E393657918E2D0AD823BDEF6112139D87845A174"
+    },
+    {
+      "file": "export_reference.py",
+      "bytes": 10607,
+      "sha256": "666032B101159F56E9970F958311782666C4AA3FCDCC92BAD2D46813C286657B"
+    },
+    {
+      "file": "geometry.json",
+      "bytes": 88096,
+      "sha256": "81324901BC5093C794C940B6A6C628A1080121F9E746842592028FEC4E3640D6"
+    },
+    {
+      "file": "inspect_reference.py",
+      "bytes": 1893,
+      "sha256": "3E1D22BCA6FFDD344EDE6628FE9FD8477A5EA3ABBC8C7A916731F575E8FBC5ED"
+    },
+    {
+      "file": "mesh-inventory.json",
+      "bytes": 164840,
+      "sha256": "A92F364325827147B1B64B61BE34BDFCABE24EA229699A2891D9712D54E84B8B"
+    },
+    {
+      "file": "mesh.bin",
+      "bytes": 15637468,
+      "sha256": "399D8BCA7FC271515A0F34D0CA96C51AA76A36F84744C3B9B035757D2022786A"
+    },
+    {
+      "file": "panel.png",
+      "bytes": 845865,
+      "sha256": "D5891782B7D9BFB269028AFBF97DD25A986E5CEB30644DE7FEA9E6EBD62E4974"
+    },
+    {
+      "file": "rear.png",
+      "bytes": 101391,
+      "sha256": "226922990869912B9C023D7DFA562D5BA878647433B32FAB87FAA4375789ABFA"
+    },
+    {
+      "file": "source-inventory.json",
+      "bytes": 573971,
+      "sha256": "E790EB1B27F25F99C126723C963C24F4CA35D7E10DCD7D77421A64EC6EAE7BE9"
+    },
+    {
+      "file": "SOURCE-LIRE-MOI.txt",
+      "bytes": 3998,
+      "sha256": "42013F2DD1DC719AFA3299984EBDD07688695A79B32F3CE7AA4B5BCC3E507186"
+    },
+    {
+      "file": "Yamaha_Genos2.blend",
+      "bytes": 1616682,
+      "sha256": "09D140A95059B1A05504D4BD60E96ECD581D2854F34729947407095E938ED553"
+    }
+  ],
+  "checks": [
+    "Source and copied blend SHA256 identical",
+    "Independent Blender inventory after modifiers:801 product meshes,205760 triangles",
+    "Runtime205756 triangles excludes only two original LCD quads",
+    "BIN header count and byte length match contract",
+    "122 unique control IDs",
+    "Packed panel and rear textures extracted complete2000x2000,visually opened",
+    "Source hero/top/control detail renders inspected before export",
+    "Control mapping follows actual matching Yamaha buttons",
+    "No source Desktop writes or interactive Blender changes"
+  ],
+  "limitations": [
+    "New JUCE visual review pending build captures",
+    "Hardware/audio/export Yamaha not validated by this model import",
+    "Factory button legends are photographs already lit",
+    "Small local dimensions and underside inferred by source creator",
+    "No global mesh decimation"
+  ],
+  "resources": {
+    "twentyFirstTool": "mcp__21st__get_usage",
+    "result": "free2/2 code retrievals,AI disabled,zero credits",
+    "componentCodeRetrieved": false,
+    "paidCalls": false,
+    "webMotionNotImported": "Existing native JUCE renderer; no DOM or web interface required"
+  }
+}

@@ -7,7 +7,7 @@
 
 namespace cadenza::ui
 {
-// Native parametric 3D surface. It shares the existing panel callbacks; it does
+// Native surface of the imported Blender model. It shares the panel callbacks; it does
 // not implement a second arranger or pretend that a hardware device is present.
 class GenosSurface final : public juce::Component,
                            public juce::SettableTooltipClient
@@ -43,7 +43,7 @@ private:
     void ensureFrame() const;
     genos::Vec3 movedVertex(genos::Vec3, int control) const;
     juce::Point<float> project(genos::Vec3) const;
-    void paintScreen(juce::Graphics&, const genos::ModelScreen&);
+    void rasterScreen(const genos::ModelScreen&) const;
     int hit(juce::Point<float>) const;
     bool enabled(const genos::Control&) const;
     bool illuminated(const genos::Control&) const;

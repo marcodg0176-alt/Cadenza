@@ -9,6 +9,24 @@
 
 namespace cadenza::ui::genos
 {
+inline std::string resolveSection(const std::string& requested,
+                                  const std::vector<std::string>& sections,
+                                  const std::string& current)
+{
+    const auto exists=[&](const std::string& id) {
+        return std::find(sections.begin(),sections.end(),id)!=sections.end();
+    };
+    if(requested=="fill") {
+        const char variation=current.size()==5 && current.rfind("main",0)==0?current.back():'A';
+        for(const auto& id:{std::string("fill")+variation+variation,
+                            std::string("fill")+variation,std::string("fill")})
+            if(exists(id))return id;
+    }
+    if(exists(requested))return requested;
+    if(requested=="introA" && exists("intro"))return "intro";
+    if(requested=="endingA" && exists("ending"))return "ending";
+    return {};
+}
 struct Vec3 { float x{}, y{}, z{}; };
 struct Point { float x{}, y{}, depth{}; };
 struct Face
@@ -28,6 +46,9 @@ struct Control
     float width{}, depth{}, height{};
     int value = 0;
     bool black = false;
+    Vec3 hitPoint{}, travel{};
+    bool hasHitPoint=false, hasTravel=false;
+    float neutralValue=.5f;
 };
 struct Camera
 {

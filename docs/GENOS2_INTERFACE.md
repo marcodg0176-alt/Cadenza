@@ -1,10 +1,13 @@
 # Genos2 Personnel
 
 Cette version personnelle de Cadenza démarre sur un instrument modélisé dans Blender.
-La scène source et les rendus sont dans `assets/genos2`. Sa géométrie triangulée
-est embarquée dans l'application et projetée avec un tampon de profondeur ;
-l'écran contient l'état réel de Cadenza. Elle reprend les proportions et groupes
-de commandes des planches locales Genos2 ; les fonctions
+La source actuelle est le fichier `Yamaha_Genos2.blend` fourni par Marco dans son
+dossier de références Yamaha Genos 2. Une copie, l'export natif reproductible et
+les textures sont dans `assets/genos2/reference-model` ; l'ancien modèle dans
+`assets/genos2` est conservé comme historique. Sa géométrie triangulée et ses
+textures sont embarquées et projetées avec un tampon de profondeur partagé par
+le rendu et les clics. Les deux écrans inclinés contiennent l'état réel de Cadenza
+à la place des photographies d'interface du modèle ; les fonctions
 musicales et les sons sont ceux du moteur Cadenza et des instruments chargés.
 
 ## Utilisation
@@ -34,7 +37,12 @@ la fermeture du composant.
 
 Les registrations, multipads, encodeur DATA et certaines petites commandes du
 clavier représenté restent des détails visuels : seules les fonctions existantes
-de Cadenza sont raccordées. Le bandeau français conserve les aides et états lisibles
+de Cadenza sont raccordées aux commandes correspondantes. Les six encodeurs
+commandent REV, COMP, VOL, LOW, MID, HIGH et les neuf curseurs les huit parties
+puis le volume maître. L'écran LIVE CONTROL décrit ces affectations Cadenza.
+Les fonctions sans bouton physique équivalent restent accessibles dans la vue
+Cadenza et la barre d'outils (éditeur, MIDI, audio, changement de vue).
+Le bandeau français conserve les aides et états lisibles
 lorsque les légendes physiques deviennent petites. Le rendu Blender est une
 reconstruction de façade, pas une reproduction certifiée de l'instrument.
 

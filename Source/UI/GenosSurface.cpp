@@ -9,24 +9,7 @@ constexpr std::array<int,8> mixerChannels{10,9,11,12,13,14,15,16};
 constexpr std::array<int,18> computerPitches{60,62,64,65,67,69,71,72,61,63,66,68,48,50,52,53,55,57};
 constexpr char computerKeys[] = "qsdfghjkzertwxcvbn";
 
-std::string resolveSection(const std::string& requested,
-                           const std::vector<std::string>& sections,
-                           const std::string& current)
-{
-    auto exists = [&](const std::string& s) {
-        return std::find(sections.begin(), sections.end(), s) != sections.end();
-    };
-    if (requested == "fill") {
-        const char variation = current.size() == 5 && current.rfind("main",0) == 0 ? current.back() : 'A';
-        for (const auto& s : {std::string("fill")+variation+variation,
-                              std::string("fill")+variation, std::string("fill")})
-            if (exists(s)) return s;
-    }
-    if (exists(requested)) return requested;
-    if (requested == "introA" && exists("intro")) return "intro";
-    if (requested == "endingA" && exists("ending")) return "ending";
-    return {};
-}
+using genos::resolveSection;
 bool sectionControl(const std::string& id)
 {
     return id.rfind("intro",0)==0 || id.rfind("main",0)==0
@@ -132,8 +115,11 @@ genos::Vec3 GenosSurface::movedVertex(genos::Vec3 p, int index) const
     if(index<0)return p;
     const auto& c=m_controls[(std::size_t)index];
     if(c.kind==genos::Control::Kind::key && m_notes.count(c.value))p.y-=.035f;
-    else if(c.kind==genos::Control::Kind::fader)
-        p.z+=(.5f-m_volumes[(std::size_t)c.value]/127.0f)*.48f;
+    else if(c.kind==genos::Control::Kind::fader) {
+        const float delta=m_volumes[(std::size_t)c.value]/127.0f-c.neutralValue;
+        if(c.hasTravel){p.x+=delta*c.travel.x;p.y+=delta*c.travel.y;p.z+=delta*c.travel.z;}
+        else p.z-=delta*.48f;
+    }
     else if(c.kind==genos::Control::Kind::knob) {
         const float angle=-2.2f+4.4f*knobValue(c.value)/127.0f;
         const float x=p.x-c.centre.x,z=p.z-c.centre.z;
@@ -176,8 +162,11 @@ void GenosSurface::ensureFrame() const
             }
             if(m_hover==face.control && enabled(c))colour=colour.brighter(.14f);
         }
-        m_raster.triangle(points,colour.getARGB(),face.control);
+        const auto* texture=face.texture>=0 && face.texture<(int)m_model.textures.size()
+                            ?&m_model.textures[(std::size_t)face.texture]:nullptr;
+        m_raster.triangle(points,colour.getARGB(),face.control,texture,face.uv);
     }
+    for(const auto& screen:m_model.screens)rasterScreen(screen);
     m_frame=juce::Image(juce::Image::ARGB,w,h,true,juce::SoftwareImageType());
     juce::Image::BitmapData data(m_frame,juce::Image::BitmapData::writeOnly);
     for(int y=0;y<h;++y)for(int x=0;x<w;++x) {
@@ -192,14 +181,17 @@ juce::Point<float> GenosSurface::controlScreenCentre(const std::string& id) cons
 {
     for(std::size_t i=0;i<m_controls.size();++i)if(m_controls[i].id==id) {
         const auto& c=m_controls[i];
-        auto p=c.centre;p.y+=c.height*.8f;
-        if(c.kind==genos::Control::Kind::fader){p.z-=.08f;p.y=.55f;}
+        auto p=c.hasHitPoint?c.hitPoint:c.centre;
+        if(!c.hasHitPoint) {
+            p.y+=c.height*.8f;
+            if(c.kind==genos::Control::Kind::fader){p.z-=.08f;p.y=.55f;}
+        }
         return project(movedVertex(p,(int)i));
     }
     return {-1,-1};
 }
 
-void GenosSurface::paintScreen(juce::Graphics& g,const genos::ModelScreen& screen)
+void GenosSurface::rasterScreen(const genos::ModelScreen& screen) const
 {
     const bool main=screen.id=="main";
     const int w=main?600:600,h=main?310:64;
@@ -237,12 +229,23 @@ void GenosSurface::paintScreen(juce::Graphics& g,const genos::ModelScreen& scree
         }
     }
     } // Complete the display image before the host graphics reads it.
-    auto c=screen.centre;c.y+=.036f;
-    const auto a=project({c.x-screen.width/2,c.y,c.z-screen.depth/2});
-    const auto b=project({c.x+screen.width/2,c.y,c.z-screen.depth/2});
-    const auto d=project({c.x-screen.width/2,c.y,c.z+screen.depth/2});
-    g.drawImageTransformed(image,juce::AffineTransform::fromTargetPoints(0,0,a.x,a.y,
-        (float)w,0,b.x,b.y,0,(float)h,d.x,d.y),false);
+    const auto texture=genos::Model::textureFromImage(image);
+    auto corners=screen.corners;
+    if(!screen.hasCorners) {
+        auto c=screen.centre;c.y+=.036f;
+        corners={genos::Vec3{c.x-screen.width/2,c.y,c.z-screen.depth/2},
+                 genos::Vec3{c.x+screen.width/2,c.y,c.z-screen.depth/2},
+                 genos::Vec3{c.x+screen.width/2,c.y,c.z+screen.depth/2},
+                 genos::Vec3{c.x-screen.width/2,c.y,c.z+screen.depth/2}};
+    }
+    const auto bounds=modelBounds();
+    std::array<genos::Point,4> points;
+    for(int i=0;i<4;++i)points[(std::size_t)i]=m_camera.project(corners[(std::size_t)i],
+        (float)bounds.getWidth(),(float)bounds.getHeight());
+    m_raster.triangle({points[0],points[1],points[2]},0xffffffff,-1,&texture,
+                      {{{0,0},{1,0},{1,1}}});
+    m_raster.triangle({points[0],points[2],points[3]},0xffffffff,-1,&texture,
+                      {{{0,0},{1,1},{0,1}}});
 }
 
 void GenosSurface::paint(juce::Graphics& g)
@@ -278,7 +281,6 @@ void GenosSurface::paint(juce::Graphics& g)
         g.drawText(label.text,juce::Rectangle<float>(p.x-width/2,p.y-size*.55f,width,size*1.2f),
                    juce::Justification::centred,false);
     }
-    for(const auto& screen:m_model.screens)paintScreen(g,screen);
     }
     const auto band=getLocalBounds().removeFromBottom(88).reduced(24,7);
     g.setColour(juce::Colour(0xff192735)); g.fillRoundedRectangle(band.toFloat(),10);

@@ -1,0 +1,1481 @@
+[
+  {
+    "id": "note28",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 01 MIDI 28",
+    "meshes": [
+      "Touche blanche 01 MIDI 28"
+    ],
+    "value": 28
+  },
+  {
+    "id": "note29",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 02 MIDI 29",
+    "meshes": [
+      "Touche blanche 02 MIDI 29"
+    ],
+    "value": 29
+  },
+  {
+    "id": "note30",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 30",
+    "meshes": [
+      "Touche noire MIDI 30"
+    ],
+    "value": 30
+  },
+  {
+    "id": "note31",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 03 MIDI 31",
+    "meshes": [
+      "Touche blanche 03 MIDI 31"
+    ],
+    "value": 31
+  },
+  {
+    "id": "note32",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 32",
+    "meshes": [
+      "Touche noire MIDI 32"
+    ],
+    "value": 32
+  },
+  {
+    "id": "note33",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 04 MIDI 33",
+    "meshes": [
+      "Touche blanche 04 MIDI 33"
+    ],
+    "value": 33
+  },
+  {
+    "id": "note34",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 34",
+    "meshes": [
+      "Touche noire MIDI 34"
+    ],
+    "value": 34
+  },
+  {
+    "id": "note35",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 05 MIDI 35",
+    "meshes": [
+      "Touche blanche 05 MIDI 35"
+    ],
+    "value": 35
+  },
+  {
+    "id": "note36",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 06 MIDI 36",
+    "meshes": [
+      "Touche blanche 06 MIDI 36"
+    ],
+    "value": 36
+  },
+  {
+    "id": "note37",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 37",
+    "meshes": [
+      "Touche noire MIDI 37"
+    ],
+    "value": 37
+  },
+  {
+    "id": "note38",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 07 MIDI 38",
+    "meshes": [
+      "Touche blanche 07 MIDI 38"
+    ],
+    "value": 38
+  },
+  {
+    "id": "note39",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 39",
+    "meshes": [
+      "Touche noire MIDI 39"
+    ],
+    "value": 39
+  },
+  {
+    "id": "note40",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 08 MIDI 40",
+    "meshes": [
+      "Touche blanche 08 MIDI 40"
+    ],
+    "value": 40
+  },
+  {
+    "id": "note41",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 09 MIDI 41",
+    "meshes": [
+      "Touche blanche 09 MIDI 41"
+    ],
+    "value": 41
+  },
+  {
+    "id": "note42",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 42",
+    "meshes": [
+      "Touche noire MIDI 42"
+    ],
+    "value": 42
+  },
+  {
+    "id": "note43",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 10 MIDI 43",
+    "meshes": [
+      "Touche blanche 10 MIDI 43"
+    ],
+    "value": 43
+  },
+  {
+    "id": "note44",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 44",
+    "meshes": [
+      "Touche noire MIDI 44"
+    ],
+    "value": 44
+  },
+  {
+    "id": "note45",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 11 MIDI 45",
+    "meshes": [
+      "Touche blanche 11 MIDI 45"
+    ],
+    "value": 45
+  },
+  {
+    "id": "note46",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 46",
+    "meshes": [
+      "Touche noire MIDI 46"
+    ],
+    "value": 46
+  },
+  {
+    "id": "note47",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 12 MIDI 47",
+    "meshes": [
+      "Touche blanche 12 MIDI 47"
+    ],
+    "value": 47
+  },
+  {
+    "id": "note48",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 13 MIDI 48",
+    "meshes": [
+      "Touche blanche 13 MIDI 48"
+    ],
+    "value": 48
+  },
+  {
+    "id": "note49",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 49",
+    "meshes": [
+      "Touche noire MIDI 49"
+    ],
+    "value": 49
+  },
+  {
+    "id": "note50",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 14 MIDI 50",
+    "meshes": [
+      "Touche blanche 14 MIDI 50"
+    ],
+    "value": 50
+  },
+  {
+    "id": "note51",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 51",
+    "meshes": [
+      "Touche noire MIDI 51"
+    ],
+    "value": 51
+  },
+  {
+    "id": "note52",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 15 MIDI 52",
+    "meshes": [
+      "Touche blanche 15 MIDI 52"
+    ],
+    "value": 52
+  },
+  {
+    "id": "note53",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 16 MIDI 53",
+    "meshes": [
+      "Touche blanche 16 MIDI 53"
+    ],
+    "value": 53
+  },
+  {
+    "id": "note54",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 54",
+    "meshes": [
+      "Touche noire MIDI 54"
+    ],
+    "value": 54
+  },
+  {
+    "id": "note55",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 17 MIDI 55",
+    "meshes": [
+      "Touche blanche 17 MIDI 55"
+    ],
+    "value": 55
+  },
+  {
+    "id": "note56",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 56",
+    "meshes": [
+      "Touche noire MIDI 56"
+    ],
+    "value": 56
+  },
+  {
+    "id": "note57",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 18 MIDI 57",
+    "meshes": [
+      "Touche blanche 18 MIDI 57"
+    ],
+    "value": 57
+  },
+  {
+    "id": "note58",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 58",
+    "meshes": [
+      "Touche noire MIDI 58"
+    ],
+    "value": 58
+  },
+  {
+    "id": "note59",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 19 MIDI 59",
+    "meshes": [
+      "Touche blanche 19 MIDI 59"
+    ],
+    "value": 59
+  },
+  {
+    "id": "note60",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 20 MIDI 60",
+    "meshes": [
+      "Touche blanche 20 MIDI 60"
+    ],
+    "value": 60
+  },
+  {
+    "id": "note61",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 61",
+    "meshes": [
+      "Touche noire MIDI 61"
+    ],
+    "value": 61
+  },
+  {
+    "id": "note62",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 21 MIDI 62",
+    "meshes": [
+      "Touche blanche 21 MIDI 62"
+    ],
+    "value": 62
+  },
+  {
+    "id": "note63",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 63",
+    "meshes": [
+      "Touche noire MIDI 63"
+    ],
+    "value": 63
+  },
+  {
+    "id": "note64",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 22 MIDI 64",
+    "meshes": [
+      "Touche blanche 22 MIDI 64"
+    ],
+    "value": 64
+  },
+  {
+    "id": "note65",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 23 MIDI 65",
+    "meshes": [
+      "Touche blanche 23 MIDI 65"
+    ],
+    "value": 65
+  },
+  {
+    "id": "note66",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 66",
+    "meshes": [
+      "Touche noire MIDI 66"
+    ],
+    "value": 66
+  },
+  {
+    "id": "note67",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 24 MIDI 67",
+    "meshes": [
+      "Touche blanche 24 MIDI 67"
+    ],
+    "value": 67
+  },
+  {
+    "id": "note68",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 68",
+    "meshes": [
+      "Touche noire MIDI 68"
+    ],
+    "value": 68
+  },
+  {
+    "id": "note69",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 25 MIDI 69",
+    "meshes": [
+      "Touche blanche 25 MIDI 69"
+    ],
+    "value": 69
+  },
+  {
+    "id": "note70",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 70",
+    "meshes": [
+      "Touche noire MIDI 70"
+    ],
+    "value": 70
+  },
+  {
+    "id": "note71",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 26 MIDI 71",
+    "meshes": [
+      "Touche blanche 26 MIDI 71"
+    ],
+    "value": 71
+  },
+  {
+    "id": "note72",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 27 MIDI 72",
+    "meshes": [
+      "Touche blanche 27 MIDI 72"
+    ],
+    "value": 72
+  },
+  {
+    "id": "note73",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 73",
+    "meshes": [
+      "Touche noire MIDI 73"
+    ],
+    "value": 73
+  },
+  {
+    "id": "note74",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 28 MIDI 74",
+    "meshes": [
+      "Touche blanche 28 MIDI 74"
+    ],
+    "value": 74
+  },
+  {
+    "id": "note75",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 75",
+    "meshes": [
+      "Touche noire MIDI 75"
+    ],
+    "value": 75
+  },
+  {
+    "id": "note76",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 29 MIDI 76",
+    "meshes": [
+      "Touche blanche 29 MIDI 76"
+    ],
+    "value": 76
+  },
+  {
+    "id": "note77",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 30 MIDI 77",
+    "meshes": [
+      "Touche blanche 30 MIDI 77"
+    ],
+    "value": 77
+  },
+  {
+    "id": "note78",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 78",
+    "meshes": [
+      "Touche noire MIDI 78"
+    ],
+    "value": 78
+  },
+  {
+    "id": "note79",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 31 MIDI 79",
+    "meshes": [
+      "Touche blanche 31 MIDI 79"
+    ],
+    "value": 79
+  },
+  {
+    "id": "note80",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 80",
+    "meshes": [
+      "Touche noire MIDI 80"
+    ],
+    "value": 80
+  },
+  {
+    "id": "note81",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 32 MIDI 81",
+    "meshes": [
+      "Touche blanche 32 MIDI 81"
+    ],
+    "value": 81
+  },
+  {
+    "id": "note82",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 82",
+    "meshes": [
+      "Touche noire MIDI 82"
+    ],
+    "value": 82
+  },
+  {
+    "id": "note83",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 33 MIDI 83",
+    "meshes": [
+      "Touche blanche 33 MIDI 83"
+    ],
+    "value": 83
+  },
+  {
+    "id": "note84",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 34 MIDI 84",
+    "meshes": [
+      "Touche blanche 34 MIDI 84"
+    ],
+    "value": 84
+  },
+  {
+    "id": "note85",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 85",
+    "meshes": [
+      "Touche noire MIDI 85"
+    ],
+    "value": 85
+  },
+  {
+    "id": "note86",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 35 MIDI 86",
+    "meshes": [
+      "Touche blanche 35 MIDI 86"
+    ],
+    "value": 86
+  },
+  {
+    "id": "note87",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 87",
+    "meshes": [
+      "Touche noire MIDI 87"
+    ],
+    "value": 87
+  },
+  {
+    "id": "note88",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 36 MIDI 88",
+    "meshes": [
+      "Touche blanche 36 MIDI 88"
+    ],
+    "value": 88
+  },
+  {
+    "id": "note89",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 37 MIDI 89",
+    "meshes": [
+      "Touche blanche 37 MIDI 89"
+    ],
+    "value": 89
+  },
+  {
+    "id": "note90",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 90",
+    "meshes": [
+      "Touche noire MIDI 90"
+    ],
+    "value": 90
+  },
+  {
+    "id": "note91",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 38 MIDI 91",
+    "meshes": [
+      "Touche blanche 38 MIDI 91"
+    ],
+    "value": 91
+  },
+  {
+    "id": "note92",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 92",
+    "meshes": [
+      "Touche noire MIDI 92"
+    ],
+    "value": 92
+  },
+  {
+    "id": "note93",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 39 MIDI 93",
+    "meshes": [
+      "Touche blanche 39 MIDI 93"
+    ],
+    "value": 93
+  },
+  {
+    "id": "note94",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 94",
+    "meshes": [
+      "Touche noire MIDI 94"
+    ],
+    "value": 94
+  },
+  {
+    "id": "note95",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 40 MIDI 95",
+    "meshes": [
+      "Touche blanche 40 MIDI 95"
+    ],
+    "value": 95
+  },
+  {
+    "id": "note96",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 41 MIDI 96",
+    "meshes": [
+      "Touche blanche 41 MIDI 96"
+    ],
+    "value": 96
+  },
+  {
+    "id": "note97",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 97",
+    "meshes": [
+      "Touche noire MIDI 97"
+    ],
+    "value": 97
+  },
+  {
+    "id": "note98",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 42 MIDI 98",
+    "meshes": [
+      "Touche blanche 42 MIDI 98"
+    ],
+    "value": 98
+  },
+  {
+    "id": "note99",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 99",
+    "meshes": [
+      "Touche noire MIDI 99"
+    ],
+    "value": 99
+  },
+  {
+    "id": "note100",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 43 MIDI 100",
+    "meshes": [
+      "Touche blanche 43 MIDI 100"
+    ],
+    "value": 100
+  },
+  {
+    "id": "note101",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 44 MIDI 101",
+    "meshes": [
+      "Touche blanche 44 MIDI 101"
+    ],
+    "value": 101
+  },
+  {
+    "id": "note102",
+    "kind": "key",
+    "sourceMesh": "Touche noire MIDI 102",
+    "meshes": [
+      "Touche noire MIDI 102"
+    ],
+    "value": 102
+  },
+  {
+    "id": "note103",
+    "kind": "key",
+    "sourceMesh": "Touche blanche 45 MIDI 103",
+    "meshes": [
+      "Touche blanche 45 MIDI 103"
+    ],
+    "value": 103
+  },
+  {
+    "id": "knob0",
+    "kind": "knob",
+    "sourceMesh": "Encodeur LIVE CONTROL 1 capuchon",
+    "meshes": [
+      "Cannele encodeur 1-0",
+      "Cannele encodeur 1-1",
+      "Cannele encodeur 1-10",
+      "Cannele encodeur 1-11",
+      "Cannele encodeur 1-12",
+      "Cannele encodeur 1-13",
+      "Cannele encodeur 1-14",
+      "Cannele encodeur 1-15",
+      "Cannele encodeur 1-16",
+      "Cannele encodeur 1-17",
+      "Cannele encodeur 1-18",
+      "Cannele encodeur 1-19",
+      "Cannele encodeur 1-2",
+      "Cannele encodeur 1-20",
+      "Cannele encodeur 1-21",
+      "Cannele encodeur 1-22",
+      "Cannele encodeur 1-23",
+      "Cannele encodeur 1-3",
+      "Cannele encodeur 1-4",
+      "Cannele encodeur 1-5",
+      "Cannele encodeur 1-6",
+      "Cannele encodeur 1-7",
+      "Cannele encodeur 1-8",
+      "Cannele encodeur 1-9",
+      "Encodeur LIVE CONTROL 1 capuchon",
+      "Encodeur LIVE CONTROL 1 couronne",
+      "Encodeur LIVE CONTROL 1 grip",
+      "LED encodeur 1-1",
+      "LED encodeur 1-10",
+      "LED encodeur 1-11",
+      "LED encodeur 1-12",
+      "LED encodeur 1-13",
+      "LED encodeur 1-14",
+      "LED encodeur 1-2",
+      "LED encodeur 1-3",
+      "LED encodeur 1-4",
+      "LED encodeur 1-5",
+      "LED encodeur 1-6",
+      "LED encodeur 1-7",
+      "LED encodeur 1-8",
+      "LED encodeur 1-9"
+    ],
+    "value": 0
+  },
+  {
+    "id": "knob1",
+    "kind": "knob",
+    "sourceMesh": "Encodeur LIVE CONTROL 2 capuchon",
+    "meshes": [
+      "Cannele encodeur 2-0",
+      "Cannele encodeur 2-1",
+      "Cannele encodeur 2-10",
+      "Cannele encodeur 2-11",
+      "Cannele encodeur 2-12",
+      "Cannele encodeur 2-13",
+      "Cannele encodeur 2-14",
+      "Cannele encodeur 2-15",
+      "Cannele encodeur 2-16",
+      "Cannele encodeur 2-17",
+      "Cannele encodeur 2-18",
+      "Cannele encodeur 2-19",
+      "Cannele encodeur 2-2",
+      "Cannele encodeur 2-20",
+      "Cannele encodeur 2-21",
+      "Cannele encodeur 2-22",
+      "Cannele encodeur 2-23",
+      "Cannele encodeur 2-3",
+      "Cannele encodeur 2-4",
+      "Cannele encodeur 2-5",
+      "Cannele encodeur 2-6",
+      "Cannele encodeur 2-7",
+      "Cannele encodeur 2-8",
+      "Cannele encodeur 2-9",
+      "Encodeur LIVE CONTROL 2 capuchon",
+      "Encodeur LIVE CONTROL 2 couronne",
+      "Encodeur LIVE CONTROL 2 grip",
+      "LED encodeur 2-1",
+      "LED encodeur 2-10",
+      "LED encodeur 2-11",
+      "LED encodeur 2-12",
+      "LED encodeur 2-13",
+      "LED encodeur 2-14",
+      "LED encodeur 2-2",
+      "LED encodeur 2-3",
+      "LED encodeur 2-4",
+      "LED encodeur 2-5",
+      "LED encodeur 2-6",
+      "LED encodeur 2-7",
+      "LED encodeur 2-8",
+      "LED encodeur 2-9"
+    ],
+    "value": 1
+  },
+  {
+    "id": "knob2",
+    "kind": "knob",
+    "sourceMesh": "Encodeur LIVE CONTROL 3 capuchon",
+    "meshes": [
+      "Cannele encodeur 3-0",
+      "Cannele encodeur 3-1",
+      "Cannele encodeur 3-10",
+      "Cannele encodeur 3-11",
+      "Cannele encodeur 3-12",
+      "Cannele encodeur 3-13",
+      "Cannele encodeur 3-14",
+      "Cannele encodeur 3-15",
+      "Cannele encodeur 3-16",
+      "Cannele encodeur 3-17",
+      "Cannele encodeur 3-18",
+      "Cannele encodeur 3-19",
+      "Cannele encodeur 3-2",
+      "Cannele encodeur 3-20",
+      "Cannele encodeur 3-21",
+      "Cannele encodeur 3-22",
+      "Cannele encodeur 3-23",
+      "Cannele encodeur 3-3",
+      "Cannele encodeur 3-4",
+      "Cannele encodeur 3-5",
+      "Cannele encodeur 3-6",
+      "Cannele encodeur 3-7",
+      "Cannele encodeur 3-8",
+      "Cannele encodeur 3-9",
+      "Encodeur LIVE CONTROL 3 capuchon",
+      "Encodeur LIVE CONTROL 3 couronne",
+      "Encodeur LIVE CONTROL 3 grip",
+      "LED encodeur 3-1",
+      "LED encodeur 3-10",
+      "LED encodeur 3-11",
+      "LED encodeur 3-12",
+      "LED encodeur 3-13",
+      "LED encodeur 3-14",
+      "LED encodeur 3-2",
+      "LED encodeur 3-3",
+      "LED encodeur 3-4",
+      "LED encodeur 3-5",
+      "LED encodeur 3-6",
+      "LED encodeur 3-7",
+      "LED encodeur 3-8",
+      "LED encodeur 3-9"
+    ],
+    "value": 2
+  },
+  {
+    "id": "knob3",
+    "kind": "knob",
+    "sourceMesh": "Encodeur LIVE CONTROL 4 capuchon",
+    "meshes": [
+      "Cannele encodeur 4-0",
+      "Cannele encodeur 4-1",
+      "Cannele encodeur 4-10",
+      "Cannele encodeur 4-11",
+      "Cannele encodeur 4-12",
+      "Cannele encodeur 4-13",
+      "Cannele encodeur 4-14",
+      "Cannele encodeur 4-15",
+      "Cannele encodeur 4-16",
+      "Cannele encodeur 4-17",
+      "Cannele encodeur 4-18",
+      "Cannele encodeur 4-19",
+      "Cannele encodeur 4-2",
+      "Cannele encodeur 4-20",
+      "Cannele encodeur 4-21",
+      "Cannele encodeur 4-22",
+      "Cannele encodeur 4-23",
+      "Cannele encodeur 4-3",
+      "Cannele encodeur 4-4",
+      "Cannele encodeur 4-5",
+      "Cannele encodeur 4-6",
+      "Cannele encodeur 4-7",
+      "Cannele encodeur 4-8",
+      "Cannele encodeur 4-9",
+      "Encodeur LIVE CONTROL 4 capuchon",
+      "Encodeur LIVE CONTROL 4 couronne",
+      "Encodeur LIVE CONTROL 4 grip",
+      "LED encodeur 4-1",
+      "LED encodeur 4-10",
+      "LED encodeur 4-11",
+      "LED encodeur 4-12",
+      "LED encodeur 4-13",
+      "LED encodeur 4-14",
+      "LED encodeur 4-2",
+      "LED encodeur 4-3",
+      "LED encodeur 4-4",
+      "LED encodeur 4-5",
+      "LED encodeur 4-6",
+      "LED encodeur 4-7",
+      "LED encodeur 4-8",
+      "LED encodeur 4-9"
+    ],
+    "value": 3
+  },
+  {
+    "id": "knob4",
+    "kind": "knob",
+    "sourceMesh": "Encodeur LIVE CONTROL 5 capuchon",
+    "meshes": [
+      "Cannele encodeur 5-0",
+      "Cannele encodeur 5-1",
+      "Cannele encodeur 5-10",
+      "Cannele encodeur 5-11",
+      "Cannele encodeur 5-12",
+      "Cannele encodeur 5-13",
+      "Cannele encodeur 5-14",
+      "Cannele encodeur 5-15",
+      "Cannele encodeur 5-16",
+      "Cannele encodeur 5-17",
+      "Cannele encodeur 5-18",
+      "Cannele encodeur 5-19",
+      "Cannele encodeur 5-2",
+      "Cannele encodeur 5-20",
+      "Cannele encodeur 5-21",
+      "Cannele encodeur 5-22",
+      "Cannele encodeur 5-23",
+      "Cannele encodeur 5-3",
+      "Cannele encodeur 5-4",
+      "Cannele encodeur 5-5",
+      "Cannele encodeur 5-6",
+      "Cannele encodeur 5-7",
+      "Cannele encodeur 5-8",
+      "Cannele encodeur 5-9",
+      "Encodeur LIVE CONTROL 5 capuchon",
+      "Encodeur LIVE CONTROL 5 couronne",
+      "Encodeur LIVE CONTROL 5 grip",
+      "LED encodeur 5-1",
+      "LED encodeur 5-10",
+      "LED encodeur 5-11",
+      "LED encodeur 5-12",
+      "LED encodeur 5-13",
+      "LED encodeur 5-14",
+      "LED encodeur 5-2",
+      "LED encodeur 5-3",
+      "LED encodeur 5-4",
+      "LED encodeur 5-5",
+      "LED encodeur 5-6",
+      "LED encodeur 5-7",
+      "LED encodeur 5-8",
+      "LED encodeur 5-9"
+    ],
+    "value": 4
+  },
+  {
+    "id": "knob5",
+    "kind": "knob",
+    "sourceMesh": "Encodeur LIVE CONTROL 6 capuchon",
+    "meshes": [
+      "Cannele encodeur 6-0",
+      "Cannele encodeur 6-1",
+      "Cannele encodeur 6-10",
+      "Cannele encodeur 6-11",
+      "Cannele encodeur 6-12",
+      "Cannele encodeur 6-13",
+      "Cannele encodeur 6-14",
+      "Cannele encodeur 6-15",
+      "Cannele encodeur 6-16",
+      "Cannele encodeur 6-17",
+      "Cannele encodeur 6-18",
+      "Cannele encodeur 6-19",
+      "Cannele encodeur 6-2",
+      "Cannele encodeur 6-20",
+      "Cannele encodeur 6-21",
+      "Cannele encodeur 6-22",
+      "Cannele encodeur 6-23",
+      "Cannele encodeur 6-3",
+      "Cannele encodeur 6-4",
+      "Cannele encodeur 6-5",
+      "Cannele encodeur 6-6",
+      "Cannele encodeur 6-7",
+      "Cannele encodeur 6-8",
+      "Cannele encodeur 6-9",
+      "Encodeur LIVE CONTROL 6 capuchon",
+      "Encodeur LIVE CONTROL 6 couronne",
+      "Encodeur LIVE CONTROL 6 grip",
+      "LED encodeur 6-1",
+      "LED encodeur 6-10",
+      "LED encodeur 6-11",
+      "LED encodeur 6-12",
+      "LED encodeur 6-13",
+      "LED encodeur 6-14",
+      "LED encodeur 6-2",
+      "LED encodeur 6-3",
+      "LED encodeur 6-4",
+      "LED encodeur 6-5",
+      "LED encodeur 6-6",
+      "LED encodeur 6-7",
+      "LED encodeur 6-8",
+      "LED encodeur 6-9"
+    ],
+    "value": 5
+  },
+  {
+    "id": "master",
+    "kind": "knob",
+    "sourceMesh": "MASTER VOLUME",
+    "meshes": [
+      "MASTER VOLUME",
+      "MASTER VOLUME repere",
+      "MASTER VOLUME socle"
+    ],
+    "value": 2
+  },
+  {
+    "id": "fader0",
+    "kind": "fader",
+    "sourceMesh": "Fader 1 curseur",
+    "meshes": [
+      "Fader 1 curseur",
+      "Fader 1 fente",
+      "Fader 1 glissiere",
+      "Fader 1 repere",
+      "LED fader 1-1",
+      "LED fader 1-2",
+      "LED fader 1-3",
+      "LED fader 1-4",
+      "LED fader 1-5",
+      "LED fader 1-6",
+      "LED fader 1-7",
+      "LED fader 1-8",
+      "LED fader 1-9"
+    ],
+    "value": 0
+  },
+  {
+    "id": "fader1",
+    "kind": "fader",
+    "sourceMesh": "Fader 2 curseur",
+    "meshes": [
+      "Fader 2 curseur",
+      "Fader 2 fente",
+      "Fader 2 glissiere",
+      "Fader 2 repere",
+      "LED fader 2-1",
+      "LED fader 2-2",
+      "LED fader 2-3",
+      "LED fader 2-4",
+      "LED fader 2-5",
+      "LED fader 2-6",
+      "LED fader 2-7",
+      "LED fader 2-8",
+      "LED fader 2-9"
+    ],
+    "value": 1
+  },
+  {
+    "id": "fader2",
+    "kind": "fader",
+    "sourceMesh": "Fader 3 curseur",
+    "meshes": [
+      "Fader 3 curseur",
+      "Fader 3 fente",
+      "Fader 3 glissiere",
+      "Fader 3 repere",
+      "LED fader 3-1",
+      "LED fader 3-2",
+      "LED fader 3-3",
+      "LED fader 3-4",
+      "LED fader 3-5",
+      "LED fader 3-6",
+      "LED fader 3-7",
+      "LED fader 3-8",
+      "LED fader 3-9"
+    ],
+    "value": 2
+  },
+  {
+    "id": "fader3",
+    "kind": "fader",
+    "sourceMesh": "Fader 4 curseur",
+    "meshes": [
+      "Fader 4 curseur",
+      "Fader 4 fente",
+      "Fader 4 glissiere",
+      "Fader 4 repere",
+      "LED fader 4-1",
+      "LED fader 4-2",
+      "LED fader 4-3",
+      "LED fader 4-4",
+      "LED fader 4-5",
+      "LED fader 4-6",
+      "LED fader 4-7",
+      "LED fader 4-8",
+      "LED fader 4-9"
+    ],
+    "value": 3
+  },
+  {
+    "id": "fader4",
+    "kind": "fader",
+    "sourceMesh": "Fader 5 curseur",
+    "meshes": [
+      "Fader 5 curseur",
+      "Fader 5 fente",
+      "Fader 5 glissiere",
+      "Fader 5 repere",
+      "LED fader 5-1",
+      "LED fader 5-2",
+      "LED fader 5-3",
+      "LED fader 5-4",
+      "LED fader 5-5",
+      "LED fader 5-6",
+      "LED fader 5-7",
+      "LED fader 5-8",
+      "LED fader 5-9"
+    ],
+    "value": 4
+  },
+  {
+    "id": "fader5",
+    "kind": "fader",
+    "sourceMesh": "Fader 6 curseur",
+    "meshes": [
+      "Fader 6 curseur",
+      "Fader 6 fente",
+      "Fader 6 glissiere",
+      "Fader 6 repere",
+      "LED fader 6-1",
+      "LED fader 6-2",
+      "LED fader 6-3",
+      "LED fader 6-4",
+      "LED fader 6-5",
+      "LED fader 6-6",
+      "LED fader 6-7",
+      "LED fader 6-8",
+      "LED fader 6-9"
+    ],
+    "value": 5
+  },
+  {
+    "id": "fader6",
+    "kind": "fader",
+    "sourceMesh": "Fader 7 curseur",
+    "meshes": [
+      "Fader 7 curseur",
+      "Fader 7 fente",
+      "Fader 7 glissiere",
+      "Fader 7 repere",
+      "LED fader 7-1",
+      "LED fader 7-2",
+      "LED fader 7-3",
+      "LED fader 7-4",
+      "LED fader 7-5",
+      "LED fader 7-6",
+      "LED fader 7-7",
+      "LED fader 7-8",
+      "LED fader 7-9"
+    ],
+    "value": 6
+  },
+  {
+    "id": "fader7",
+    "kind": "fader",
+    "sourceMesh": "Fader 8 curseur",
+    "meshes": [
+      "Fader 8 curseur",
+      "Fader 8 fente",
+      "Fader 8 glissiere",
+      "Fader 8 repere",
+      "LED fader 8-1",
+      "LED fader 8-2",
+      "LED fader 8-3",
+      "LED fader 8-4",
+      "LED fader 8-5",
+      "LED fader 8-6",
+      "LED fader 8-7",
+      "LED fader 8-8",
+      "LED fader 8-9"
+    ],
+    "value": 7
+  },
+  {
+    "id": "fader8",
+    "kind": "fader",
+    "sourceMesh": "Fader 9 curseur",
+    "meshes": [
+      "Fader 9 curseur",
+      "Fader 9 fente",
+      "Fader 9 glissiere",
+      "Fader 9 repere",
+      "LED fader 9-1",
+      "LED fader 9-2",
+      "LED fader 9-3",
+      "LED fader 9-4",
+      "LED fader 9-5",
+      "LED fader 9-6",
+      "LED fader 9-7",
+      "LED fader 9-8",
+      "LED fader 9-9"
+    ],
+    "value": 8
+  },
+  {
+    "id": "style",
+    "kind": "button",
+    "sourceMesh": "GATEWAY style voice 1",
+    "meshes": [
+      "GATEWAY style voice 1",
+      "GATEWAY style voice 1 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "ots0",
+    "kind": "button",
+    "sourceMesh": "ONE TOUCH 1",
+    "meshes": [
+      "ONE TOUCH 1",
+      "ONE TOUCH 1 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "ots1",
+    "kind": "button",
+    "sourceMesh": "ONE TOUCH 2",
+    "meshes": [
+      "ONE TOUCH 2",
+      "ONE TOUCH 2 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "ots2",
+    "kind": "button",
+    "sourceMesh": "ONE TOUCH 3",
+    "meshes": [
+      "ONE TOUCH 3",
+      "ONE TOUCH 3 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "ots3",
+    "kind": "button",
+    "sourceMesh": "ONE TOUCH 4",
+    "meshes": [
+      "ONE TOUCH 4",
+      "ONE TOUCH 4 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "left",
+    "kind": "button",
+    "sourceMesh": "PART ON OFF 2",
+    "meshes": [
+      "PART ON OFF 2",
+      "PART ON OFF 2 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "right0",
+    "kind": "button",
+    "sourceMesh": "PART ON OFF 3",
+    "meshes": [
+      "PART ON OFF 3",
+      "PART ON OFF 3 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "right1",
+    "kind": "button",
+    "sourceMesh": "PART ON OFF 4",
+    "meshes": [
+      "PART ON OFF 4",
+      "PART ON OFF 4 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "right2",
+    "kind": "button",
+    "sourceMesh": "PART ON OFF 5",
+    "meshes": [
+      "PART ON OFF 5",
+      "PART ON OFF 5 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "rec",
+    "kind": "button",
+    "sourceMesh": "SONG RECORD 1",
+    "meshes": [
+      "SONG RECORD 1",
+      "SONG RECORD 1 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "acmp",
+    "kind": "button",
+    "sourceMesh": "SONG autres 1",
+    "meshes": [
+      "SONG autres 1",
+      "SONG autres 1 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "autofill",
+    "kind": "button",
+    "sourceMesh": "SONG autres 3",
+    "meshes": [
+      "SONG autres 3",
+      "SONG autres 3 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "break",
+    "kind": "button",
+    "sourceMesh": "STYLE BREAK 1",
+    "meshes": [
+      "STYLE BREAK 1",
+      "STYLE BREAK 1 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "endingA",
+    "kind": "button",
+    "sourceMesh": "STYLE ENDING 1",
+    "meshes": [
+      "STYLE ENDING 1",
+      "STYLE ENDING 1 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "endingB",
+    "kind": "button",
+    "sourceMesh": "STYLE ENDING 2",
+    "meshes": [
+      "STYLE ENDING 2",
+      "STYLE ENDING 2 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "endingC",
+    "kind": "button",
+    "sourceMesh": "STYLE ENDING 3",
+    "meshes": [
+      "STYLE ENDING 3",
+      "STYLE ENDING 3 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "introA",
+    "kind": "button",
+    "sourceMesh": "STYLE INTRO 1",
+    "meshes": [
+      "STYLE INTRO 1",
+      "STYLE INTRO 1 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "introB",
+    "kind": "button",
+    "sourceMesh": "STYLE INTRO 2",
+    "meshes": [
+      "STYLE INTRO 2",
+      "STYLE INTRO 2 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "introC",
+    "kind": "button",
+    "sourceMesh": "STYLE INTRO 3",
+    "meshes": [
+      "STYLE INTRO 3",
+      "STYLE INTRO 3 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "mainA",
+    "kind": "button",
+    "sourceMesh": "STYLE MAIN 1",
+    "meshes": [
+      "STYLE MAIN 1",
+      "STYLE MAIN 1 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "mainB",
+    "kind": "button",
+    "sourceMesh": "STYLE MAIN 2",
+    "meshes": [
+      "STYLE MAIN 2",
+      "STYLE MAIN 2 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "mainC",
+    "kind": "button",
+    "sourceMesh": "STYLE MAIN 3",
+    "meshes": [
+      "STYLE MAIN 3",
+      "STYLE MAIN 3 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "mainD",
+    "kind": "button",
+    "sourceMesh": "STYLE MAIN 4",
+    "meshes": [
+      "STYLE MAIN 4",
+      "STYLE MAIN 4 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "syncstop",
+    "kind": "button",
+    "sourceMesh": "STYLE commande 1",
+    "meshes": [
+      "STYLE commande 1",
+      "STYLE commande 1 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "play",
+    "kind": "button",
+    "sourceMesh": "STYLE commande 3",
+    "meshes": [
+      "STYLE commande 3",
+      "STYLE commande 3 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "tempo-",
+    "kind": "button",
+    "sourceMesh": "TEMPO 1",
+    "meshes": [
+      "TEMPO 1",
+      "TEMPO 1 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "tempo+",
+    "kind": "button",
+    "sourceMesh": "TEMPO 2",
+    "meshes": [
+      "TEMPO 2",
+      "TEMPO 2 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "transpose-",
+    "kind": "button",
+    "sourceMesh": "TRANSPOSE 1",
+    "meshes": [
+      "TRANSPOSE 1",
+      "TRANSPOSE 1 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "transpose+",
+    "kind": "button",
+    "sourceMesh": "TRANSPOSE 2",
+    "meshes": [
+      "TRANSPOSE 2",
+      "TRANSPOSE 2 embase"
+    ],
+    "value": 0
+  },
+  {
+    "id": "pitch",
+    "kind": "joystick",
+    "sourceMesh": "Bout du joystick",
+    "meshes": [
+      "Levier joystick",
+      "Bout du joystick",
+      "Axe transversal joystick"
+    ],
+    "value": 0
+  }
+]

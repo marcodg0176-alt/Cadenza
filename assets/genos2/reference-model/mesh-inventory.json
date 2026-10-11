@@ -1,0 +1,8091 @@
+[
+  {
+    "name": "AC IN cadre",
+    "firstTriangle": 0,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "AC IN cavite",
+    "firstTriangle": 188,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "AC broche",
+    "firstTriangle": 376,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "AC broche.001",
+    "firstTriangle": 564,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "ART 1",
+    "firstTriangle": 752,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ART 1 embase",
+    "firstTriangle": 940,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "ART 2",
+    "firstTriangle": 1128,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ART 2 embase",
+    "firstTriangle": 1316,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "ART 3",
+    "firstTriangle": 1504,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ART 3 embase",
+    "firstTriangle": 1692,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE ABC 1",
+    "firstTriangle": 1880,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE ABC 1 embase",
+    "firstTriangle": 2068,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE ABC 2",
+    "firstTriangle": 2256,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE ABC 2 embase",
+    "firstTriangle": 2444,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE ABC 3",
+    "firstTriangle": 2632,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE ABC 3 embase",
+    "firstTriangle": 2820,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE DEF 1",
+    "firstTriangle": 3008,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE DEF 1 embase",
+    "firstTriangle": 3196,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE DEF 2",
+    "firstTriangle": 3384,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE DEF 2 embase",
+    "firstTriangle": 3572,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE DEF 3",
+    "firstTriangle": 3760,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE DEF 3 embase",
+    "firstTriangle": 3948,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE gauche 1",
+    "firstTriangle": 4136,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE gauche 1 embase",
+    "firstTriangle": 4324,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE gauche 2",
+    "firstTriangle": 4512,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE gauche 2 embase",
+    "firstTriangle": 4700,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE gauche 3",
+    "firstTriangle": 4888,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ASSIGNABLE gauche 3 embase",
+    "firstTriangle": 5076,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "AUX IN 1 bague",
+    "firstTriangle": 5264,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "AUX IN 1 cavite",
+    "firstTriangle": 6032,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "AUX IN 1 embase",
+    "firstTriangle": 6412,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "AUX IN 2 bague",
+    "firstTriangle": 6792,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "AUX IN 2 cavite",
+    "firstTriangle": 7560,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "AUX IN 2 embase",
+    "firstTriangle": 7940,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Axe transversal joystick",
+    "firstTriangle": 8320,
+    "triangleCount": 572,
+    "control": "pitch",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Boitier ecran tactile 9 pouces",
+    "firstTriangle": 8892,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Bosse arriere des deux afficheurs",
+    "firstTriangle": 9080,
+    "triangleCount": 62,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre"
+    ]
+  },
+  {
+    "name": "Bout du joystick",
+    "firstTriangle": 9142,
+    "triangleCount": 572,
+    "control": "pitch",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Cadre photographique ecran tactile",
+    "firstTriangle": 9714,
+    "triangleCount": 2,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-0",
+    "firstTriangle": 9716,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-1",
+    "firstTriangle": 9936,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-10",
+    "firstTriangle": 10156,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-11",
+    "firstTriangle": 10376,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-12",
+    "firstTriangle": 10596,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-13",
+    "firstTriangle": 10816,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-14",
+    "firstTriangle": 11036,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-15",
+    "firstTriangle": 11256,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-16",
+    "firstTriangle": 11476,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-17",
+    "firstTriangle": 11696,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-18",
+    "firstTriangle": 11916,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-19",
+    "firstTriangle": 12136,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-2",
+    "firstTriangle": 12356,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-20",
+    "firstTriangle": 12576,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-21",
+    "firstTriangle": 12796,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-22",
+    "firstTriangle": 13016,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-23",
+    "firstTriangle": 13236,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-3",
+    "firstTriangle": 13456,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-4",
+    "firstTriangle": 13676,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-5",
+    "firstTriangle": 13896,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-6",
+    "firstTriangle": 14116,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-7",
+    "firstTriangle": 14336,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-8",
+    "firstTriangle": 14556,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 1-9",
+    "firstTriangle": 14776,
+    "triangleCount": 220,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-0",
+    "firstTriangle": 14996,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-1",
+    "firstTriangle": 15216,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-10",
+    "firstTriangle": 15436,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-11",
+    "firstTriangle": 15656,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-12",
+    "firstTriangle": 15876,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-13",
+    "firstTriangle": 16096,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-14",
+    "firstTriangle": 16316,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-15",
+    "firstTriangle": 16536,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-16",
+    "firstTriangle": 16756,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-17",
+    "firstTriangle": 16976,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-18",
+    "firstTriangle": 17196,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-19",
+    "firstTriangle": 17416,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-2",
+    "firstTriangle": 17636,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-20",
+    "firstTriangle": 17856,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-21",
+    "firstTriangle": 18076,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-22",
+    "firstTriangle": 18296,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-23",
+    "firstTriangle": 18516,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-3",
+    "firstTriangle": 18736,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-4",
+    "firstTriangle": 18956,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-5",
+    "firstTriangle": 19176,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-6",
+    "firstTriangle": 19396,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-7",
+    "firstTriangle": 19616,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-8",
+    "firstTriangle": 19836,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 2-9",
+    "firstTriangle": 20056,
+    "triangleCount": 220,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-0",
+    "firstTriangle": 20276,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-1",
+    "firstTriangle": 20496,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-10",
+    "firstTriangle": 20716,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-11",
+    "firstTriangle": 20936,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-12",
+    "firstTriangle": 21156,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-13",
+    "firstTriangle": 21376,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-14",
+    "firstTriangle": 21596,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-15",
+    "firstTriangle": 21816,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-16",
+    "firstTriangle": 22036,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-17",
+    "firstTriangle": 22256,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-18",
+    "firstTriangle": 22476,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-19",
+    "firstTriangle": 22696,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-2",
+    "firstTriangle": 22916,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-20",
+    "firstTriangle": 23136,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-21",
+    "firstTriangle": 23356,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-22",
+    "firstTriangle": 23576,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-23",
+    "firstTriangle": 23796,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-3",
+    "firstTriangle": 24016,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-4",
+    "firstTriangle": 24236,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-5",
+    "firstTriangle": 24456,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-6",
+    "firstTriangle": 24676,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-7",
+    "firstTriangle": 24896,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-8",
+    "firstTriangle": 25116,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 3-9",
+    "firstTriangle": 25336,
+    "triangleCount": 220,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-0",
+    "firstTriangle": 25556,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-1",
+    "firstTriangle": 25776,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-10",
+    "firstTriangle": 25996,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-11",
+    "firstTriangle": 26216,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-12",
+    "firstTriangle": 26436,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-13",
+    "firstTriangle": 26656,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-14",
+    "firstTriangle": 26876,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-15",
+    "firstTriangle": 27096,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-16",
+    "firstTriangle": 27316,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-17",
+    "firstTriangle": 27536,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-18",
+    "firstTriangle": 27756,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-19",
+    "firstTriangle": 27976,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-2",
+    "firstTriangle": 28196,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-20",
+    "firstTriangle": 28416,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-21",
+    "firstTriangle": 28636,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-22",
+    "firstTriangle": 28856,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-23",
+    "firstTriangle": 29076,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-3",
+    "firstTriangle": 29296,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-4",
+    "firstTriangle": 29516,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-5",
+    "firstTriangle": 29736,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-6",
+    "firstTriangle": 29956,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-7",
+    "firstTriangle": 30176,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-8",
+    "firstTriangle": 30396,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 4-9",
+    "firstTriangle": 30616,
+    "triangleCount": 220,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-0",
+    "firstTriangle": 30836,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-1",
+    "firstTriangle": 31056,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-10",
+    "firstTriangle": 31276,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-11",
+    "firstTriangle": 31496,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-12",
+    "firstTriangle": 31716,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-13",
+    "firstTriangle": 31936,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-14",
+    "firstTriangle": 32156,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-15",
+    "firstTriangle": 32376,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-16",
+    "firstTriangle": 32596,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-17",
+    "firstTriangle": 32816,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-18",
+    "firstTriangle": 33036,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-19",
+    "firstTriangle": 33256,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-2",
+    "firstTriangle": 33476,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-20",
+    "firstTriangle": 33696,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-21",
+    "firstTriangle": 33916,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-22",
+    "firstTriangle": 34136,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-23",
+    "firstTriangle": 34356,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-3",
+    "firstTriangle": 34576,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-4",
+    "firstTriangle": 34796,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-5",
+    "firstTriangle": 35016,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-6",
+    "firstTriangle": 35236,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-7",
+    "firstTriangle": 35456,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-8",
+    "firstTriangle": 35676,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 5-9",
+    "firstTriangle": 35896,
+    "triangleCount": 220,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-0",
+    "firstTriangle": 36116,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-1",
+    "firstTriangle": 36336,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-10",
+    "firstTriangle": 36556,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-11",
+    "firstTriangle": 36776,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-12",
+    "firstTriangle": 36996,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-13",
+    "firstTriangle": 37216,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-14",
+    "firstTriangle": 37436,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-15",
+    "firstTriangle": 37656,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-16",
+    "firstTriangle": 37876,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-17",
+    "firstTriangle": 38096,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-18",
+    "firstTriangle": 38316,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-19",
+    "firstTriangle": 38536,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-2",
+    "firstTriangle": 38756,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-20",
+    "firstTriangle": 38976,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-21",
+    "firstTriangle": 39196,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-22",
+    "firstTriangle": 39416,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-23",
+    "firstTriangle": 39636,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-3",
+    "firstTriangle": 39856,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-4",
+    "firstTriangle": 40076,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-5",
+    "firstTriangle": 40296,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-6",
+    "firstTriangle": 40516,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-7",
+    "firstTriangle": 40736,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-8",
+    "firstTriangle": 40956,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Cannele encodeur 6-9",
+    "firstTriangle": 41176,
+    "triangleCount": 220,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Coque inferieure argent - galbe perimetrique",
+    "firstTriangle": 41396,
+    "triangleCount": 1084,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Coque inferieure gris clair"
+    ]
+  },
+  {
+    "name": "Coque superieure ABS",
+    "firstTriangle": 42480,
+    "triangleCount": 1266,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin",
+      "Serigraphie photo Yamaha - projection calibre",
+      null,
+      "Serigraphie arriere photo Yamaha"
+    ]
+  },
+  {
+    "name": "Cross fader encastre",
+    "firstTriangle": 43746,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Cross fader poignee",
+    "firstTriangle": 43934,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "DATA ENTRY",
+    "firstTriangle": 44122,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Molette DATA aluminium sombre"
+    ]
+  },
+  {
+    "name": "DATA ENTRY socle",
+    "firstTriangle": 44694,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "DATA fonctions 1",
+    "firstTriangle": 45266,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "DATA fonctions 1 embase",
+    "firstTriangle": 45454,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "DATA fonctions 2",
+    "firstTriangle": 45642,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "DATA fonctions 2 embase",
+    "firstTriangle": 45830,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "ENTER 1",
+    "firstTriangle": 46018,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ENTER 1 embase",
+    "firstTriangle": 46206,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "EXIT DIRECT 1",
+    "firstTriangle": 46394,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "EXIT DIRECT 1 embase",
+    "firstTriangle": 46582,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "EXIT DIRECT 2",
+    "firstTriangle": 46770,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "EXIT DIRECT 2 embase",
+    "firstTriangle": 46958,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Empreinte vis dessous",
+    "firstTriangle": 47146,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Empreinte vis dessous.001",
+    "firstTriangle": 47334,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Empreinte vis dessous.002",
+    "firstTriangle": 47522,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Empreinte vis dessous.003",
+    "firstTriangle": 47710,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Empreinte vis dessous.004",
+    "firstTriangle": 47898,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Empreinte vis dessous.005",
+    "firstTriangle": 48086,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Empreinte vis dessous.006",
+    "firstTriangle": 48274,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Empreinte vis dessous.007",
+    "firstTriangle": 48462,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 1 capuchon",
+    "firstTriangle": 48650,
+    "triangleCount": 572,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 1 couronne",
+    "firstTriangle": 49222,
+    "triangleCount": 572,
+    "control": "knob0",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 1 grip",
+    "firstTriangle": 49794,
+    "triangleCount": 572,
+    "control": "knob0",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 2 capuchon",
+    "firstTriangle": 50366,
+    "triangleCount": 572,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 2 couronne",
+    "firstTriangle": 50938,
+    "triangleCount": 572,
+    "control": "knob1",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 2 grip",
+    "firstTriangle": 51510,
+    "triangleCount": 572,
+    "control": "knob1",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 3 capuchon",
+    "firstTriangle": 52082,
+    "triangleCount": 572,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 3 couronne",
+    "firstTriangle": 52654,
+    "triangleCount": 572,
+    "control": "knob2",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 3 grip",
+    "firstTriangle": 53226,
+    "triangleCount": 572,
+    "control": "knob2",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 4 capuchon",
+    "firstTriangle": 53798,
+    "triangleCount": 572,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 4 couronne",
+    "firstTriangle": 54370,
+    "triangleCount": 572,
+    "control": "knob3",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 4 grip",
+    "firstTriangle": 54942,
+    "triangleCount": 572,
+    "control": "knob3",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 5 capuchon",
+    "firstTriangle": 55514,
+    "triangleCount": 572,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 5 couronne",
+    "firstTriangle": 56086,
+    "triangleCount": 572,
+    "control": "knob4",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 5 grip",
+    "firstTriangle": 56658,
+    "triangleCount": 572,
+    "control": "knob4",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 6 capuchon",
+    "firstTriangle": 57230,
+    "triangleCount": 572,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 6 couronne",
+    "firstTriangle": 57802,
+    "triangleCount": 572,
+    "control": "knob5",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Encodeur LIVE CONTROL 6 grip",
+    "firstTriangle": 58374,
+    "triangleCount": 572,
+    "control": "knob5",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "FOOT PEDAL 1 bague",
+    "firstTriangle": 58946,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "FOOT PEDAL 1 cavite",
+    "firstTriangle": 59714,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "FOOT PEDAL 1 embase",
+    "firstTriangle": 60094,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "FOOT PEDAL 2 bague",
+    "firstTriangle": 60474,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "FOOT PEDAL 2 cavite",
+    "firstTriangle": 61242,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "FOOT PEDAL 2 embase",
+    "firstTriangle": 61622,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "FOOT PEDAL 3 bague",
+    "firstTriangle": 62002,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "FOOT PEDAL 3 cavite",
+    "firstTriangle": 62770,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "FOOT PEDAL 3 embase",
+    "firstTriangle": 63150,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Face arriere avec marquages originaux",
+    "firstTriangle": 63530,
+    "triangleCount": 96,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie arriere photo Yamaha"
+    ]
+  },
+  {
+    "name": "Fader 1 curseur",
+    "firstTriangle": 63626,
+    "triangleCount": 188,
+    "control": "fader0",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Fader 1 fente",
+    "firstTriangle": 63814,
+    "triangleCount": 188,
+    "control": "fader0",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Fader 1 glissiere",
+    "firstTriangle": 64002,
+    "triangleCount": 188,
+    "control": "fader0",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Fader 1 repere",
+    "firstTriangle": 64190,
+    "triangleCount": 188,
+    "control": "fader0",
+    "moving": true,
+    "materials": [
+      "Boutons gris"
+    ]
+  },
+  {
+    "name": "Fader 2 curseur",
+    "firstTriangle": 64378,
+    "triangleCount": 188,
+    "control": "fader1",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Fader 2 fente",
+    "firstTriangle": 64566,
+    "triangleCount": 188,
+    "control": "fader1",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Fader 2 glissiere",
+    "firstTriangle": 64754,
+    "triangleCount": 188,
+    "control": "fader1",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Fader 2 repere",
+    "firstTriangle": 64942,
+    "triangleCount": 188,
+    "control": "fader1",
+    "moving": true,
+    "materials": [
+      "Boutons gris"
+    ]
+  },
+  {
+    "name": "Fader 3 curseur",
+    "firstTriangle": 65130,
+    "triangleCount": 188,
+    "control": "fader2",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Fader 3 fente",
+    "firstTriangle": 65318,
+    "triangleCount": 188,
+    "control": "fader2",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Fader 3 glissiere",
+    "firstTriangle": 65506,
+    "triangleCount": 188,
+    "control": "fader2",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Fader 3 repere",
+    "firstTriangle": 65694,
+    "triangleCount": 188,
+    "control": "fader2",
+    "moving": true,
+    "materials": [
+      "Boutons gris"
+    ]
+  },
+  {
+    "name": "Fader 4 curseur",
+    "firstTriangle": 65882,
+    "triangleCount": 188,
+    "control": "fader3",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Fader 4 fente",
+    "firstTriangle": 66070,
+    "triangleCount": 188,
+    "control": "fader3",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Fader 4 glissiere",
+    "firstTriangle": 66258,
+    "triangleCount": 188,
+    "control": "fader3",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Fader 4 repere",
+    "firstTriangle": 66446,
+    "triangleCount": 188,
+    "control": "fader3",
+    "moving": true,
+    "materials": [
+      "Boutons gris"
+    ]
+  },
+  {
+    "name": "Fader 5 curseur",
+    "firstTriangle": 66634,
+    "triangleCount": 188,
+    "control": "fader4",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Fader 5 fente",
+    "firstTriangle": 66822,
+    "triangleCount": 188,
+    "control": "fader4",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Fader 5 glissiere",
+    "firstTriangle": 67010,
+    "triangleCount": 188,
+    "control": "fader4",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Fader 5 repere",
+    "firstTriangle": 67198,
+    "triangleCount": 188,
+    "control": "fader4",
+    "moving": true,
+    "materials": [
+      "Boutons gris"
+    ]
+  },
+  {
+    "name": "Fader 6 curseur",
+    "firstTriangle": 67386,
+    "triangleCount": 188,
+    "control": "fader5",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Fader 6 fente",
+    "firstTriangle": 67574,
+    "triangleCount": 188,
+    "control": "fader5",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Fader 6 glissiere",
+    "firstTriangle": 67762,
+    "triangleCount": 188,
+    "control": "fader5",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Fader 6 repere",
+    "firstTriangle": 67950,
+    "triangleCount": 188,
+    "control": "fader5",
+    "moving": true,
+    "materials": [
+      "Boutons gris"
+    ]
+  },
+  {
+    "name": "Fader 7 curseur",
+    "firstTriangle": 68138,
+    "triangleCount": 188,
+    "control": "fader6",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Fader 7 fente",
+    "firstTriangle": 68326,
+    "triangleCount": 188,
+    "control": "fader6",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Fader 7 glissiere",
+    "firstTriangle": 68514,
+    "triangleCount": 188,
+    "control": "fader6",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Fader 7 repere",
+    "firstTriangle": 68702,
+    "triangleCount": 188,
+    "control": "fader6",
+    "moving": true,
+    "materials": [
+      "Boutons gris"
+    ]
+  },
+  {
+    "name": "Fader 8 curseur",
+    "firstTriangle": 68890,
+    "triangleCount": 188,
+    "control": "fader7",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Fader 8 fente",
+    "firstTriangle": 69078,
+    "triangleCount": 188,
+    "control": "fader7",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Fader 8 glissiere",
+    "firstTriangle": 69266,
+    "triangleCount": 188,
+    "control": "fader7",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Fader 8 repere",
+    "firstTriangle": 69454,
+    "triangleCount": 188,
+    "control": "fader7",
+    "moving": true,
+    "materials": [
+      "Boutons gris"
+    ]
+  },
+  {
+    "name": "Fader 9 curseur",
+    "firstTriangle": 69642,
+    "triangleCount": 188,
+    "control": "fader8",
+    "moving": true,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Fader 9 fente",
+    "firstTriangle": 69830,
+    "triangleCount": 188,
+    "control": "fader8",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Fader 9 glissiere",
+    "firstTriangle": 70018,
+    "triangleCount": 188,
+    "control": "fader8",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Fader 9 repere",
+    "firstTriangle": 70206,
+    "triangleCount": 188,
+    "control": "fader8",
+    "moving": true,
+    "materials": [
+      "Boutons gris"
+    ]
+  },
+  {
+    "name": "Fond logement USB",
+    "firstTriangle": 70394,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Fond noir du logement clavier",
+    "firstTriangle": 70582,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "GATEWAY menu 1",
+    "firstTriangle": 70770,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "GATEWAY menu 1 embase",
+    "firstTriangle": 70958,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "GATEWAY menu 2",
+    "firstTriangle": 71146,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "GATEWAY menu 2 embase",
+    "firstTriangle": 71334,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "GATEWAY song playlist 1",
+    "firstTriangle": 71522,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "GATEWAY song playlist 1 embase",
+    "firstTriangle": 71710,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "GATEWAY song playlist 2",
+    "firstTriangle": 71898,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "GATEWAY song playlist 2 embase",
+    "firstTriangle": 72086,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "GATEWAY style voice 1",
+    "firstTriangle": 72274,
+    "triangleCount": 188,
+    "control": "style",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "GATEWAY style voice 1 embase",
+    "firstTriangle": 72462,
+    "triangleCount": 188,
+    "control": "style",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "GATEWAY style voice 2",
+    "firstTriangle": 72650,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "GATEWAY style voice 2 embase",
+    "firstTriangle": 72838,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "HDMI cadre",
+    "firstTriangle": 73026,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "HDMI cavite",
+    "firstTriangle": 73214,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "HDMI insert",
+    "firstTriangle": 73402,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "Insert fixation support 1",
+    "firstTriangle": 73590,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "Insert fixation support 2",
+    "firstTriangle": 74162,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "Insert fixation support 3",
+    "firstTriangle": 74734,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "Insert fixation support 4",
+    "firstTriangle": 75306,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "Insert fixation support 5",
+    "firstTriangle": 75878,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "Insert fixation support 6",
+    "firstTriangle": 76450,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "Insert fixation support 7",
+    "firstTriangle": 77022,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "JOYSTICK HOLD 1",
+    "firstTriangle": 77594,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "JOYSTICK HOLD 1 embase",
+    "firstTriangle": 77782,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Joint perimetrique entre demi-coques",
+    "firstTriangle": 77970,
+    "triangleCount": 1084,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "KNOB ASSIGN 1",
+    "firstTriangle": 79054,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "KNOB ASSIGN 1 embase",
+    "firstTriangle": 79242,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "LED encodeur 1-1",
+    "firstTriangle": 79430,
+    "triangleCount": 188,
+    "control": "knob0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 1-10",
+    "firstTriangle": 79618,
+    "triangleCount": 188,
+    "control": "knob0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 1-11",
+    "firstTriangle": 79806,
+    "triangleCount": 188,
+    "control": "knob0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 1-12",
+    "firstTriangle": 79994,
+    "triangleCount": 188,
+    "control": "knob0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 1-13",
+    "firstTriangle": 80182,
+    "triangleCount": 188,
+    "control": "knob0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 1-14",
+    "firstTriangle": 80370,
+    "triangleCount": 188,
+    "control": "knob0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 1-2",
+    "firstTriangle": 80558,
+    "triangleCount": 188,
+    "control": "knob0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 1-3",
+    "firstTriangle": 80746,
+    "triangleCount": 188,
+    "control": "knob0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 1-4",
+    "firstTriangle": 80934,
+    "triangleCount": 188,
+    "control": "knob0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 1-5",
+    "firstTriangle": 81122,
+    "triangleCount": 188,
+    "control": "knob0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 1-6",
+    "firstTriangle": 81310,
+    "triangleCount": 188,
+    "control": "knob0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 1-7",
+    "firstTriangle": 81498,
+    "triangleCount": 188,
+    "control": "knob0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 1-8",
+    "firstTriangle": 81686,
+    "triangleCount": 188,
+    "control": "knob0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 1-9",
+    "firstTriangle": 81874,
+    "triangleCount": 188,
+    "control": "knob0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 2-1",
+    "firstTriangle": 82062,
+    "triangleCount": 188,
+    "control": "knob1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 2-10",
+    "firstTriangle": 82250,
+    "triangleCount": 188,
+    "control": "knob1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 2-11",
+    "firstTriangle": 82438,
+    "triangleCount": 188,
+    "control": "knob1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 2-12",
+    "firstTriangle": 82626,
+    "triangleCount": 188,
+    "control": "knob1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 2-13",
+    "firstTriangle": 82814,
+    "triangleCount": 188,
+    "control": "knob1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 2-14",
+    "firstTriangle": 83002,
+    "triangleCount": 188,
+    "control": "knob1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 2-2",
+    "firstTriangle": 83190,
+    "triangleCount": 188,
+    "control": "knob1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 2-3",
+    "firstTriangle": 83378,
+    "triangleCount": 188,
+    "control": "knob1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 2-4",
+    "firstTriangle": 83566,
+    "triangleCount": 188,
+    "control": "knob1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 2-5",
+    "firstTriangle": 83754,
+    "triangleCount": 188,
+    "control": "knob1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 2-6",
+    "firstTriangle": 83942,
+    "triangleCount": 188,
+    "control": "knob1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 2-7",
+    "firstTriangle": 84130,
+    "triangleCount": 188,
+    "control": "knob1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 2-8",
+    "firstTriangle": 84318,
+    "triangleCount": 188,
+    "control": "knob1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 2-9",
+    "firstTriangle": 84506,
+    "triangleCount": 188,
+    "control": "knob1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 3-1",
+    "firstTriangle": 84694,
+    "triangleCount": 188,
+    "control": "knob2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 3-10",
+    "firstTriangle": 84882,
+    "triangleCount": 188,
+    "control": "knob2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 3-11",
+    "firstTriangle": 85070,
+    "triangleCount": 188,
+    "control": "knob2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 3-12",
+    "firstTriangle": 85258,
+    "triangleCount": 188,
+    "control": "knob2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 3-13",
+    "firstTriangle": 85446,
+    "triangleCount": 188,
+    "control": "knob2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 3-14",
+    "firstTriangle": 85634,
+    "triangleCount": 188,
+    "control": "knob2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 3-2",
+    "firstTriangle": 85822,
+    "triangleCount": 188,
+    "control": "knob2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 3-3",
+    "firstTriangle": 86010,
+    "triangleCount": 188,
+    "control": "knob2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 3-4",
+    "firstTriangle": 86198,
+    "triangleCount": 188,
+    "control": "knob2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 3-5",
+    "firstTriangle": 86386,
+    "triangleCount": 188,
+    "control": "knob2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 3-6",
+    "firstTriangle": 86574,
+    "triangleCount": 188,
+    "control": "knob2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 3-7",
+    "firstTriangle": 86762,
+    "triangleCount": 188,
+    "control": "knob2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 3-8",
+    "firstTriangle": 86950,
+    "triangleCount": 188,
+    "control": "knob2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 3-9",
+    "firstTriangle": 87138,
+    "triangleCount": 188,
+    "control": "knob2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 4-1",
+    "firstTriangle": 87326,
+    "triangleCount": 188,
+    "control": "knob3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 4-10",
+    "firstTriangle": 87514,
+    "triangleCount": 188,
+    "control": "knob3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 4-11",
+    "firstTriangle": 87702,
+    "triangleCount": 188,
+    "control": "knob3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 4-12",
+    "firstTriangle": 87890,
+    "triangleCount": 188,
+    "control": "knob3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 4-13",
+    "firstTriangle": 88078,
+    "triangleCount": 188,
+    "control": "knob3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 4-14",
+    "firstTriangle": 88266,
+    "triangleCount": 188,
+    "control": "knob3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 4-2",
+    "firstTriangle": 88454,
+    "triangleCount": 188,
+    "control": "knob3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 4-3",
+    "firstTriangle": 88642,
+    "triangleCount": 188,
+    "control": "knob3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 4-4",
+    "firstTriangle": 88830,
+    "triangleCount": 188,
+    "control": "knob3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 4-5",
+    "firstTriangle": 89018,
+    "triangleCount": 188,
+    "control": "knob3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 4-6",
+    "firstTriangle": 89206,
+    "triangleCount": 188,
+    "control": "knob3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 4-7",
+    "firstTriangle": 89394,
+    "triangleCount": 188,
+    "control": "knob3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 4-8",
+    "firstTriangle": 89582,
+    "triangleCount": 188,
+    "control": "knob3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 4-9",
+    "firstTriangle": 89770,
+    "triangleCount": 188,
+    "control": "knob3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 5-1",
+    "firstTriangle": 89958,
+    "triangleCount": 188,
+    "control": "knob4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 5-10",
+    "firstTriangle": 90146,
+    "triangleCount": 188,
+    "control": "knob4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 5-11",
+    "firstTriangle": 90334,
+    "triangleCount": 188,
+    "control": "knob4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 5-12",
+    "firstTriangle": 90522,
+    "triangleCount": 188,
+    "control": "knob4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 5-13",
+    "firstTriangle": 90710,
+    "triangleCount": 188,
+    "control": "knob4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 5-14",
+    "firstTriangle": 90898,
+    "triangleCount": 188,
+    "control": "knob4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 5-2",
+    "firstTriangle": 91086,
+    "triangleCount": 188,
+    "control": "knob4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 5-3",
+    "firstTriangle": 91274,
+    "triangleCount": 188,
+    "control": "knob4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 5-4",
+    "firstTriangle": 91462,
+    "triangleCount": 188,
+    "control": "knob4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 5-5",
+    "firstTriangle": 91650,
+    "triangleCount": 188,
+    "control": "knob4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 5-6",
+    "firstTriangle": 91838,
+    "triangleCount": 188,
+    "control": "knob4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 5-7",
+    "firstTriangle": 92026,
+    "triangleCount": 188,
+    "control": "knob4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 5-8",
+    "firstTriangle": 92214,
+    "triangleCount": 188,
+    "control": "knob4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 5-9",
+    "firstTriangle": 92402,
+    "triangleCount": 188,
+    "control": "knob4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 6-1",
+    "firstTriangle": 92590,
+    "triangleCount": 188,
+    "control": "knob5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 6-10",
+    "firstTriangle": 92778,
+    "triangleCount": 188,
+    "control": "knob5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 6-11",
+    "firstTriangle": 92966,
+    "triangleCount": 188,
+    "control": "knob5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 6-12",
+    "firstTriangle": 93154,
+    "triangleCount": 188,
+    "control": "knob5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 6-13",
+    "firstTriangle": 93342,
+    "triangleCount": 188,
+    "control": "knob5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 6-14",
+    "firstTriangle": 93530,
+    "triangleCount": 188,
+    "control": "knob5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 6-2",
+    "firstTriangle": 93718,
+    "triangleCount": 188,
+    "control": "knob5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 6-3",
+    "firstTriangle": 93906,
+    "triangleCount": 188,
+    "control": "knob5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 6-4",
+    "firstTriangle": 94094,
+    "triangleCount": 188,
+    "control": "knob5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 6-5",
+    "firstTriangle": 94282,
+    "triangleCount": 188,
+    "control": "knob5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 6-6",
+    "firstTriangle": 94470,
+    "triangleCount": 188,
+    "control": "knob5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 6-7",
+    "firstTriangle": 94658,
+    "triangleCount": 188,
+    "control": "knob5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 6-8",
+    "firstTriangle": 94846,
+    "triangleCount": 188,
+    "control": "knob5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED encodeur 6-9",
+    "firstTriangle": 95034,
+    "triangleCount": 188,
+    "control": "knob5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 1-1",
+    "firstTriangle": 95222,
+    "triangleCount": 188,
+    "control": "fader0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 1-2",
+    "firstTriangle": 95410,
+    "triangleCount": 188,
+    "control": "fader0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 1-3",
+    "firstTriangle": 95598,
+    "triangleCount": 188,
+    "control": "fader0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 1-4",
+    "firstTriangle": 95786,
+    "triangleCount": 188,
+    "control": "fader0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 1-5",
+    "firstTriangle": 95974,
+    "triangleCount": 188,
+    "control": "fader0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 1-6",
+    "firstTriangle": 96162,
+    "triangleCount": 188,
+    "control": "fader0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 1-7",
+    "firstTriangle": 96350,
+    "triangleCount": 188,
+    "control": "fader0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 1-8",
+    "firstTriangle": 96538,
+    "triangleCount": 188,
+    "control": "fader0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 1-9",
+    "firstTriangle": 96726,
+    "triangleCount": 188,
+    "control": "fader0",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 2-1",
+    "firstTriangle": 96914,
+    "triangleCount": 188,
+    "control": "fader1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 2-2",
+    "firstTriangle": 97102,
+    "triangleCount": 188,
+    "control": "fader1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 2-3",
+    "firstTriangle": 97290,
+    "triangleCount": 188,
+    "control": "fader1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 2-4",
+    "firstTriangle": 97478,
+    "triangleCount": 188,
+    "control": "fader1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 2-5",
+    "firstTriangle": 97666,
+    "triangleCount": 188,
+    "control": "fader1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 2-6",
+    "firstTriangle": 97854,
+    "triangleCount": 188,
+    "control": "fader1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 2-7",
+    "firstTriangle": 98042,
+    "triangleCount": 188,
+    "control": "fader1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 2-8",
+    "firstTriangle": 98230,
+    "triangleCount": 188,
+    "control": "fader1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 2-9",
+    "firstTriangle": 98418,
+    "triangleCount": 188,
+    "control": "fader1",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 3-1",
+    "firstTriangle": 98606,
+    "triangleCount": 188,
+    "control": "fader2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 3-2",
+    "firstTriangle": 98794,
+    "triangleCount": 188,
+    "control": "fader2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 3-3",
+    "firstTriangle": 98982,
+    "triangleCount": 188,
+    "control": "fader2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 3-4",
+    "firstTriangle": 99170,
+    "triangleCount": 188,
+    "control": "fader2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 3-5",
+    "firstTriangle": 99358,
+    "triangleCount": 188,
+    "control": "fader2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 3-6",
+    "firstTriangle": 99546,
+    "triangleCount": 188,
+    "control": "fader2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 3-7",
+    "firstTriangle": 99734,
+    "triangleCount": 188,
+    "control": "fader2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 3-8",
+    "firstTriangle": 99922,
+    "triangleCount": 188,
+    "control": "fader2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 3-9",
+    "firstTriangle": 100110,
+    "triangleCount": 188,
+    "control": "fader2",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 4-1",
+    "firstTriangle": 100298,
+    "triangleCount": 188,
+    "control": "fader3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 4-2",
+    "firstTriangle": 100486,
+    "triangleCount": 188,
+    "control": "fader3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 4-3",
+    "firstTriangle": 100674,
+    "triangleCount": 188,
+    "control": "fader3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 4-4",
+    "firstTriangle": 100862,
+    "triangleCount": 188,
+    "control": "fader3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 4-5",
+    "firstTriangle": 101050,
+    "triangleCount": 188,
+    "control": "fader3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 4-6",
+    "firstTriangle": 101238,
+    "triangleCount": 188,
+    "control": "fader3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 4-7",
+    "firstTriangle": 101426,
+    "triangleCount": 188,
+    "control": "fader3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 4-8",
+    "firstTriangle": 101614,
+    "triangleCount": 188,
+    "control": "fader3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 4-9",
+    "firstTriangle": 101802,
+    "triangleCount": 188,
+    "control": "fader3",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 5-1",
+    "firstTriangle": 101990,
+    "triangleCount": 188,
+    "control": "fader4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 5-2",
+    "firstTriangle": 102178,
+    "triangleCount": 188,
+    "control": "fader4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 5-3",
+    "firstTriangle": 102366,
+    "triangleCount": 188,
+    "control": "fader4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 5-4",
+    "firstTriangle": 102554,
+    "triangleCount": 188,
+    "control": "fader4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 5-5",
+    "firstTriangle": 102742,
+    "triangleCount": 188,
+    "control": "fader4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 5-6",
+    "firstTriangle": 102930,
+    "triangleCount": 188,
+    "control": "fader4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 5-7",
+    "firstTriangle": 103118,
+    "triangleCount": 188,
+    "control": "fader4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 5-8",
+    "firstTriangle": 103306,
+    "triangleCount": 188,
+    "control": "fader4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 5-9",
+    "firstTriangle": 103494,
+    "triangleCount": 188,
+    "control": "fader4",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 6-1",
+    "firstTriangle": 103682,
+    "triangleCount": 188,
+    "control": "fader5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 6-2",
+    "firstTriangle": 103870,
+    "triangleCount": 188,
+    "control": "fader5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 6-3",
+    "firstTriangle": 104058,
+    "triangleCount": 188,
+    "control": "fader5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 6-4",
+    "firstTriangle": 104246,
+    "triangleCount": 188,
+    "control": "fader5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 6-5",
+    "firstTriangle": 104434,
+    "triangleCount": 188,
+    "control": "fader5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 6-6",
+    "firstTriangle": 104622,
+    "triangleCount": 188,
+    "control": "fader5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 6-7",
+    "firstTriangle": 104810,
+    "triangleCount": 188,
+    "control": "fader5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 6-8",
+    "firstTriangle": 104998,
+    "triangleCount": 188,
+    "control": "fader5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 6-9",
+    "firstTriangle": 105186,
+    "triangleCount": 188,
+    "control": "fader5",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 7-1",
+    "firstTriangle": 105374,
+    "triangleCount": 188,
+    "control": "fader6",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 7-2",
+    "firstTriangle": 105562,
+    "triangleCount": 188,
+    "control": "fader6",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 7-3",
+    "firstTriangle": 105750,
+    "triangleCount": 188,
+    "control": "fader6",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 7-4",
+    "firstTriangle": 105938,
+    "triangleCount": 188,
+    "control": "fader6",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 7-5",
+    "firstTriangle": 106126,
+    "triangleCount": 188,
+    "control": "fader6",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 7-6",
+    "firstTriangle": 106314,
+    "triangleCount": 188,
+    "control": "fader6",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 7-7",
+    "firstTriangle": 106502,
+    "triangleCount": 188,
+    "control": "fader6",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 7-8",
+    "firstTriangle": 106690,
+    "triangleCount": 188,
+    "control": "fader6",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 7-9",
+    "firstTriangle": 106878,
+    "triangleCount": 188,
+    "control": "fader6",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 8-1",
+    "firstTriangle": 107066,
+    "triangleCount": 188,
+    "control": "fader7",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 8-2",
+    "firstTriangle": 107254,
+    "triangleCount": 188,
+    "control": "fader7",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 8-3",
+    "firstTriangle": 107442,
+    "triangleCount": 188,
+    "control": "fader7",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 8-4",
+    "firstTriangle": 107630,
+    "triangleCount": 188,
+    "control": "fader7",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 8-5",
+    "firstTriangle": 107818,
+    "triangleCount": 188,
+    "control": "fader7",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 8-6",
+    "firstTriangle": 108006,
+    "triangleCount": 188,
+    "control": "fader7",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 8-7",
+    "firstTriangle": 108194,
+    "triangleCount": 188,
+    "control": "fader7",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 8-8",
+    "firstTriangle": 108382,
+    "triangleCount": 188,
+    "control": "fader7",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 8-9",
+    "firstTriangle": 108570,
+    "triangleCount": 188,
+    "control": "fader7",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 9-1",
+    "firstTriangle": 108758,
+    "triangleCount": 188,
+    "control": "fader8",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 9-2",
+    "firstTriangle": 108946,
+    "triangleCount": 188,
+    "control": "fader8",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 9-3",
+    "firstTriangle": 109134,
+    "triangleCount": 188,
+    "control": "fader8",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 9-4",
+    "firstTriangle": 109322,
+    "triangleCount": 188,
+    "control": "fader8",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 9-5",
+    "firstTriangle": 109510,
+    "triangleCount": 188,
+    "control": "fader8",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 9-6",
+    "firstTriangle": 109698,
+    "triangleCount": 188,
+    "control": "fader8",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 9-7",
+    "firstTriangle": 109886,
+    "triangleCount": 188,
+    "control": "fader8",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 9-8",
+    "firstTriangle": 110074,
+    "triangleCount": 188,
+    "control": "fader8",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LED fader 9-9",
+    "firstTriangle": 110262,
+    "triangleCount": 188,
+    "control": "fader8",
+    "moving": false,
+    "materials": [
+      "LED ambre"
+    ]
+  },
+  {
+    "name": "LINE OUT 1 bague",
+    "firstTriangle": 110450,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "LINE OUT 1 cavite",
+    "firstTriangle": 111218,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "LINE OUT 1 embase",
+    "firstTriangle": 111598,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "LINE OUT 2 bague",
+    "firstTriangle": 111978,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "LINE OUT 2 cavite",
+    "firstTriangle": 112746,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "LINE OUT 2 embase",
+    "firstTriangle": 113126,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "LINE OUT 3 bague",
+    "firstTriangle": 113506,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "LINE OUT 3 cavite",
+    "firstTriangle": 114274,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "LINE OUT 3 embase",
+    "firstTriangle": 114654,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "LINE OUT 4 bague",
+    "firstTriangle": 115034,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "LINE OUT 4 cavite",
+    "firstTriangle": 115802,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "LINE OUT 4 embase",
+    "firstTriangle": 116182,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "LINE OUT 5 bague",
+    "firstTriangle": 116562,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "LINE OUT 5 cavite",
+    "firstTriangle": 117330,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "LINE OUT 5 embase",
+    "firstTriangle": 117710,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "LINE OUT 6 bague",
+    "firstTriangle": 118090,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "LINE OUT 6 cavite",
+    "firstTriangle": 118858,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "LINE OUT 6 embase",
+    "firstTriangle": 119238,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Levier joystick",
+    "firstTriangle": 119618,
+    "triangleCount": 572,
+    "control": "pitch",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "MASTER VOLUME",
+    "firstTriangle": 120190,
+    "triangleCount": 572,
+    "control": "master",
+    "moving": true,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "MASTER VOLUME repere",
+    "firstTriangle": 120762,
+    "triangleCount": 188,
+    "control": "master",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "MASTER VOLUME socle",
+    "firstTriangle": 120950,
+    "triangleCount": 572,
+    "control": "master",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MIC 1",
+    "firstTriangle": 121522,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "MIC 1 embase",
+    "firstTriangle": 121710,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MIC 2",
+    "firstTriangle": 121898,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "MIC 2 embase",
+    "firstTriangle": 122086,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MIC GAIN",
+    "firstTriangle": 122274,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "MIC GAIN repere",
+    "firstTriangle": 122846,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "MIC GAIN socle",
+    "firstTriangle": 123034,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MIC INPUT combo XLR bague",
+    "firstTriangle": 123606,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "MIC INPUT combo XLR cavite",
+    "firstTriangle": 124374,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MIC INPUT combo XLR embase",
+    "firstTriangle": 124754,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "MIC XLR alveole",
+    "firstTriangle": 125134,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MIC XLR alveole.001",
+    "firstTriangle": 125322,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MIC XLR alveole.002",
+    "firstTriangle": 125510,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MIDI 1 contact 1",
+    "firstTriangle": 125698,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 1 contact 2",
+    "firstTriangle": 125838,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 1 contact 3",
+    "firstTriangle": 125978,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 1 contact 4",
+    "firstTriangle": 126118,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 1 contact 5",
+    "firstTriangle": 126258,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 2 contact 1",
+    "firstTriangle": 126398,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 2 contact 2",
+    "firstTriangle": 126538,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 2 contact 3",
+    "firstTriangle": 126678,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 2 contact 4",
+    "firstTriangle": 126818,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 2 contact 5",
+    "firstTriangle": 126958,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 3 contact 1",
+    "firstTriangle": 127098,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 3 contact 2",
+    "firstTriangle": 127238,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 3 contact 3",
+    "firstTriangle": 127378,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 3 contact 4",
+    "firstTriangle": 127518,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 3 contact 5",
+    "firstTriangle": 127658,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 4 contact 1",
+    "firstTriangle": 127798,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 4 contact 2",
+    "firstTriangle": 127938,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 4 contact 3",
+    "firstTriangle": 128078,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 4 contact 4",
+    "firstTriangle": 128218,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI 4 contact 5",
+    "firstTriangle": 128358,
+    "triangleCount": 140,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "MIDI DIN 1 bague",
+    "firstTriangle": 128498,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "MIDI DIN 1 cavite",
+    "firstTriangle": 129266,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MIDI DIN 1 embase",
+    "firstTriangle": 129646,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "MIDI DIN 2 bague",
+    "firstTriangle": 130026,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "MIDI DIN 2 cavite",
+    "firstTriangle": 130794,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MIDI DIN 2 embase",
+    "firstTriangle": 131174,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "MIDI DIN 3 bague",
+    "firstTriangle": 131554,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "MIDI DIN 3 cavite",
+    "firstTriangle": 132322,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MIDI DIN 3 embase",
+    "firstTriangle": 132702,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "MIDI DIN 4 bague",
+    "firstTriangle": 133082,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "MIDI DIN 4 cavite",
+    "firstTriangle": 133850,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MIDI DIN 4 embase",
+    "firstTriangle": 134230,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "MULTI PAD 1",
+    "firstTriangle": 134610,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "MULTI PAD 1 embase",
+    "firstTriangle": 134798,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MULTI PAD 2",
+    "firstTriangle": 134986,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "MULTI PAD 2 embase",
+    "firstTriangle": 135174,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MULTI PAD 3",
+    "firstTriangle": 135362,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "MULTI PAD 3 embase",
+    "firstTriangle": 135550,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MULTI PAD 4",
+    "firstTriangle": 135738,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "MULTI PAD 4 embase",
+    "firstTriangle": 135926,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MULTIPAD SELECT 1",
+    "firstTriangle": 136114,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "MULTIPAD SELECT 1 embase",
+    "firstTriangle": 136302,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "MULTIPAD STOP 1",
+    "firstTriangle": 136490,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "MULTIPAD STOP 1 embase",
+    "firstTriangle": 136678,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Molette DATA prise de doigt",
+    "firstTriangle": 136866,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Nervure dessous observee manuel 1",
+    "firstTriangle": 137438,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Coque inferieure gris clair"
+    ]
+  },
+  {
+    "name": "Nervure dessous observee manuel 2",
+    "firstTriangle": 137626,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Coque inferieure gris clair"
+    ]
+  },
+  {
+    "name": "Nervure dessous observee manuel 3",
+    "firstTriangle": 137814,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Coque inferieure gris clair"
+    ]
+  },
+  {
+    "name": "ONE TOUCH 1",
+    "firstTriangle": 138002,
+    "triangleCount": 188,
+    "control": "ots0",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ONE TOUCH 1 embase",
+    "firstTriangle": 138190,
+    "triangleCount": 188,
+    "control": "ots0",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "ONE TOUCH 2",
+    "firstTriangle": 138378,
+    "triangleCount": 188,
+    "control": "ots1",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ONE TOUCH 2 embase",
+    "firstTriangle": 138566,
+    "triangleCount": 188,
+    "control": "ots1",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "ONE TOUCH 3",
+    "firstTriangle": 138754,
+    "triangleCount": 188,
+    "control": "ots2",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ONE TOUCH 3 embase",
+    "firstTriangle": 138942,
+    "triangleCount": 188,
+    "control": "ots2",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "ONE TOUCH 4",
+    "firstTriangle": 139130,
+    "triangleCount": 188,
+    "control": "ots3",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "ONE TOUCH 4 embase",
+    "firstTriangle": 139318,
+    "triangleCount": 188,
+    "control": "ots3",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "PART ON OFF 1",
+    "firstTriangle": 139506,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "PART ON OFF 1 embase",
+    "firstTriangle": 139694,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "PART ON OFF 2",
+    "firstTriangle": 139882,
+    "triangleCount": 188,
+    "control": "left",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "PART ON OFF 2 embase",
+    "firstTriangle": 140070,
+    "triangleCount": 188,
+    "control": "left",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "PART ON OFF 3",
+    "firstTriangle": 140258,
+    "triangleCount": 188,
+    "control": "right0",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "PART ON OFF 3 embase",
+    "firstTriangle": 140446,
+    "triangleCount": 188,
+    "control": "right0",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "PART ON OFF 4",
+    "firstTriangle": 140634,
+    "triangleCount": 188,
+    "control": "right1",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "PART ON OFF 4 embase",
+    "firstTriangle": 140822,
+    "triangleCount": 188,
+    "control": "right1",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "PART ON OFF 5",
+    "firstTriangle": 141010,
+    "triangleCount": 188,
+    "control": "right2",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "PART ON OFF 5 embase",
+    "firstTriangle": 141198,
+    "triangleCount": 188,
+    "control": "right2",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Patin inferieur",
+    "firstTriangle": 141386,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Patin inferieur.001",
+    "firstTriangle": 141958,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Patin inferieur.002",
+    "firstTriangle": 142530,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Patin inferieur.003",
+    "firstTriangle": 143102,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Patin inferieur.004",
+    "firstTriangle": 143674,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Patin inferieur.005",
+    "firstTriangle": 144246,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Patin inferieur.006",
+    "firstTriangle": 144818,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Patin inferieur.007",
+    "firstTriangle": 145390,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Elastomere noir"
+    ]
+  },
+  {
+    "name": "Peau serigraphiee calibree dessus",
+    "firstTriangle": 145962,
+    "triangleCount": 446,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre"
+    ]
+  },
+  {
+    "name": "Puits du joystick",
+    "firstTriangle": 146408,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "REG BANK 1",
+    "firstTriangle": 146596,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "REG BANK 1 embase",
+    "firstTriangle": 146784,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "REG BANK 2",
+    "firstTriangle": 146972,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "REG BANK 2 embase",
+    "firstTriangle": 147160,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "REG FREEZE 1",
+    "firstTriangle": 147348,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "REG FREEZE 1 embase",
+    "firstTriangle": 147536,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "REG FREEZE 2",
+    "firstTriangle": 147724,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "REG FREEZE 2 embase",
+    "firstTriangle": 147912,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "REGISTRATION 1",
+    "firstTriangle": 148100,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "REGISTRATION 1 embase",
+    "firstTriangle": 148288,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "REGISTRATION 10",
+    "firstTriangle": 148476,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "REGISTRATION 10 embase",
+    "firstTriangle": 148664,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "REGISTRATION 2",
+    "firstTriangle": 148852,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "REGISTRATION 2 embase",
+    "firstTriangle": 149040,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "REGISTRATION 3",
+    "firstTriangle": 149228,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "REGISTRATION 3 embase",
+    "firstTriangle": 149416,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "REGISTRATION 4",
+    "firstTriangle": 149604,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "REGISTRATION 4 embase",
+    "firstTriangle": 149792,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "REGISTRATION 5",
+    "firstTriangle": 149980,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "REGISTRATION 5 embase",
+    "firstTriangle": 150168,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "REGISTRATION 6",
+    "firstTriangle": 150356,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "REGISTRATION 6 embase",
+    "firstTriangle": 150544,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "REGISTRATION 7",
+    "firstTriangle": 150732,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "REGISTRATION 7 embase",
+    "firstTriangle": 150920,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "REGISTRATION 8",
+    "firstTriangle": 151108,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "REGISTRATION 8 embase",
+    "firstTriangle": 151296,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "REGISTRATION 9",
+    "firstTriangle": 151484,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "REGISTRATION 9 embase",
+    "firstTriangle": 151672,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Rail arriere clavier",
+    "firstTriangle": 151860,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Rail avant clavier",
+    "firstTriangle": 152048,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Rainure support arriere 1",
+    "firstTriangle": 152236,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Rainure support arriere 2",
+    "firstTriangle": 152424,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Rainure support arriere 3",
+    "firstTriangle": 152612,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Rainure support arriere 4",
+    "firstTriangle": 152800,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Rainure support arriere 5",
+    "firstTriangle": 152988,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Rainure support arriere 6",
+    "firstTriangle": 153176,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Rainure support arriere 7",
+    "firstTriangle": 153364,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "SLIDER ASSIGN 1",
+    "firstTriangle": 153552,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "SLIDER ASSIGN 1 embase",
+    "firstTriangle": 153740,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "SONG A 1",
+    "firstTriangle": 153928,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "SONG A 1 embase",
+    "firstTriangle": 154116,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "SONG A 2",
+    "firstTriangle": 154304,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "SONG A 2 embase",
+    "firstTriangle": 154492,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "SONG A 3",
+    "firstTriangle": 154680,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "SONG A 3 embase",
+    "firstTriangle": 154868,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "SONG B 1",
+    "firstTriangle": 155056,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "SONG B 1 embase",
+    "firstTriangle": 155244,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "SONG B 2",
+    "firstTriangle": 155432,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "SONG B 2 embase",
+    "firstTriangle": 155620,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "SONG B 3",
+    "firstTriangle": 155808,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "SONG B 3 embase",
+    "firstTriangle": 155996,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "SONG RECORD 1",
+    "firstTriangle": 156184,
+    "triangleCount": 188,
+    "control": "rec",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "SONG RECORD 1 embase",
+    "firstTriangle": 156372,
+    "triangleCount": 188,
+    "control": "rec",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "SONG autres 1",
+    "firstTriangle": 156560,
+    "triangleCount": 188,
+    "control": "acmp",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "SONG autres 1 embase",
+    "firstTriangle": 156748,
+    "triangleCount": 188,
+    "control": "acmp",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "SONG autres 2",
+    "firstTriangle": 156936,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "SONG autres 2 embase",
+    "firstTriangle": 157124,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "SONG autres 3",
+    "firstTriangle": 157312,
+    "triangleCount": 188,
+    "control": "autofill",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "SONG autres 3 embase",
+    "firstTriangle": 157500,
+    "triangleCount": 188,
+    "control": "autofill",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STANDBY ON",
+    "firstTriangle": 157688,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE BREAK 1",
+    "firstTriangle": 158260,
+    "triangleCount": 188,
+    "control": "break",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE BREAK 1 embase",
+    "firstTriangle": 158448,
+    "triangleCount": 188,
+    "control": "break",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE ENDING 1",
+    "firstTriangle": 158636,
+    "triangleCount": 188,
+    "control": "endingA",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE ENDING 1 embase",
+    "firstTriangle": 158824,
+    "triangleCount": 188,
+    "control": "endingA",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE ENDING 2",
+    "firstTriangle": 159012,
+    "triangleCount": 188,
+    "control": "endingB",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE ENDING 2 embase",
+    "firstTriangle": 159200,
+    "triangleCount": 188,
+    "control": "endingB",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE ENDING 3",
+    "firstTriangle": 159388,
+    "triangleCount": 188,
+    "control": "endingC",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE ENDING 3 embase",
+    "firstTriangle": 159576,
+    "triangleCount": 188,
+    "control": "endingC",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE INTRO 1",
+    "firstTriangle": 159764,
+    "triangleCount": 188,
+    "control": "introA",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE INTRO 1 embase",
+    "firstTriangle": 159952,
+    "triangleCount": 188,
+    "control": "introA",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE INTRO 2",
+    "firstTriangle": 160140,
+    "triangleCount": 188,
+    "control": "introB",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE INTRO 2 embase",
+    "firstTriangle": 160328,
+    "triangleCount": 188,
+    "control": "introB",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE INTRO 3",
+    "firstTriangle": 160516,
+    "triangleCount": 188,
+    "control": "introC",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE INTRO 3 embase",
+    "firstTriangle": 160704,
+    "triangleCount": 188,
+    "control": "introC",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE MAIN 1",
+    "firstTriangle": 160892,
+    "triangleCount": 188,
+    "control": "mainA",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE MAIN 1 embase",
+    "firstTriangle": 161080,
+    "triangleCount": 188,
+    "control": "mainA",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE MAIN 2",
+    "firstTriangle": 161268,
+    "triangleCount": 188,
+    "control": "mainB",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE MAIN 2 embase",
+    "firstTriangle": 161456,
+    "triangleCount": 188,
+    "control": "mainB",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE MAIN 3",
+    "firstTriangle": 161644,
+    "triangleCount": 188,
+    "control": "mainC",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE MAIN 3 embase",
+    "firstTriangle": 161832,
+    "triangleCount": 188,
+    "control": "mainC",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE MAIN 4",
+    "firstTriangle": 162020,
+    "triangleCount": 188,
+    "control": "mainD",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE MAIN 4 embase",
+    "firstTriangle": 162208,
+    "triangleCount": 188,
+    "control": "mainD",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE commande 1",
+    "firstTriangle": 162396,
+    "triangleCount": 188,
+    "control": "syncstop",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE commande 1 embase",
+    "firstTriangle": 162584,
+    "triangleCount": 188,
+    "control": "syncstop",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE commande 2",
+    "firstTriangle": 162772,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE commande 2 embase",
+    "firstTriangle": 162960,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE commande 3",
+    "firstTriangle": 163148,
+    "triangleCount": 188,
+    "control": "play",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE commande 3 embase",
+    "firstTriangle": 163336,
+    "triangleCount": 188,
+    "control": "play",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE commande 4",
+    "firstTriangle": 163524,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE commande 4 embase",
+    "firstTriangle": 163712,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "STYLE commande 5",
+    "firstTriangle": 163900,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "STYLE commande 5 embase",
+    "firstTriangle": 164088,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Support joystick",
+    "firstTriangle": 164276,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "Support joystick.001",
+    "firstTriangle": 164464,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "TEMPO 1",
+    "firstTriangle": 164652,
+    "triangleCount": 188,
+    "control": "tempo-",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "TEMPO 1 embase",
+    "firstTriangle": 164840,
+    "triangleCount": 188,
+    "control": "tempo-",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "TEMPO 2",
+    "firstTriangle": 165028,
+    "triangleCount": 188,
+    "control": "tempo+",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "TEMPO 2 embase",
+    "firstTriangle": 165216,
+    "triangleCount": 188,
+    "control": "tempo+",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "TEMPO 3",
+    "firstTriangle": 165404,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "TEMPO 3 embase",
+    "firstTriangle": 165592,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "TO SUB WOOFER bague",
+    "firstTriangle": 165780,
+    "triangleCount": 768,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "TO SUB WOOFER cavite",
+    "firstTriangle": 166548,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "TO SUB WOOFER embase",
+    "firstTriangle": 166928,
+    "triangleCount": 380,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "TRANSPOSE 1",
+    "firstTriangle": 167308,
+    "triangleCount": 188,
+    "control": "transpose-",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "TRANSPOSE 1 embase",
+    "firstTriangle": 167496,
+    "triangleCount": 188,
+    "control": "transpose-",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "TRANSPOSE 2",
+    "firstTriangle": 167684,
+    "triangleCount": 188,
+    "control": "transpose+",
+    "moving": true,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "TRANSPOSE 2 embase",
+    "firstTriangle": 167872,
+    "triangleCount": 188,
+    "control": "transpose+",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Touche blanche 01 MIDI 28",
+    "firstTriangle": 168060,
+    "triangleCount": 380,
+    "control": "note28",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 02 MIDI 29",
+    "firstTriangle": 168440,
+    "triangleCount": 380,
+    "control": "note29",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 03 MIDI 31",
+    "firstTriangle": 168820,
+    "triangleCount": 380,
+    "control": "note31",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 04 MIDI 33",
+    "firstTriangle": 169200,
+    "triangleCount": 380,
+    "control": "note33",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 05 MIDI 35",
+    "firstTriangle": 169580,
+    "triangleCount": 380,
+    "control": "note35",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 06 MIDI 36",
+    "firstTriangle": 169960,
+    "triangleCount": 380,
+    "control": "note36",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 07 MIDI 38",
+    "firstTriangle": 170340,
+    "triangleCount": 380,
+    "control": "note38",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 08 MIDI 40",
+    "firstTriangle": 170720,
+    "triangleCount": 380,
+    "control": "note40",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 09 MIDI 41",
+    "firstTriangle": 171100,
+    "triangleCount": 380,
+    "control": "note41",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 10 MIDI 43",
+    "firstTriangle": 171480,
+    "triangleCount": 380,
+    "control": "note43",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 11 MIDI 45",
+    "firstTriangle": 171860,
+    "triangleCount": 380,
+    "control": "note45",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 12 MIDI 47",
+    "firstTriangle": 172240,
+    "triangleCount": 380,
+    "control": "note47",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 13 MIDI 48",
+    "firstTriangle": 172620,
+    "triangleCount": 380,
+    "control": "note48",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 14 MIDI 50",
+    "firstTriangle": 173000,
+    "triangleCount": 380,
+    "control": "note50",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 15 MIDI 52",
+    "firstTriangle": 173380,
+    "triangleCount": 380,
+    "control": "note52",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 16 MIDI 53",
+    "firstTriangle": 173760,
+    "triangleCount": 380,
+    "control": "note53",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 17 MIDI 55",
+    "firstTriangle": 174140,
+    "triangleCount": 380,
+    "control": "note55",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 18 MIDI 57",
+    "firstTriangle": 174520,
+    "triangleCount": 380,
+    "control": "note57",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 19 MIDI 59",
+    "firstTriangle": 174900,
+    "triangleCount": 380,
+    "control": "note59",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 20 MIDI 60",
+    "firstTriangle": 175280,
+    "triangleCount": 380,
+    "control": "note60",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 21 MIDI 62",
+    "firstTriangle": 175660,
+    "triangleCount": 380,
+    "control": "note62",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 22 MIDI 64",
+    "firstTriangle": 176040,
+    "triangleCount": 380,
+    "control": "note64",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 23 MIDI 65",
+    "firstTriangle": 176420,
+    "triangleCount": 380,
+    "control": "note65",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 24 MIDI 67",
+    "firstTriangle": 176800,
+    "triangleCount": 380,
+    "control": "note67",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 25 MIDI 69",
+    "firstTriangle": 177180,
+    "triangleCount": 380,
+    "control": "note69",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 26 MIDI 71",
+    "firstTriangle": 177560,
+    "triangleCount": 380,
+    "control": "note71",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 27 MIDI 72",
+    "firstTriangle": 177940,
+    "triangleCount": 380,
+    "control": "note72",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 28 MIDI 74",
+    "firstTriangle": 178320,
+    "triangleCount": 380,
+    "control": "note74",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 29 MIDI 76",
+    "firstTriangle": 178700,
+    "triangleCount": 380,
+    "control": "note76",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 30 MIDI 77",
+    "firstTriangle": 179080,
+    "triangleCount": 380,
+    "control": "note77",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 31 MIDI 79",
+    "firstTriangle": 179460,
+    "triangleCount": 380,
+    "control": "note79",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 32 MIDI 81",
+    "firstTriangle": 179840,
+    "triangleCount": 380,
+    "control": "note81",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 33 MIDI 83",
+    "firstTriangle": 180220,
+    "triangleCount": 380,
+    "control": "note83",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 34 MIDI 84",
+    "firstTriangle": 180600,
+    "triangleCount": 380,
+    "control": "note84",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 35 MIDI 86",
+    "firstTriangle": 180980,
+    "triangleCount": 380,
+    "control": "note86",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 36 MIDI 88",
+    "firstTriangle": 181360,
+    "triangleCount": 380,
+    "control": "note88",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 37 MIDI 89",
+    "firstTriangle": 181740,
+    "triangleCount": 380,
+    "control": "note89",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 38 MIDI 91",
+    "firstTriangle": 182120,
+    "triangleCount": 380,
+    "control": "note91",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 39 MIDI 93",
+    "firstTriangle": 182500,
+    "triangleCount": 380,
+    "control": "note93",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 40 MIDI 95",
+    "firstTriangle": 182880,
+    "triangleCount": 380,
+    "control": "note95",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 41 MIDI 96",
+    "firstTriangle": 183260,
+    "triangleCount": 380,
+    "control": "note96",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 42 MIDI 98",
+    "firstTriangle": 183640,
+    "triangleCount": 380,
+    "control": "note98",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 43 MIDI 100",
+    "firstTriangle": 184020,
+    "triangleCount": 380,
+    "control": "note100",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 44 MIDI 101",
+    "firstTriangle": 184400,
+    "triangleCount": 380,
+    "control": "note101",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche blanche 45 MIDI 103",
+    "firstTriangle": 184780,
+    "triangleCount": 380,
+    "control": "note103",
+    "moving": true,
+    "materials": [
+      "Touches ivoire ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 102",
+    "firstTriangle": 185160,
+    "triangleCount": 236,
+    "control": "note102",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 30",
+    "firstTriangle": 185396,
+    "triangleCount": 236,
+    "control": "note30",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 32",
+    "firstTriangle": 185632,
+    "triangleCount": 236,
+    "control": "note32",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 34",
+    "firstTriangle": 185868,
+    "triangleCount": 236,
+    "control": "note34",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 37",
+    "firstTriangle": 186104,
+    "triangleCount": 236,
+    "control": "note37",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 39",
+    "firstTriangle": 186340,
+    "triangleCount": 236,
+    "control": "note39",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 42",
+    "firstTriangle": 186576,
+    "triangleCount": 236,
+    "control": "note42",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 44",
+    "firstTriangle": 186812,
+    "triangleCount": 236,
+    "control": "note44",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 46",
+    "firstTriangle": 187048,
+    "triangleCount": 236,
+    "control": "note46",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 49",
+    "firstTriangle": 187284,
+    "triangleCount": 236,
+    "control": "note49",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 51",
+    "firstTriangle": 187520,
+    "triangleCount": 236,
+    "control": "note51",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 54",
+    "firstTriangle": 187756,
+    "triangleCount": 236,
+    "control": "note54",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 56",
+    "firstTriangle": 187992,
+    "triangleCount": 236,
+    "control": "note56",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 58",
+    "firstTriangle": 188228,
+    "triangleCount": 236,
+    "control": "note58",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 61",
+    "firstTriangle": 188464,
+    "triangleCount": 236,
+    "control": "note61",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 63",
+    "firstTriangle": 188700,
+    "triangleCount": 236,
+    "control": "note63",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 66",
+    "firstTriangle": 188936,
+    "triangleCount": 236,
+    "control": "note66",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 68",
+    "firstTriangle": 189172,
+    "triangleCount": 236,
+    "control": "note68",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 70",
+    "firstTriangle": 189408,
+    "triangleCount": 236,
+    "control": "note70",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 73",
+    "firstTriangle": 189644,
+    "triangleCount": 236,
+    "control": "note73",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 75",
+    "firstTriangle": 189880,
+    "triangleCount": 236,
+    "control": "note75",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 78",
+    "firstTriangle": 190116,
+    "triangleCount": 236,
+    "control": "note78",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 80",
+    "firstTriangle": 190352,
+    "triangleCount": 236,
+    "control": "note80",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 82",
+    "firstTriangle": 190588,
+    "triangleCount": 236,
+    "control": "note82",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 85",
+    "firstTriangle": 190824,
+    "triangleCount": 236,
+    "control": "note85",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 87",
+    "firstTriangle": 191060,
+    "triangleCount": 236,
+    "control": "note87",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 90",
+    "firstTriangle": 191296,
+    "triangleCount": 236,
+    "control": "note90",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 92",
+    "firstTriangle": 191532,
+    "triangleCount": 236,
+    "control": "note92",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 94",
+    "firstTriangle": 191768,
+    "triangleCount": 236,
+    "control": "note94",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 97",
+    "firstTriangle": 192004,
+    "triangleCount": 236,
+    "control": "note97",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Touche noire MIDI 99",
+    "firstTriangle": 192240,
+    "triangleCount": 236,
+    "control": "note99",
+    "moving": true,
+    "materials": [
+      "Touches noires ABS"
+    ]
+  },
+  {
+    "name": "Trappe USB inferieure estimee",
+    "firstTriangle": 192476,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Coque inferieure gris clair"
+    ]
+  },
+  {
+    "name": "Trou insert support 1",
+    "firstTriangle": 192664,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Trou insert support 2",
+    "firstTriangle": 193236,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Trou insert support 3",
+    "firstTriangle": 193808,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Trou insert support 4",
+    "firstTriangle": 194380,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Trou insert support 5",
+    "firstTriangle": 194952,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Trou insert support 6",
+    "firstTriangle": 195524,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Trou insert support 7",
+    "firstTriangle": 196096,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "UPPER OCTAVE 1",
+    "firstTriangle": 196668,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "UPPER OCTAVE 1 embase",
+    "firstTriangle": 196856,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "UPPER OCTAVE 2",
+    "firstTriangle": 197044,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "UPPER OCTAVE 2 embase",
+    "firstTriangle": 197232,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "USB TO DEVICE cadre",
+    "firstTriangle": 197420,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "USB TO DEVICE cavite",
+    "firstTriangle": 197608,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "USB TO DEVICE insert",
+    "firstTriangle": 197796,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "USB TO HOST cadre",
+    "firstTriangle": 197984,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "USB TO HOST cavite",
+    "firstTriangle": 198172,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "USB TO HOST insert",
+    "firstTriangle": 198360,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "USB port superieur",
+    "firstTriangle": 198548,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Aluminium brosse"
+    ]
+  },
+  {
+    "name": "USB port superieur interieur",
+    "firstTriangle": 198736,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "VOICE SELECT 1",
+    "firstTriangle": 198924,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "VOICE SELECT 1 embase",
+    "firstTriangle": 199112,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "VOICE SELECT 2",
+    "firstTriangle": 199300,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "VOICE SELECT 2 embase",
+    "firstTriangle": 199488,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "VOICE SELECT 3",
+    "firstTriangle": 199676,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "VOICE SELECT 3 embase",
+    "firstTriangle": 199864,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "VOICE SELECT 4",
+    "firstTriangle": 200052,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "VOICE SELECT 4 embase",
+    "firstTriangle": 200240,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "VOICE commandes 1",
+    "firstTriangle": 200428,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "VOICE commandes 1 embase",
+    "firstTriangle": 200616,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "VOICE commandes 2",
+    "firstTriangle": 200804,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Serigraphie photo Yamaha - projection calibre",
+      "ABS anthracite satin"
+    ]
+  },
+  {
+    "name": "VOICE commandes 2 embase",
+    "firstTriangle": 200992,
+    "triangleCount": 188,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Bord noir mat"
+    ]
+  },
+  {
+    "name": "Vis coque inferieure",
+    "firstTriangle": 201180,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "Vis coque inferieure.001",
+    "firstTriangle": 201752,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "Vis coque inferieure.002",
+    "firstTriangle": 202324,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "Vis coque inferieure.003",
+    "firstTriangle": 202896,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "Vis coque inferieure.004",
+    "firstTriangle": 203468,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "Vis coque inferieure.005",
+    "firstTriangle": 204040,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "Vis coque inferieure.006",
+    "firstTriangle": 204612,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  },
+  {
+    "name": "Vis coque inferieure.007",
+    "firstTriangle": 205184,
+    "triangleCount": 572,
+    "control": "",
+    "moving": false,
+    "materials": [
+      "Vis acier"
+    ]
+  }
+]

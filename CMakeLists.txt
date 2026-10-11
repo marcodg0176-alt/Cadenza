@@ -252,7 +252,9 @@ endif()
 if(CADENZA_BUILD_NATIVE_HOST AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib/JUCE/CMakeLists.txt")
     add_subdirectory(lib/JUCE)
     juce_add_binary_data(GenosModel HEADER_NAME GenosModelData.h
-        NAMESPACE GenosModelData SOURCES assets/genos2/geometry.json)
+        NAMESPACE GenosModelData SOURCES assets/genos2/reference-model/geometry.json
+        assets/genos2/reference-model/mesh.bin assets/genos2/reference-model/panel.png
+        assets/genos2/reference-model/rear.png)
 
     # ----- plugin-probe: headless CLI to verify VST3 hosting works -----
     juce_add_console_app(plugin-probe PRODUCT_NAME "plugin-probe")
