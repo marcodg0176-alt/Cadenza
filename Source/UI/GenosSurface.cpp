@@ -142,15 +142,19 @@ juce::Point<float> GenosSurface::project(genos::Vec3 p) const
 void GenosSurface::ensureFrame() const
 {
     const auto bounds=modelBounds();
-    if(!m_frameDirty && m_frame.getWidth()==bounds.getWidth() && m_frame.getHeight()==bounds.getHeight())return;
-    const int w=bounds.getWidth(),h=bounds.getHeight();
+    const auto size=genos::renderSize(bounds.getWidth(),bounds.getHeight(),m_displayScale);
+    const int w=size.width,h=size.height;
+    if(!m_frameDirty && m_frame.getWidth()==w && m_frame.getHeight()==h)return;
     if(w<=0 || h<=0)return;
+    const float scaleX=(float)w/bounds.getWidth(),scaleY=(float)h/bounds.getHeight();
     m_raster.clear(w,h);
     for(const auto& face:m_model.triangles) {
         std::array<genos::Point,3> points;
-        for(std::size_t i=0;i<3;++i)
+        for(std::size_t i=0;i<3;++i) {
             points[i]=m_camera.project(face.moving?movedVertex(face.vertices[i],face.control):face.vertices[i],
-                                       (float)w,(float)h);
+                                       (float)bounds.getWidth(),(float)bounds.getHeight());
+            points[i].x*=scaleX;points[i].y*=scaleY;
+        }
         auto colour=juce::Colour(face.colour);
         if(face.control>=0) {
             const auto& c=m_controls[(std::size_t)face.control];
@@ -177,6 +181,12 @@ void GenosSurface::ensureFrame() const
     m_frameDirty=false;
 }
 
+juce::Point<int> GenosSurface::renderedSceneSize() const
+{
+    ensureFrame();
+    return {m_frame.getWidth(),m_frame.getHeight()};
+}
+
 juce::Point<float> GenosSurface::controlScreenCentre(const std::string& id) const
 {
     for(std::size_t i=0;i<m_controls.size();++i)if(m_controls[i].id==id) {
@@ -193,12 +203,37 @@ juce::Point<float> GenosSurface::controlScreenCentre(const std::string& id) cons
 
 void GenosSurface::rasterScreen(const genos::ModelScreen& screen) const
 {
+    auto corners=screen.corners;
+    if(!screen.hasCorners) {
+        auto c=screen.centre;c.y+=.036f;
+        corners={genos::Vec3{c.x-screen.width/2,c.y,c.z-screen.depth/2},
+                 genos::Vec3{c.x+screen.width/2,c.y,c.z-screen.depth/2},
+                 genos::Vec3{c.x+screen.width/2,c.y,c.z+screen.depth/2},
+                 genos::Vec3{c.x-screen.width/2,c.y,c.z+screen.depth/2}};
+    }
+    const auto bounds=modelBounds();
+    std::array<genos::Point,4> points;
+    for(int i=0;i<4;++i) {
+        points[(std::size_t)i]=m_camera.project(corners[(std::size_t)i],
+            (float)bounds.getWidth(),(float)bounds.getHeight());
+        points[(std::size_t)i].x*=(float)m_raster.width/bounds.getWidth();
+        points[(std::size_t)i].y*=(float)m_raster.height/bounds.getHeight();
+    }
     const bool main=screen.id=="main";
-    const int w=main?600:600,h=main?310:64;
-    juce::Image image(juce::Image::RGB,w,h,true,juce::SoftwareImageType());
+    const int w=600,h=main?310:64;
+    const auto edgeLength=[&](int a,int b) {
+        return std::hypot(points[(std::size_t)a].x-points[(std::size_t)b].x,
+                          points[(std::size_t)a].y-points[(std::size_t)b].y);
+    };
+    const float lcdScale=juce::jlimit(2.0f,8.0f,
+        std::max(std::max(edgeLength(0,1),edgeLength(3,2))/w,
+                 std::max(edgeLength(0,3),edgeLength(1,2))/h));
+    juce::Image image(juce::Image::RGB,(int)std::ceil(w*lcdScale),(int)std::ceil(h*lcdScale),
+                      true,juce::SoftwareImageType());
     {
     juce::Graphics lcd(image);
     lcd.fillAll(juce::Colour(0xff142737));
+    lcd.addTransform(juce::AffineTransform::scale(lcdScale));
     if(main) {
         lcd.setColour(juce::Colour(0xff22455c));lcd.fillRect(0,0,w,42);
         lcd.setFont(juce::Font(juce::FontOptions(20.0f,juce::Font::bold)));
@@ -230,18 +265,6 @@ void GenosSurface::rasterScreen(const genos::ModelScreen& screen) const
     }
     } // Complete the display image before the host graphics reads it.
     const auto texture=genos::Model::textureFromImage(image);
-    auto corners=screen.corners;
-    if(!screen.hasCorners) {
-        auto c=screen.centre;c.y+=.036f;
-        corners={genos::Vec3{c.x-screen.width/2,c.y,c.z-screen.depth/2},
-                 genos::Vec3{c.x+screen.width/2,c.y,c.z-screen.depth/2},
-                 genos::Vec3{c.x+screen.width/2,c.y,c.z+screen.depth/2},
-                 genos::Vec3{c.x-screen.width/2,c.y,c.z+screen.depth/2}};
-    }
-    const auto bounds=modelBounds();
-    std::array<genos::Point,4> points;
-    for(int i=0;i<4;++i)points[(std::size_t)i]=m_camera.project(corners[(std::size_t)i],
-        (float)bounds.getWidth(),(float)bounds.getHeight());
     m_raster.triangle({points[0],points[1],points[2]},0xffffffff,-1,&texture,
                       {{{0,0},{1,0},{1,1}}});
     m_raster.triangle({points[0],points[2],points[3]},0xffffffff,-1,&texture,
@@ -263,8 +286,13 @@ void GenosSurface::paint(juce::Graphics& g)
     {
     juce::Graphics::ScopedSaveState sceneState(g);
     g.reduceClipRegion(bounds);
+    const float displayScale=g.getInternalContext().getPhysicalPixelScaleFactor();
+    if(std::isfinite(displayScale) && displayScale>0 && displayScale!=m_displayScale) {
+        m_displayScale=displayScale;m_frameDirty=true;
+    }
     ensureFrame();
-    g.drawImageAt(m_frame,bounds.getX(),bounds.getY());
+    g.setImageResamplingQuality(juce::Graphics::highResamplingQuality);
+    g.drawImage(m_frame,bounds.toFloat());
     const float scale=std::min(bounds.getWidth()/13.7f,bounds.getHeight()/5.5f)*m_camera.zoom;
     for(const auto& label:m_model.labels) {
         // Live display artwork is supplied by the host, never baked as a photo.
@@ -307,7 +335,9 @@ int GenosSurface::hit(juce::Point<float> p) const
 {
     ensureFrame();
     const auto b=modelBounds();
-    return m_raster.at((int)std::floor(p.x)-b.getX(),(int)std::floor(p.y)-b.getY());
+    if(p.x<b.getX() || p.y<b.getY() || p.x>=b.getRight() || p.y>=b.getBottom())return -1;
+    return m_raster.at((int)std::floor((p.x-b.getX())*m_raster.width/b.getWidth()),
+                       (int)std::floor((p.y-b.getY())*m_raster.height/b.getHeight()));
 }
 
 std::string GenosSurface::controlIdAt(juce::Point<float> point) const

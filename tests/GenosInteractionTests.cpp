@@ -262,12 +262,14 @@ int runTests() {
     expect(newSession==1&&makeEditable==1&&editor==2&&page==7,"loaded creator makes editable and opens editor");
     count=notes.size();down(centre("note60"));toolbar("Vue Cadenza");
     expect(page==0,"Native opens Cadenza page");expect(notes.size()==count+2&&!notes.back().on,"Native releases held note");
-    auto render=[&](const char* name) {
+    auto render=[&](const char* name,float pixelScale=1.0f) {
         view.setVisible(true);
-        juce::Image image(juce::Image::ARGB,view.getWidth(),view.getHeight(),true,juce::SoftwareImageType());
+        juce::Image image(juce::Image::ARGB,(int)std::lround(view.getWidth()*pixelScale),
+                         (int)std::lround(view.getHeight()*pixelScale),true,juce::SoftwareImageType());
         const auto renderStart=std::chrono::steady_clock::now();
         {
         juce::Graphics graphics(image);
+        graphics.addTransform(juce::AffineTransform::scale(pixelScale));
         // Paint the real component directly: standalone test components have no window peer.
         view.paint(graphics);
         for(int i=0;i<view.getNumChildComponents();++i) {
@@ -277,8 +279,14 @@ int runTests() {
             child->paintEntireComponent(graphics,true);
         }
         } // Flush all painting before inspecting or exporting the pixels.
-        std::cout<<"Actual JUCE render "<<name<<" ("<<view.getWidth()<<"x"<<view.getHeight()<<"): "
+        std::cout<<"Actual JUCE render "<<name<<" ("<<image.getWidth()<<"x"<<image.getHeight()<<"): "
                  <<std::chrono::duration<double,std::milli>(std::chrono::steady_clock::now()-renderStart).count()<<" ms\n";
+        const auto scene=view.renderedSceneSize();
+        expect(scene.x>=3840,"scene is rendered from geometry at 4K or higher, rather than stretching a low-resolution bitmap");
+        expect(scene.x<=7680&&scene.y<=4320,"supersampling buffers stay within their memory envelope");
+        std::cout<<"Scene raster "<<scene.x<<"x"<<scene.y<<", display scale "<<pixelScale<<"\n";
+        expect(view.controlIdAt({-1,-1}).empty(),"supersampled picking rejects outside-window coordinates");
+        expect(view.controlIdAt({24.0f,75.0f}).empty(),"supersampled picking does not extend into the toolbar");
         int darkest=255,brightest=0,lit=0,samples=0;
         for(int y=0;y<image.getHeight();y+=4)for(int x=0;x<image.getWidth();x+=4) {
             auto c=image.getPixelAt(x,y);
@@ -299,6 +307,17 @@ int runTests() {
     for(int i=0;i<view.getNumChildComponents();++i)
         expect(view.getLocalBounds().contains(view.getChildComponent(i)->getBounds()),"all toolbar buttons fit at minimum window size");
     render("genos2-minimum.png");
+    view.setSize(3840,2160);toolbar("Vue 3D");picking();
+    runtime(initialSections,"C7"); // Force a full geometry/LCD render for the 4K timing.
+    render("genos2-4k.png");
+    toolbar("Vue de dessus");picking();runtime(initialSections,"F#m");
+    render("genos2-4k-top.png");
+    view.setSize(1920,1080);toolbar("Vue 3D");runtime(initialSections);
+    render("genos2-4k-hidpi.png",2.0f);picking();
+    expect(view.renderedSceneSize().x>=4*(1920-24),"200-percent DPI retains supersampling above native physical pixels");
+    lcdSnapshot(); // Returning to a 100-percent graphics target must invalidate the DPI cache.
+    expect(view.renderedSceneSize().x==3840,"moving back from 200-percent DPI updates the cached raster resolution");
+    picking();
     view.releaseNotes();view.setLookAndFeel(nullptr);
     std::cout<<"Genos interaction: pointer notes/releases, sections, mixer, knobs, joystick, Native/editor and resize passed\n";
     return 0;

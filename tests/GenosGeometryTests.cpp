@@ -1,14 +1,26 @@
 #include "UI/GenosGeometry.h"
+#include "UI/GenosRenderQuality.h"
 #ifdef NDEBUG
 #undef NDEBUG
 #endif
 #include <cassert>
 #include <set>
 #include <iostream>
+#include <limits>
 
 int main()
 {
     using namespace cadenza::ui::genos;
+    const auto desktop=renderSize(1256,596);
+    assert(desktop.width==3840 && desktop.height>1800);
+    const auto uhd=renderSize(3816,1956);
+    assert(uhd.width==7632 && uhd.height==3912);
+    const auto hidpi=renderSize(1896,876,2);
+    assert(hidpi.width==7584 && hidpi.height==3504);
+    const auto extreme=renderSize(10000,10000,10);
+    assert(extreme.width<=7680 && extreme.height<=4320);
+    assert(renderSize(0,600).width==0 && renderSize(600,0).height==0);
+    assert(renderSize(1256,596,std::numeric_limits<float>::quiet_NaN()).width==3840);
     const auto controls=makeControls();
     std::set<int> notes; std::set<std::string> ids;
     for (const auto& c:controls) {

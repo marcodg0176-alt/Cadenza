@@ -30,6 +30,15 @@ musicales et les sons sont ceux du moteur Cadenza et des instruments chargés.
 - La fenêtre reste redimensionnable à partir de 900 × 650 pixels pour garder
   tous les accès essentiels visibles.
 
+Le rendu de la façade utilise une image interne d'au moins 3840 pixels de large
+aux tailles habituelles, avec suréchantillonnage et filtrage des contours. Il
+s'adapte à la densité de pixels Windows, y compris un affichage 4K à 200 %, et
+les écrans Cadenza sont dessinés à leur résolution projetée. Les captures 4K
+fournies mesurent 3840 × 2160 pixels. La fenêtre conserve une taille adaptée à
+l'écran ; un écran de résolution inférieure affiche une version réduite du
+rendu. Les sérigraphies photographiques gardent leur définition source de
+2000 × 2000, sans détails supplémentaires inventés.
+
 Les réglages sont conservés dans un profil local distinct, Genos2Personnel. Les
 réglages et journaux d'une installation Cadenza existante ne sont pas remplacés.
 Les touches sont relâchées lors d'un changement de vue, d'une perte de focus ou de
