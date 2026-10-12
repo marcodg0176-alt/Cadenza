@@ -61,14 +61,15 @@ void GenosSurface::setRuntime(const juce::String& style, const juce::String& cho
                               const std::array<bool,3>& rightEnabled, bool leftEnabled,
                               int reverb, int compressor, const std::array<int,3>& eq)
 {
-    const bool changed = m_style != style || m_chord != chord || m_section != section
+    const auto displayChord = chord.isEmpty() ? juce::String::fromUTF8("—") : chord;
+    const bool changed = m_style != style || m_chord != displayChord || m_section != section
         || m_bpm != bpm || m_playing != playing || m_sections != available
         || m_volumes != volumes || m_arranger != arranger || m_memory != memory
         || m_autoFill != autoFill || m_syncStop != syncStop || m_transpose != transpose
         || m_recorderActive != recorderActive || m_recording != recording || m_ots != ots
         || m_rightEnabled != rightEnabled || m_leftEnabled != leftEnabled
         || m_reverb!=reverb || m_compressor!=compressor || m_eq!=eq;
-    m_style=style; m_chord=chord.isEmpty() ? juce::String::fromUTF8("—") : chord; m_section=section;
+    m_style=style; m_chord=displayChord; m_section=section;
     m_bpm=bpm; m_playing=playing; m_sections=available; m_volumes=volumes;
     m_arranger=arranger; m_memory=memory; m_autoFill=autoFill;
     m_syncStop=syncStop; m_transpose=transpose;
@@ -179,6 +180,7 @@ void GenosSurface::ensureFrame() const
         pixel->setARGB((juce::uint8)(c>>24),(juce::uint8)(c>>16),(juce::uint8)(c>>8),(juce::uint8)c);
     }
     m_frameDirty=false;
+    ++m_sceneRenderCount;
 }
 
 juce::Point<int> GenosSurface::renderedSceneSize() const

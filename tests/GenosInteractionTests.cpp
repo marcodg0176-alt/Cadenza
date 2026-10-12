@@ -177,6 +177,25 @@ int runTests() {
         { juce::Graphics graphics(image);view.paint(graphics); }
         return image;
     };
+    // Exercise the actual JUCE paint/cache path used by periodic host updates.
+    runtime(initialSections,"");lcdSnapshot();
+    const auto emptyRenderCount=view.sceneRenderCount();
+    for(int tick=0;tick<20;++tick) {
+        runtime(initialSections,"");lcdSnapshot();
+        expect(view.sceneRenderCount()==emptyRenderCount,"empty chord ticks reuse the rendered 4K scene");
+    }
+    runtime(initialSections,"C#m");lcdSnapshot();
+    expect(view.sceneRenderCount()==emptyRenderCount+1,"a real chord change rebuilds the scene once");
+    for(int tick=0;tick<20;++tick) {runtime(initialSections,"C#m");lcdSnapshot();}
+    expect(view.sceneRenderCount()==emptyRenderCount+1,"identical nonempty chord ticks reuse the scene");
+    runtime(initialSections,"");lcdSnapshot();
+    expect(view.sceneRenderCount()==emptyRenderCount+2,"returning to no chord rebuilds the scene once");
+    runtime(initialSections,juce::String::fromUTF8("\xe2\x80\x94").toRawUTF8());lcdSnapshot();
+    expect(view.sceneRenderCount()==emptyRenderCount+2,"empty and explicit dash share the display cache");
+    runtime(initialSections,"");lcdSnapshot();
+    expect(view.sceneRenderCount()==emptyRenderCount+2,"empty tick after explicit dash remains cached");
+    std::cout<<"Scene cache: 20 empty + 20 identical chord ticks reused; chord transitions rendered once\n";
+    runtime(initialSections);
     const auto lcdBefore=lcdSnapshot();
     runtime(initialSections,"F#m");
     const auto lcdAfter=lcdSnapshot();

@@ -4,6 +4,7 @@
 #include "GenosModel.h"
 #include "GenosRaster.h"
 #include "GenosRenderQuality.h"
+#include <cstdint>
 #include <set>
 
 namespace cadenza::ui
@@ -40,6 +41,7 @@ public:
     std::string controlIdAt(juce::Point<float> point) const;
     juce::Point<float> controlScreenCentre(const std::string& id) const;
     juce::Point<int> renderedSceneSize() const;
+    std::uint64_t sceneRenderCount() const noexcept { return m_sceneRenderCount; }
 
 private:
     void ensureFrame() const;
@@ -60,6 +62,7 @@ private:
     mutable genos::Raster m_raster;
     mutable juce::Image m_frame;
     mutable bool m_frameDirty = true;
+    mutable std::uint64_t m_sceneRenderCount = 0;
     mutable float m_displayScale = 1.0f;
     genos::Camera m_camera;
     juce::String m_style = juce::String::fromUTF8("Aucun style chargé"), m_chord = juce::String::fromUTF8("—"), m_hint;
