@@ -141,7 +141,7 @@ int runTests() {
     auto up=[&](juce::Point<float> p){view.mouseUp(event(view,p,p,false));};
     auto click=[&](const std::string& id){auto p=centre(id);down(p);up(p);};
     auto drag=[&](const std::string& id,juce::Point<float> d){auto p=centre(id);down(p);view.mouseDrag(event(view,p+d,p,true,true));up(p+d);};
-    auto runtime=[&](std::vector<std::string> available,const char* chord="C#m") {
+    auto runtime=[&](std::vector<std::string> available,const juce::String& chord="C#m") {
         view.setRuntime(juce::String::fromUTF8("Été à Montréal — Répétition"),chord,"mainA",110,false,
             available,{104,86,101,87,80,86,78,78,100},true,true,true,false,0,
             false,false,{}, {true,false,false},false,30,15,{0,0,0});
@@ -190,7 +190,7 @@ int runTests() {
     expect(view.sceneRenderCount()==emptyRenderCount+1,"identical nonempty chord ticks reuse the scene");
     runtime(initialSections,"");lcdSnapshot();
     expect(view.sceneRenderCount()==emptyRenderCount+2,"returning to no chord rebuilds the scene once");
-    runtime(initialSections,juce::String::fromUTF8("\xe2\x80\x94").toRawUTF8());lcdSnapshot();
+    runtime(initialSections,juce::String::fromUTF8("\xe2\x80\x94"));lcdSnapshot();
     expect(view.sceneRenderCount()==emptyRenderCount+2,"empty and explicit dash share the display cache");
     runtime(initialSections,"");lcdSnapshot();
     expect(view.sceneRenderCount()==emptyRenderCount+2,"empty tick after explicit dash remains cached");
